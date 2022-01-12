@@ -23,12 +23,7 @@ const BlogGrid = () => {
     <>
       <HtmlHead title={title} description={description} />
       {/* Title Start */}
-      <div className="page-title-container">
-        <h1 className="mb-0 pb-0 display-4">{title}</h1>
-        <BreadcrumbList items={breadcrumbs} />
-      </div>
       {/* Title End */}
-
       <Row className="g-5">
         <Col xl="8" xxl="9" className="mb-5">
           {/* Grid Start */}
@@ -104,229 +99,13 @@ const BlogGrid = () => {
                   </Row>
                 </Card.Footer>
               </Card>
-            </Col>
-            <Col>
-              <Card className="h-100">
-                <Card.Img src="/img/product/small/product-4.webp" className="card-img-top sh-19" alt="card image" />
-                <Card.Body>
-                  <NavLink to="/pages/blog/detail" className="body-link stretched-link d-block heading sh-8 mb-0 sh-md-6 d-block h5 heading lh-1-5">
-                    <Clamp tag="span" clamp="2">
-                      A Complete Guide to Mix Dough for the Molds
-                    </Clamp>
-                  </NavLink>
-                </Card.Body>
-                <Card.Footer className="border-0 pt-0">
-                  <Row className="g-0">
-                    <Col xs="auto" className="pe-3">
-                      <CsLineIcons icon="like" size="15" className="text-primary me-1" />
-                      <span className="align-middle">82</span>
-                    </Col>
-                    <Col>
-                      <CsLineIcons icon="clock" size="15" className="text-primary me-1" />
-                      <span className="align-middle">30 Min</span>
-                    </Col>
-                  </Row>
-                </Card.Footer>
-              </Card>
-            </Col>
-            <Col>
-              <Card className="h-100">
-                <Card.Img src="/img/product/small/product-5.webp" className="card-img-top sh-19" alt="card image" />
-                <Card.Body>
-                  <NavLink to="/pages/blog/detail" className="body-link stretched-link d-block heading sh-8 mb-0 sh-md-6 d-block h5 heading lh-1-5">
-                    <Clamp tag="span" clamp="2">
-                      10 Secrets Every Southern Baker Should Know
-                    </Clamp>
-                  </NavLink>
-                </Card.Body>
-                <Card.Footer className="border-0 pt-0">
-                  <Row className="g-0">
-                    <Col xs="auto" className="pe-3">
-                      <CsLineIcons icon="like" size="15" className="text-primary me-1" />
-                      <span className="align-middle">43</span>
-                    </Col>
-                    <Col>
-                      <CsLineIcons icon="clock" size="15" className="text-primary me-1" />
-                      <span className="align-middle">30 Min</span>
-                    </Col>
-                  </Row>
-                </Card.Footer>
-              </Card>
-            </Col>
-            <Col>
-              <Card className="h-100">
-                <Card.Img src="/img/product/small/product-6.webp" className="card-img-top sh-19" alt="card image" />
-                <Card.Body>
-                  <NavLink to="/pages/blog/detail" className="body-link stretched-link d-block heading sh-8 mb-0 sh-md-6 d-block h5 heading lh-1-5">
-                    <Clamp tag="span" clamp="2">
-                      Quick Recipes for Sweet and Healty Treats for Children
-                    </Clamp>
-                  </NavLink>
-                </Card.Body>
-                <Card.Footer className="border-0 pt-0">
-                  <Row className="g-0">
-                    <Col xs="auto" className="pe-3">
-                      <CsLineIcons icon="like" size="15" className="text-primary me-1" />
-                      <span className="align-middle">15</span>
-                    </Col>
-                    <Col>
-                      <CsLineIcons icon="clock" size="15" className="text-primary me-1" />
-                      <span className="align-middle">20 Min</span>
-                    </Col>
-                  </Row>
-                </Card.Footer>
-              </Card>
-            </Col>
-            <Col>
-              <Card className="h-100">
-                <Card.Img src="/img/product/small/product-7.webp" className="card-img-top sh-19" alt="card image" />
-                <Card.Body>
-                  <NavLink to="/pages/blog/detail" className="body-link stretched-link d-block heading sh-8 mb-0 sh-md-6 d-block h5 heading lh-1-5">
-                    <Clamp tag="span" clamp="2">
-                      Better Ways to Mix Dough for the Molds
-                    </Clamp>
-                  </NavLink>
-                </Card.Body>
-                <Card.Footer className="border-0 pt-0">
-                  <Row className="g-0">
-                    <Col xs="auto" className="pe-3">
-                      <CsLineIcons icon="like" size="15" className="text-primary me-1" />
-                      <span className="align-middle">44</span>
-                    </Col>
-                    <Col>
-                      <CsLineIcons icon="clock" size="15" className="text-primary me-1" />
-                      <span className="align-middle">10 Min</span>
-                    </Col>
-                  </Row>
-                </Card.Footer>
-              </Card>
-            </Col>
-            <Col>
-              <Card className="h-100">
-                <Card.Img src="/img/product/small/product-8.webp" className="card-img-top sh-19" alt="card image" />
-                <Card.Body>
-                  <NavLink to="/pages/blog/detail" className="body-link stretched-link d-block heading sh-8 mb-0 sh-md-6 d-block h5 heading lh-1-5">
-                    <Clamp tag="span" clamp="2">
-                      Basic Introduction for Dough Molding
-                    </Clamp>
-                  </NavLink>
-                </Card.Body>
-                <Card.Footer className="border-0 pt-0">
-                  <Row className="g-0">
-                    <Col xs="auto" className="pe-3">
-                      <CsLineIcons icon="like" size="15" className="text-primary me-1" />
-                      <span className="align-middle">341</span>
-                    </Col>
-                    <Col>
-                      <CsLineIcons icon="clock" size="15" className="text-primary me-1" />
-                      <span className="align-middle">50 Min</span>
-                    </Col>
-                  </Row>
-                </Card.Footer>
-              </Card>
-            </Col>
-            <Col>
-              <Card className="h-100">
-                <Card.Img src="/img/product/small/product-9.webp" className="card-img-top sh-19" alt="card image" />
-                <Card.Body>
-                  <NavLink to="/pages/blog/detail" className="body-link stretched-link d-block heading sh-8 mb-0 sh-md-6 d-block h5 heading lh-1-5">
-                    <Clamp tag="span" clamp="2">
-                      Introduction to Baking Cakes for Fancy Guests
-                    </Clamp>
-                  </NavLink>
-                </Card.Body>
-                <Card.Footer className="border-0 pt-0">
-                  <Row className="g-0">
-                    <Col xs="auto" className="pe-3">
-                      <CsLineIcons icon="like" size="15" className="text-primary me-1" />
-                      <span className="align-middle">122</span>
-                    </Col>
-                    <Col>
-                      <CsLineIcons icon="clock" size="15" className="text-primary me-1" />
-                      <span className="align-middle">15 Min</span>
-                    </Col>
-                  </Row>
-                </Card.Footer>
-              </Card>
-            </Col>
-            <Col>
-              <Card className="h-100">
-                <Card.Img src="/img/product/small/product-10.webp" className="card-img-top sh-19" alt="card image" />
-                <Card.Body>
-                  <NavLink to="/pages/blog/detail" className="body-link stretched-link d-block heading sh-8 mb-0 sh-md-6 d-block h5 heading lh-1-5">
-                    <Clamp tag="span" clamp="2">
-                      Apple Cake Recipe for Absolute Starters
-                    </Clamp>
-                  </NavLink>
-                </Card.Body>
-                <Card.Footer className="border-0 pt-0">
-                  <Row className="g-0">
-                    <Col xs="auto" className="pe-3">
-                      <CsLineIcons icon="like" size="15" className="text-primary me-1" />
-                      <span className="align-middle">84</span>
-                    </Col>
-                    <Col>
-                      <CsLineIcons icon="clock" size="15" className="text-primary me-1" />
-                      <span className="align-middle">10 Min</span>
-                    </Col>
-                  </Row>
-                </Card.Footer>
-              </Card>
-            </Col>
-            <Col>
-              <Card className="h-100">
-                <Card.Img src="/img/product/small/product-2.webp" className="card-img-top sh-19" alt="card image" />
-                <Card.Body>
-                  <NavLink to="/pages/blog/detail" className="body-link stretched-link d-block heading sh-8 mb-0 sh-md-6 d-block h5 heading lh-1-5">
-                    <Clamp tag="span" clamp="2">
-                      A Complete Guide to Mix Dough for the Molds
-                    </Clamp>
-                  </NavLink>
-                </Card.Body>
-                <Card.Footer className="border-0 pt-0">
-                  <Row className="g-0">
-                    <Col xs="auto" className="pe-3">
-                      <CsLineIcons icon="like" size="15" className="text-primary me-1" />
-                      <span className="align-middle">36</span>
-                    </Col>
-                    <Col>
-                      <CsLineIcons icon="clock" size="15" className="text-primary me-1" />
-                      <span className="align-middle">45 Min</span>
-                    </Col>
-                  </Row>
-                </Card.Footer>
-              </Card>
-            </Col>
-            <Col>
-              <Card className="h-100">
-                <Card.Img src="/img/product/small/product-1.webp" className="card-img-top sh-19" alt="card image" />
-                <Card.Body>
-                  <NavLink to="/pages/blog/detail" className="body-link stretched-link d-block heading sh-8 mb-0 sh-md-6 d-block h5 heading lh-1-5">
-                    <Clamp tag="span" clamp="2">
-                      Basic Introduction to Bread Making Techniques
-                    </Clamp>
-                  </NavLink>
-                </Card.Body>
-                <Card.Footer className="border-0 pt-0">
-                  <Row className="g-0">
-                    <Col xs="auto" className="pe-3">
-                      <CsLineIcons icon="like" size="15" className="text-primary me-1" />
-                      <span className="align-middle">15</span>
-                    </Col>
-                    <Col>
-                      <CsLineIcons icon="clock" size="15" className="text-primary me-1" />
-                      <span className="align-middle">40 Min</span>
-                    </Col>
-                  </Row>
-                </Card.Footer>
-              </Card>
-            </Col>
+            </Col>          
           </Row>
           <Row>
             <Col xs="12" className="text-center">
-              <Button size="xl" variant="outline-primary" className="sw-30">
+              {/* <Button size="xl" variant="outline-primary" className="sw-30">
                 Load More
-              </Button>
+              </Button> */}
             </Col>
           </Row>
           {/* Grid End */}
@@ -339,12 +118,24 @@ const BlogGrid = () => {
             <Col xs="12" className="mb-5">
               <Card>
                 <Card.Body>
-                  <div className="cta-3">Ready to make bread?</div>
-                  <div className="mb-3 cta-3 text-primary">Join our email list!</div>
-                  <div className="text-muted mb-3">Cheesecake chocolate carrot cake pie lollipop lemon drops.</div>
+                  {/* <div className="cta-3">Ready to make bread?</div> */}
+                  <div className="mb-3 cta-3 text-primary">Enquire Now</div>
+                  {/* <div className="text-muted mb-3">Cheesecake chocolate carrot cake pie lollipop lemon drops.</div> */}
+                  <Form.Control type="name" className="mb-2" placeholder="Name" />
                   <Form.Control type="email" className="mb-2" placeholder="E-mail" />
+                  <Form.Control type="phone" className="mb-2" placeholder="Phone" />
+                  <Form.Control
+                    as="select"
+                    className="mb-2"
+                  >
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="black">Black</option>
+                    <option value="orange">Orange</option>
+                  </Form.Control>
                   <Button variant="primary" className="btn-icon btn-icon-start">
-                    <CsLineIcons icon="chevron-right" /> <span>Join Now</span>
+                    <CsLineIcons icon="chevron-right" /> <span>Submit</span>
                   </Button>
                 </Card.Body>
               </Card>
@@ -352,7 +143,7 @@ const BlogGrid = () => {
             {/* Mailing List End */}
 
             {/* Must Read Start */}
-            <Col xs="12" className="mb-5">
+            {/* <Col xs="12" className="mb-5">
               <h2 className="small-title">Must Read</h2>
               <Row className="mb-n2">
                 <Col md="6" xl="12" className="mb-2">
@@ -428,11 +219,11 @@ const BlogGrid = () => {
                   </Card>
                 </Col>
               </Row>
-            </Col>
+            </Col> */}
             {/* Must Read End */}
 
             {/* Categories Start */}
-            <Col sm="6" xl="12" className="mb-5">
+            {/* <Col sm="6" xl="12" className="mb-5">
               <h2 className="small-title">Categories</h2>
               <Card>
                 <Card.Body>
@@ -468,11 +259,11 @@ const BlogGrid = () => {
                   </Row>
                 </Card.Body>
               </Card>
-            </Col>
+            </Col> */}
             {/* Categories End */}
 
             {/* Tags Start */}
-            <Col sm="6" xl="12">
+            {/* <Col sm="6" xl="12">
               <h2 className="small-title">Tags</h2>
               <Card>
                 <Card.Body className="mb-n1">
@@ -496,7 +287,7 @@ const BlogGrid = () => {
                   </Button>
                 </Card.Body>
               </Card>
-            </Col>
+            </Col> */}
             {/* Tags End */}
           </Row>
         </Col>

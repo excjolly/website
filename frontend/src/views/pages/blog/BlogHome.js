@@ -24,14 +24,14 @@ const BlogHome = () => {
     <>
       <HtmlHead title={title} description={description} />
       {/* Title Start */}
-      <div className="page-title-container">
+      {/* <div className="page-title-container">
         <h1 className="mb-0 pb-0 display-4">{title}</h1>
         <BreadcrumbList items={breadcrumbs} />
-      </div>
+      </div> */}
       {/* Title End */}
 
       {/* Top Stories Start */}
-      <h2 className="small-title">Top Stories</h2>
+      {/* <h2 className="small-title">Top Stories</h2>
       <Row className="g-4 mb-5">
         <Col lg="6" className="sh-40">
           <Card className="h-100">
@@ -202,7 +202,7 @@ const BlogHome = () => {
           </Card>
         </Col>
       </Row>
-      {/* Top Stories End */}
+      Top Stories End */}
 
       {/* Popular Articles Start */}
       <h2 className="small-title">Popular Articles</h2>
@@ -273,7 +273,7 @@ const BlogHome = () => {
       {/* Popular Articles End */}
 
       {/* Quick Reads Start */}
-      <h2 className="small-title">Quick Reads</h2>
+      {/* <h2 className="small-title">Quick Reads</h2>
       <Row className="row-cols-1 row-cols-sm-2 row-cols-xl-4">
         <Col sm="6" lg="3" className="sh-40 mb-5">
           <Card className="h-100">
@@ -371,7 +371,7 @@ const BlogHome = () => {
             </Card.Footer>
           </Card>
         </Col>
-      </Row>
+      </Row> */}
       {/* Quick Reads End */}
     </>
   );

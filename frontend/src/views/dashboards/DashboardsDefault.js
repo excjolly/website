@@ -11,7 +11,8 @@ import ChartLargeLineSales from 'views/interface/plugins/chart/ChartLargeLineSal
 import ChartLargeLineStock from 'views/interface/plugins/chart/ChartLargeLineStock';
 import ChartSmallDoughnutChart1 from 'views/interface/plugins/chart/ChartSmallDoughnutChart1';
 import BlogGrid from 'views/pages/blog/BlogGrid';
-import 'intro.js/introjs.css';
+import BlogHome from 'views/pages/blog/BlogHome';     
+import 'intro.js/introjs.css';                          
 
 const DashboardsDefault = () => {
   const title = 'Dashboard';
@@ -139,7 +140,9 @@ const DashboardsDefault = () => {
           </Card>
         </Col>
       </Row>
-
+      <Row>
+        <BlogGrid/>
+      </Row>
       <Row>
         {/* Logs Start */}
         <Col lg="6" className="mb-5">
@@ -456,10 +459,11 @@ const DashboardsDefault = () => {
             </Col>
           </Row>
         </Col>
-        <BlogGrid/>
         {/* Categories End */}
       </Row>
-      {/* Extend Your Knowledge End */}
+      <Row>
+        <BlogHome/>
+      </Row>
     </>
   );
 };
