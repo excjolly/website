@@ -6,7 +6,7 @@ const HtmlHead = ({ title = '', description = '', children = null }) => {
   return (
     <Helmet>
       {title && <title>{title}</title>}
-      {description && <meta name="description" content="description" />}
+      {description && <meta name="description" content={description} />}
       {children && children}
     </Helmet>
   );

@@ -16,6 +16,7 @@ import BlogDetail from 'views/pages/blog/BlogDetail';
 import CarouselFlow from 'views/interface/plugins/carousel/CarouselFlow';
 import CarouselSingle from 'views/interface/plugins/carousel/CarouselSingle';
 import 'intro.js/introjs.css';                          
+import { ThumbnailsIconContent } from 'views/blocks/thumbnails/ThumbnailsIconContent';
 
 const DashboardsDefault = () => {
   const title = 'Dashboard';
@@ -479,7 +480,8 @@ const DashboardsDefault = () => {
         <CarouselFlow/>
       </Row>
       <Row>
-        <BlogGrid/>
+        <h2 className="small-title">Categories</h2>
+        <ThumbnailsIconContent/>
       </Row>
     </>
   );
