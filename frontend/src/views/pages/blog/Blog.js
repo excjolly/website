@@ -5,6 +5,7 @@ import HtmlHead from 'components/html-head/HtmlHead';
 import BreadcrumbList from 'components/breadcrumb-list/BreadcrumbList';
 import CsLineIcons from 'cs-line-icons/CsLineIcons';
 
+
 const BlogPage = () => {
   const title = 'Blog';
   const description = 'Blog pages for home, detail and listing layouts.';

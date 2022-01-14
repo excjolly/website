@@ -8,6 +8,7 @@ import Clamp from 'components/clamp';
 import CsLineIcons from 'cs-line-icons/CsLineIcons';
 import Glide from 'components/carousel/Glide';
 import useCustomLayout from 'hooks/useCustomLayout';
+import MetaTags from 'react-meta-tags';
 
 const BlogHome = () => {
   const title = 'Blog Home';

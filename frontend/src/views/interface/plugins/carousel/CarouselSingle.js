@@ -11,7 +11,7 @@ const CarouselSingle = () => {
         perView: 1,
       }}
     >
-      {[1, 2, 3].map((i) => (
+      {[1, 2, 3, 4].map((i) => (
         <Glide.Item key={`single.${i}`}>
           <Card className="mb-5">
             <Row className="sh-10 g-0">

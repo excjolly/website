@@ -12,6 +12,9 @@ import ChartLargeLineStock from 'views/interface/plugins/chart/ChartLargeLineSto
 import ChartSmallDoughnutChart1 from 'views/interface/plugins/chart/ChartSmallDoughnutChart1';
 import BlogGrid from 'views/pages/blog/BlogGrid';
 import BlogHome from 'views/pages/blog/BlogHome';     
+import BlogDetail from 'views/pages/blog/BlogDetail';
+import CarouselFlow from 'views/interface/plugins/carousel/CarouselFlow';
+import CarouselSingle from 'views/interface/plugins/carousel/CarouselSingle';
 import 'intro.js/introjs.css';                          
 
 const DashboardsDefault = () => {
@@ -55,7 +58,7 @@ const DashboardsDefault = () => {
       <HtmlHead title={title} description={description} />
 
       {/* Tour Start */}
-      <Steps
+      {/* <Steps
         enabled={tourEnabled}
         steps={tourSteps}
         initialStep={0}
@@ -63,22 +66,23 @@ const DashboardsDefault = () => {
         onExit={() => {
           setTourEnabled(false);
         }}
-      />
+      /> */}
       {/* Tour End */}
 
       {/* Title and Top Buttons Start */}
-      <div className="page-title-container">
+
         <Row>
           {/* Title Start */}
-          <Col md="7">
-            <h1 className="mb-0 pb-0 display-4">{title}</h1>
+           <Col md="7">
+            {/* <h1 className="mb-0 pb-0 display-4">{title}</h1> */}
             {/* <BreadcrumbList items={breadcrumbs} /> */}
           </Col>
           {/* Title End */}
 
           {/* Top Buttons Start */}
-          {/* <Col md="5" className="d-flex align-items-start justify-content-end">
-            <Button
+           <Col md="5" className="d-flex align-items-start justify-content-end">
+             <h1>Course recommendation</h1>
+            {/* <Button
               variant="outline-primary"
               className="btn-icon btn-icon-start btn-icon w-100 w-md-auto ms-1"
               onClick={() => {
@@ -86,12 +90,14 @@ const DashboardsDefault = () => {
               }}
             >
               <CsLineIcons icon="flag" /> <span>Take a Tour</span>
-            </Button>
-          </Col> */}
+            </Button> */}
+          </Col>
           {/* Top Buttons End */}
         </Row>
-      </div>
       {/* Title and Top Buttons End */}
+      <Row>
+        <BlogDetail/>
+      </Row>
 
       <Row>
         {/* <h2 className="small-title">Extend Your Knowledge</h2> */}
@@ -463,6 +469,17 @@ const DashboardsDefault = () => {
       </Row>
       <Row>
         <BlogHome/>
+      </Row>
+      <Row>
+        <h2 className="small-title">Categories</h2>
+        <CarouselSingle/>
+      </Row>
+      <Row>
+        <h2 className="small-title">Categories</h2>
+        <CarouselFlow/>
+      </Row>
+      <Row>
+        <BlogGrid/>
       </Row>
     </>
   );

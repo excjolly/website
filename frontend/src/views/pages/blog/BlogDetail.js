@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card, Col, Row } from 'react-bootstrap';
+import { Button, Card, Col, Row,Form } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import { LAYOUT } from 'constants.js';
 import HtmlHead from 'components/html-head/HtmlHead';
@@ -48,17 +48,20 @@ const BlogDetail = () => {
     <>
       <HtmlHead title={title} description={description} />
       {/* Title Start */}
-      <div className="page-title-container">
+      {/* <div className="page-title-container">
         <h1 className="mb-0 pb-0 display-4">{title}</h1>
         <BreadcrumbList items={breadcrumbs} />
-      </div>
+      </div> */}
       {/* Title End */}
 
       <Row className="g-5">
         <Col xl="8" xxl="9" className="mb-5">
           {/* Content Start */}
-          <Card className="mb-5">
-            <GlideGallery>
+          {/* <Card className="mb-5"> */}
+            {/* <GlideGallery.Item> */}
+            <img alt="detail" src='/img/product/large/banner.jpeg' className="responsive border-0 rounded mb-5 w-100 sh-50" />
+            {/* </GlideGallery.Item> */}
+            {/* <GlideGallery>
               <GlideGallery.LargeItems>
                 {galleyItems.map((item, index) => (
                   <GlideGallery.Item key={`half.boxed.large.${index}`}>
@@ -73,9 +76,9 @@ const BlogDetail = () => {
                   </GlideGallery.Item>
                 ))}
               </GlideGallery.ThumbItems>
-            </GlideGallery>
+            </GlideGallery> */}
 
-            <Card.Body>
+            {/* <Card.Body>
               <h4 className="mb-3">Carrot Cake Gingerbread</h4>
               <div>
                 <p>
@@ -111,8 +114,8 @@ const BlogDetail = () => {
                   lollipop jelly-o candy caramels.
                 </p>
               </div>
-            </Card.Body>
-            <Card.Footer className="border-0 pt-0">
+            </Card.Body> */}
+            {/* <Card.Footer className="border-0 pt-0">
               <Row className="align-items-center">
                 <Col xs="6">
                   <Row className="g-0">
@@ -137,12 +140,12 @@ const BlogDetail = () => {
                   </div>
                 </Col>
               </Row>
-            </Card.Footer>
-          </Card>
+            </Card.Footer> */}
+          {/* </Card> */}
           {/* Content End */}
 
           {/* About the Author Start */}
-          <h2 className="small-title">About the Author</h2>
+          {/* <h2 className="small-title">About the Author</h2>
           <Card className="mb-5">
             <Card.Body>
               <Row className="g-0">
@@ -162,12 +165,12 @@ const BlogDetail = () => {
                 </Col>
               </Row>
             </Card.Body>
-          </Card>
+          </Card> */}
           {/* About the Author End */}
 
           {/* You May Also Like Start */}
-          <h2 className="small-title">You May Also Like</h2>
-          <Row className="g-4">
+          {/* <h2 className="small-title">You May Also Like</h2> */}
+          {/* <Row className="g-4">
             <Col md="4" className="sh-40">
               <Card className="h-100">
                 <Card.Img src="/img/product/small/product-2.webp" className="card-img-top sh-22" alt="card image" />
@@ -240,7 +243,7 @@ const BlogDetail = () => {
                 </Card.Footer>
               </Card>
             </Col>
-          </Row>
+          </Row> */}
           {/* You May Also Like End */}
         </Col>
 
@@ -250,61 +253,81 @@ const BlogDetail = () => {
             {/* Must Read Start */}
             <Col xs="12" className="mb-5">
               <Row className="mb-n2">
-                <Col md="6" xl="12" className="mb-2">
-                  <Card className="sh-11 sh-sm-14">
-                    <Row className="g-0 h-100">
-                      <Col xs="auto">
-                        <img src="/img/product/small/product-3.webp" alt="user" className="card-img card-img-horizontal sw-10 sw-sm-14" />
-                      </Col>
-                      <Col>
-                        <Card.Body className="d-flex flex-column pt-0 pb-0 h-100 justify-content-center">
-                          <NavLink to="/pages/blog/detail" className="body-link stretched-link">
-                            <Clamp tag="span" clamp="2">
-                              A Complete Guide to Mix Dough for the Molds
-                            </Clamp>
-                          </NavLink>
-                        </Card.Body>
-                      </Col>
-                    </Row>
-                  </Card>
-                </Col>
-                <Col md="6" xl="12" className="mb-2">
-                  <Card className="sh-11 sh-sm-14">
-                    <Row className="g-0 h-100">
-                      <Col xs="auto">
-                        <img src="/img/product/small/product-4.webp" alt="user" className="card-img card-img-horizontal sw-10 sw-sm-14" />
-                      </Col>
-                      <Col>
-                        <Card.Body className="d-flex flex-column pt-0 pb-0 h-100 justify-content-center">
-                          <NavLink to="/pages/blog/detail" className="body-link stretched-link">
-                            <Clamp tag="span" clamp="2">
-                              Apple Cake Recipe for Starters
-                            </Clamp>
-                          </NavLink>
-                        </Card.Body>
-                      </Col>
-                    </Row>
-                  </Card>
-                </Col>
-                <Col md="6" xl="12" className="mb-2">
-                  <Card className="sh-11 sh-sm-14">
-                    <Row className="g-0 h-100">
-                      <Col xs="auto">
-                        <img src="/img/product/small/product-5.webp" alt="user" className="card-img card-img-horizontal sw-10 sw-sm-14" />
-                      </Col>
-                      <Col>
-                        <Card.Body className="d-flex flex-column pt-0 pb-0 h-100 justify-content-center">
-                          <NavLink to="/pages/blog/detail" className="body-link stretched-link">
-                            <Clamp tag="span" clamp="2">
-                              Basic Introduction to Bread Making
-                            </Clamp>
-                          </NavLink>
-                        </Card.Body>
-                      </Col>
-                    </Row>
-                  </Card>
-                </Col>
-                <Col md="6" xl="12" className="mb-2">
+              <Card className="w-100 sh-50">
+                <Card.Body>
+                  {/* <div className="cta-3">Ready to make bread?</div> */}
+                  {/* <div className="mb-3 cta-3 text-primary">Enquire Now</div> */}
+                  {/* <div className="text-muted mb-3">Cheesecake chocolate carrot cake pie lollipop lemon drops.</div> */}
+                  <Form.Control
+                    as="select"
+                    className="mb-2"
+                  >
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="black">Black</option>
+                    <option value="orange">Orange</option>
+                  </Form.Control><Form.Control
+                    as="select"
+                    className="mb-2"
+                  >
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="black">Black</option>
+                    <option value="orange">Orange</option>
+                  </Form.Control><Form.Control
+                    as="select"
+                    className="mb-2"
+                  >
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="black">Black</option>
+                    <option value="orange">Orange</option>
+                  </Form.Control><Form.Control
+                    as="select"
+                    className="mb-2"
+                  >
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="black">Black</option>
+                    <option value="orange">Orange</option>
+                  </Form.Control><Form.Control
+                    as="select"
+                    className="mb-2"
+                  >
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="black">Black</option>
+                    <option value="orange">Orange</option>
+                  </Form.Control><Form.Control
+                    as="select"
+                    className="mb-2"
+                  >
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="black">Black</option>
+                    <option value="orange">Orange</option>
+                  </Form.Control><Form.Control
+                    as="select"
+                    className="mb-2"
+                  >
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="black">Black</option>
+                    <option value="orange">Orange</option>
+                  </Form.Control>
+                  <Button variant="primary" className="btn-icon btn-icon-start">
+                    <CsLineIcons icon="chevron-right" /> <span>Submit</span>
+                  </Button>
+                </Card.Body>
+              </Card>
+                {/* <Col md="6" xl="12" className="mb-2">
                   <Card className="sh-11 sh-sm-14">
                     <Row className="g-0 h-100">
                       <Col xs="auto">
@@ -321,13 +344,13 @@ const BlogDetail = () => {
                       </Col>
                     </Row>
                   </Card>
-                </Col>
+                </Col> */}
               </Row>
             </Col>
             {/* Must Read End */}
           </Row>
 
-          <Row>
+          {/* <Row>
             <Col xs="12" sm="6" xl="12" className="mb-2">
               <Card className="w-100 sh-25 hover-img-scale-up">
                 <img src="/img/banner/cta-square-1.webp" className="card-img h-100 scale" alt="card image" />
@@ -362,7 +385,7 @@ const BlogDetail = () => {
                 </div>
               </Card>
             </Col>
-          </Row>
+          </Row> */}
         </Col>
         {/* Sidebar End */}
       </Row>
