@@ -72,17 +72,17 @@ const DashboardsDefault = () => {
 
       {/* Title and Top Buttons Start */}
 
-        <Row>
+        {/* <Row> */}
           {/* Title Start */}
-           <Col md="7">
+           {/* <Col md="7"> */}
             {/* <h1 className="mb-0 pb-0 display-4">{title}</h1> */}
             {/* <BreadcrumbList items={breadcrumbs} /> */}
-          </Col>
+          {/* </Col> */}
           {/* Title End */}
 
           {/* Top Buttons Start */}
-           <Col md="5" className="d-flex align-items-start justify-content-end">
-             <h1>Course recommendation</h1>
+           {/* <Col md="5" className="d-flex align-items-start justify-content-end">
+             <h1>Course recommendation</h1> */}
             {/* <Button
               variant="outline-primary"
               className="btn-icon btn-icon-start btn-icon w-100 w-md-auto ms-1"
@@ -92,9 +92,9 @@ const DashboardsDefault = () => {
             >
               <CsLineIcons icon="flag" /> <span>Take a Tour</span>
             </Button> */}
-          </Col>
+          {/* </Col> */}
           {/* Top Buttons End */}
-        </Row>
+        {/* </Row> */}
       {/* Title and Top Buttons End */}
       <Row>
         <BlogDetail/>
@@ -470,6 +470,7 @@ const DashboardsDefault = () => {
       </Row>
       <Row>
         <BlogHome/>
+        // Images vertical
       </Row>
       <Row>
         <h2 className="small-title">Categories</h2>
@@ -483,6 +484,8 @@ const DashboardsDefault = () => {
         <h2 className="small-title">Categories</h2>
         <ThumbnailsIconContent/>
       </Row>
+      // player - interface
+      // videos - basic 2 - carousal
     </>
   );
 };

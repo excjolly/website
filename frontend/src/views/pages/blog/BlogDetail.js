@@ -248,10 +248,14 @@ const BlogDetail = () => {
         </Col>
 
         {/* Sidebar Start */}
+        // Form wizard - Basic
         <Col xl="4" xxl="3">
           <Row>
             {/* Must Read Start */}
             <Col xs="12" className="mb-5">
+              <h2>
+                Course Recommendation
+              </h2>
               <Row className="mb-n2">
               <Card className="w-100 sh-50">
                 <Card.Body>
