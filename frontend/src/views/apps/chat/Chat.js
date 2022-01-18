@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Row, Col, Button, Card, Nav, Tab } from 'react-bootstrap';
 import { OverlayScrollbarsComponent } from 'overlayscrollbars-react';
-
 import { useSelector, useDispatch } from 'react-redux';
 import HtmlHead from 'components/html-head/HtmlHead';
 import BreadcrumbList from 'components/breadcrumb-list/BreadcrumbList';
@@ -12,6 +11,7 @@ import ChatView from './components/ChatView';
 import CallView from './components/CallView';
 import ContactListItem from './components/ContactListItem';
 import { getItems, chatSetSelectedTab, selectChat } from './chatSlice';
+import { Helmet } from 'react-helmet';
 
 const ChatApp = () => {
   const title = 'Chat';
@@ -76,6 +76,10 @@ const ChatApp = () => {
 
   return (
     <>
+    <Helmet>
+      <link rel="canonical" href="/apps/chat">
+      </link>
+    </Helmet>
       <HtmlHead title={title} description={description} />
       <div className="h-100 d-flex flex-column">
         <div className="page-title-container">

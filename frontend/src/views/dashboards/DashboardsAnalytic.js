@@ -17,6 +17,7 @@ import ChartSmallDoughnutChart3 from 'views/interface/plugins/chart/ChartSmallDo
 import ChartSmallDoughnutChart4 from 'views/interface/plugins/chart/ChartSmallDoughnutChart4';
 import ChartSmallDoughnutChart5 from 'views/interface/plugins/chart/ChartSmallDoughnutChart5';
 import ChartSmallDoughnutChart6 from 'views/interface/plugins/chart/ChartSmallDoughnutChart6';
+import { Helmet } from 'react-helmet';
 
 const DashboardsAnalytic = () => {
   const title = 'Analytic Dashboard';
@@ -30,6 +31,10 @@ const DashboardsAnalytic = () => {
   return (
     <>
       <HtmlHead title={title} description={description} />
+      <Helmet>
+        <link rel="canonical" href="/dashboards/analytic">
+        </link>
+      </Helmet>
       {/* Title and Top Buttons Start */}
       <div className="page-title-container">
         <Row>

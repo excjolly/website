@@ -17,6 +17,7 @@ import CarouselFlow from 'views/interface/plugins/carousel/CarouselFlow';
 import CarouselSingle from 'views/interface/plugins/carousel/CarouselSingle';
 import 'intro.js/introjs.css';                          
 import { ThumbnailsIconContent } from 'views/blocks/thumbnails/ThumbnailsIconContent';
+import { Helmet } from 'react-helmet';
 
 const DashboardsDefault = () => {
   const title = 'Dashboard';
@@ -57,6 +58,10 @@ const DashboardsDefault = () => {
   return (
     <>
       <HtmlHead title={title} description={description} />
+      <Helmet>
+        <link rel="canonical" href="/dashboards/default">
+        </link>
+      </Helmet>
 
       {/* Tour Start */}
       {/* <Steps
