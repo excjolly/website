@@ -103,50 +103,27 @@ const DashboardsDefault = () => {
           {/* Top Buttons End */}
         {/* </Row> */}
       {/* Title and Top Buttons End */}
-      <Row>
+      {/* <Row> */}
         <BlogDetail/>
-      </Row>
+      {/* </Row> */}
 
       <Row>
-        {/* <h2 className="small-title">Extend Your Knowledge</h2> */}
-        <Col md="4" className="mb-5">
+        <h2 className="small-title">Extend Your Knowledge</h2>
+        <Col md="4" className="mb-3">
           <Card className="sh-13">
             <Card.Body className="py-0 d-flex align-items-center">
               <ChartSmallDoughnutChart1 />
             </Card.Body>
           </Card>
         </Col>
-        <Col md="4" className="mb-5">
+        <Col md="4" className="mb-3">
           <Card className="sh-13">
             <Card.Body className="py-0 d-flex align-items-center">
               <ChartSmallDoughnutChart1 />
             </Card.Body>
           </Card>
         </Col>
-        <Col md="4" className="mb-5">
-          <Card className="sh-13">
-            <Card.Body className="py-0 d-flex align-items-center">
-              <ChartSmallDoughnutChart1 />
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-      <Row>
-        <Col md="4" className="mb-5">
-          <Card className="sh-13">
-            <Card.Body className="py-0 d-flex align-items-center">
-              <ChartSmallDoughnutChart1 />
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md="4" className="mb-5">
-          <Card className="sh-13">
-            <Card.Body className="py-0 d-flex align-items-center">
-              <ChartSmallDoughnutChart1 />
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md="4" className="mb-5">
+        <Col md="4" className="mb-3">
           <Card className="sh-13">
             <Card.Body className="py-0 d-flex align-items-center">
               <ChartSmallDoughnutChart1 />
@@ -155,8 +132,32 @@ const DashboardsDefault = () => {
         </Col>
       </Row>
       <Row>
+        <Col md="4" className="mb-3">
+          <Card className="sh-13">
+            <Card.Body className="py-0 d-flex align-items-center">
+              <ChartSmallDoughnutChart1 />
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col md="4" className="mb-3">
+          <Card className="sh-13">
+            <Card.Body className="py-0 d-flex align-items-center">
+              <ChartSmallDoughnutChart1 />
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col md="4" className="mb-3">
+          <Card className="sh-13">
+            <Card.Body className="py-0 d-flex align-items-center">
+              <ChartSmallDoughnutChart1 />
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+      {/* <Row> */}
+      <h2 className="small-title">Blogs</h2> 
         <BlogGrid/>
-      </Row>
+      {/* </Row> */}
       <Row>
         {/* Logs Start */}
         <Col lg="4" className="mb-5">
@@ -426,26 +427,23 @@ const DashboardsDefault = () => {
         {/* Categories End */}
       </Row>
       <Row>
-        {/* <h2 className="small-title">Categories</h2> */}
-        {/* <ThumbnailsImagesVertical/> */}
+        <h2 className="small-title">Testimonials</h2>
         <BlogHome/>
-        {/* autoplay */}
-        {/* portfolio home left  */}
       </Row>
       <Row>
-        <h2 className="small-title">Categories</h2>
+        <h2 className="small-title">Admission Procedure</h2>
         <CarouselSingle/>
       </Row>
       <Row>
-        <h2 className="small-title">Categories</h2>
+        <h2 className="small-title">Our Partners</h2>
         <CarouselFlow/>
       </Row>
-      <Row>
-        <h2 className="small-title">Categories</h2>
+      {/* <Row> */}
+        <h2 className="small-title">Our Courses</h2>
         <ThumbnailsIconContent/>
-      </Row>
+      {/* </Row> */}
       <Row>
-        <h2 className="small-title">Categories</h2>
+        <h2 className="small-title">Videos</h2>
         <PlayerBasic/>
       </Row>
     </>

@@ -205,7 +205,6 @@ const BlogHome = () => {
       Top Stories End */}
 
       {/* Popular Articles Start */}
-      <h2 className="small-title">Popular Articles</h2>
       <Row>
         <Glide
           className="mb-5"

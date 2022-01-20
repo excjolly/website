@@ -24,18 +24,23 @@ const BlogGrid = () => {
     <>
       {/* Title Start */}
       {/* Title End */}
-      <Row className="g-5">
-        <Col xl="8" xxl="9" className="mb-5">
+      <Row>
+        <Col>
           {/* Grid Start */}
           <Row className="row-cols-1 row-cols-sm-2 row-cols-xl-3 g-2 mb-5">
             <Glide
             options={{
-              perView: 3,
+              perView: 3,    
+              breakpoints: {
+                400: {
+                  perView: 1
+                }
+              }
             }}>
             {[1, 2, 3, 4, 5, 6, 7].map((i) => (
               <Glide.Item key={`basic.${i}`} >
               <Col className="mb-5">
-                <Card className="h-100">
+                <Card>
                   <Card.Img src="/img/product/small/product-6.webp" className="card-img-top sh-16" alt="card image" />
                   <Card.Body>
                     <h5 className="heading mb-0">
@@ -110,13 +115,6 @@ const BlogGrid = () => {
               </Card>
             </Col>           */}
           </Row>
-          <Row>
-            <Col xs="12" className="text-center">
-              {/* <Button size="xl" variant="outline-primary" className="sw-30">
-                Load More
-              </Button> */}
-            </Col>
-          </Row>
           {/* Grid End */}
         </Col>
 
@@ -124,18 +122,18 @@ const BlogGrid = () => {
         <Col xl="4" xxl="3">
           <Row>
             {/* Mailing List Start */}
-            <Col xs="12" className="mb-3">
+            <Col xs="12">
               <Card>
-                <Card.Body  style = {{ padding : '0.9rem 1.5rem' }}>
+                <Card.Body className="pb-4 pt-3">
                   {/* <div className="cta-3">Ready to make bread?</div> */}
-                  <div className="mb-3 pt-0 text-primary">Enquire Now</div>
+                  <div className="mb-2 pt-0 text-primary">Enquire Now</div>
                   {/* <div className="text-muted mb-3">Cheesecake chocolate carrot cake pie lollipop lemon drops.</div> */}
-                  <Form.Control type="name" className="mb-2" placeholder="Name" />
-                  <Form.Control type="email" className="mb-2" placeholder="E-mail" />
-                  <Form.Control type="phone" className="mb-2" placeholder="Phone" />
+                  <Form.Control type="name" className="mb-1" placeholder="Name" />
+                  <Form.Control type="email" className="mb-1" placeholder="E-mail" />
+                  <Form.Control type="phone" className="mb-1" placeholder="Phone" />
                   <Form.Control
                     as="select"
-                    className="mb-3"
+                    className="mb-1"
                   >
                     <option value="red">Red</option>
                     <option value="blue">Blue</option>

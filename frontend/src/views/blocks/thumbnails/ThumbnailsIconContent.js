@@ -6,11 +6,16 @@ import Glide from 'components/carousel/Glide';
 
 export const ThumbnailsIconContent = () => {
   return (
-    <Row className="row row-cols-1 row-cols-sm-2 row-cols-xl-3">
+    <Row>
     <Glide
       options={{
         perView: 3,
-        peek: { before: -2, after: 10 },
+        peek: { before: 0, after: 10 },        
+        breakpoints: {
+          400: {
+            perView: 1
+          }
+        }
       }}
       >
       {[1, 2, 3, 4, 5, 6, 7].map((i) => (

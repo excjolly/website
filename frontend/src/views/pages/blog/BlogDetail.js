@@ -55,12 +55,12 @@ const BlogDetail = () => {
       </div> */}
       {/* Title End */}
 
-      <Row className="g-5">
-        <Col xl="8" xxl="9" className="mb-5">
+      <Row>
+        <Col xl="8" xxl="9" className="mb-3 mt-3">
           {/* Content Start */}
           {/* <Card className="mb-5"> */}
             {/* <GlideGallery.Item> */}
-            <img alt="detail" src='/img/product/large/banner.jpeg' className="responsive border-0 rounded mb-5 w-100 sh-50" />
+            <img alt="detail" src='/img/product/large/banner.jpeg' className="responsive border-0 rounded mb-3 w-100 sh-50" />
             {/* </GlideGallery.Item> */}
             {/* <GlideGallery>
               <GlideGallery.LargeItems>
@@ -253,7 +253,7 @@ const BlogDetail = () => {
         <Col xl="4" xxl="3">
           <Row>
             {/* Must Read Start */}
-            <Col xs="12" className="mb-5">
+            <Col xs="12" className="mb-3 mt-3">
               <Row className="mb-n2">
               <Card className="w-100 sh-50">
                 <Card.Body>
