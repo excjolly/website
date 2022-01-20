@@ -159,7 +159,7 @@ const DashboardsDefault = () => {
       </Row>
       <Row>
         {/* Logs Start */}
-        <Col lg="6" className="mb-5">
+        <Col lg="4" className="mb-5">
           <h2 className="small-title">Logs</h2>
           <Card className="sh-40 h-lg-100-card">
             <Card.Body className="mb-n2 scroll-out h-100">
@@ -179,11 +179,6 @@ const DashboardsDefault = () => {
                       </div>
                     </div>
                   </Col>
-                  <Col xs="auto">
-                    <div className="d-inline-block d-flex justify-content-end align-items-center h-100">
-                      <div className="text-muted ms-2 mt-n1 lh-1-25">18 Dec</div>
-                    </div>
-                  </Col>
                 </Row>
                 <Row className="g-0 mb-2">
                   <Col xs="auto">
@@ -200,11 +195,7 @@ const DashboardsDefault = () => {
                       </div>
                     </div>
                   </Col>
-                  <Col xs="auto">
-                    <div className="d-inline-block d-flex justify-content-end align-items-center h-100">
-                      <div className="text-muted ms-2 mt-n1 lh-1-25">15 Dec</div>
-                    </div>
-                  </Col>
+              
                 </Row>
                 <Row className="g-0 mb-2">
                   <Col xs="auto">
@@ -221,11 +212,7 @@ const DashboardsDefault = () => {
                       </div>
                     </div>
                   </Col>
-                  <Col xs="auto">
-                    <div className="d-inline-block d-flex justify-content-end align-items-center h-100">
-                      <div className="text-muted ms-2 mt-n1 lh-1-25">14 Dec</div>
-                    </div>
-                  </Col>
+                
                 </Row>
                 <Row className="g-0 mb-2">
                   <Col xs="auto">
@@ -240,11 +227,6 @@ const DashboardsDefault = () => {
                       <div className="d-flex flex-column">
                         <div className="text-alternate mt-n1 lh-1-25">14 products added</div>
                       </div>
-                    </div>
-                  </Col>
-                  <Col xs="auto">
-                    <div className="d-inline-block d-flex justify-content-end align-items-center h-100">
-                      <div className="text-muted ms-2 mt-n1 lh-1-25">14 Dec</div>
                     </div>
                   </Col>
                 </Row>
@@ -263,11 +245,6 @@ const DashboardsDefault = () => {
                       </div>
                     </div>
                   </Col>
-                  <Col xs="auto">
-                    <div className="d-inline-block d-flex justify-content-end align-items-center h-100">
-                      <div className="text-muted ms-2 mt-n1 lh-1-25">14 Dec</div>
-                    </div>
-                  </Col>
                 </Row>
                 <Row className="g-0 mb-2">
                   <Col xs="auto">
@@ -284,11 +261,7 @@ const DashboardsDefault = () => {
                       </div>
                     </div>
                   </Col>
-                  <Col xs="auto">
-                    <div className="d-inline-block d-flex justify-content-end align-items-center h-100">
-                      <div className="text-muted ms-2 mt-n1 lh-1-25">15 Dec</div>
-                    </div>
-                  </Col>
+                  
                 </Row>
                 <Row className="g-0 mb-2">
                   <Col xs="auto">
@@ -305,11 +278,7 @@ const DashboardsDefault = () => {
                       </div>
                     </div>
                   </Col>
-                  <Col xs="auto">
-                    <div className="d-inline-block d-flex justify-content-end align-items-center h-100">
-                      <div className="text-muted ms-2 mt-n1 lh-1-25">14 Dec</div>
-                    </div>
-                  </Col>
+                  
                 </Row>
                 <Row className="g-0 mb-2">
                   <Col xs="auto">
@@ -326,11 +295,7 @@ const DashboardsDefault = () => {
                       </div>
                     </div>
                   </Col>
-                  <Col xs="auto">
-                    <div className="d-inline-block d-flex justify-content-end align-items-center h-100">
-                      <div className="text-muted ms-2 mt-n1 lh-1-25">13 Dec</div>
-                    </div>
-                  </Col>
+                  
                 </Row>
                 <Row className="g-0 mb-2">
                   <Col xs="auto">
@@ -347,11 +312,6 @@ const DashboardsDefault = () => {
                       </div>
                     </div>
                   </Col>
-                  <Col xs="auto">
-                    <div className="d-inline-block d-flex justify-content-end align-items-center h-100">
-                      <div className="text-muted ms-2 mt-n1 lh-1-25">13 Dec</div>
-                    </div>
-                  </Col>
                 </Row>
                 <Row className="g-0 mb-2">
                   <Col xs="auto">
@@ -366,11 +326,6 @@ const DashboardsDefault = () => {
                       <div className="d-flex flex-column">
                         <div className="text-alternate mt-n1 lh-1-25">Recived a support ticket</div>
                       </div>
-                    </div>
-                  </Col>
-                  <Col xs="auto">
-                    <div className="d-inline-block d-flex justify-content-end align-items-center h-100">
-                      <div className="text-muted ms-2 mt-n1 lh-1-25">13 Dec</div>
                     </div>
                   </Col>
                 </Row>
@@ -389,11 +344,6 @@ const DashboardsDefault = () => {
                       </div>
                     </div>
                   </Col>
-                  <Col xs="auto">
-                    <div className="d-inline-block d-flex justify-content-end align-items-center h-100">
-                      <div className="text-muted ms-2 mt-n1 lh-1-25">13 Dec</div>
-                    </div>
-                  </Col>
                 </Row>
               </OverlayScrollbarsComponent>
             </Card.Body>
@@ -402,7 +352,7 @@ const DashboardsDefault = () => {
         {/* Logs End */}
 
         {/* Categories Start */}
-        <Col lg="6" className="mb-5">
+        <Col lg="8" className="mb-5">
           <h2 className="small-title">Categories</h2>
           <Row className="g-2">
             <Col xs="6" xl="4" className="sh-19">

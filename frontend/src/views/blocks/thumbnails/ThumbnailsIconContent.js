@@ -11,9 +11,10 @@ export const ThumbnailsIconContent = () => {
       options={{
         perView: 3,
         peek: { before: -2, after: 10 },
-      }}>
+      }}
+      >
       {[1, 2, 3, 4, 5, 6, 7].map((i) => (
-        <Glide.Item key={`basic.${i}`} >
+        <Glide.Item key={`basic.${i}`}>
           <Col className="mb-5">
             <Card className="h-100">
               <Card.Img src="/img/product/small/product-6.webp" className="card-img-top sh-16" alt="card image" />

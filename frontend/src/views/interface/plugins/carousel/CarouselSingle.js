@@ -14,15 +14,15 @@ const CarouselSingle = () => {
     >
       {[1, 2, 3, 4].map((i) => (
         <Glide.Item key={`single.${i}`}>
-          <Card className="mb-5">
-            <Row className="sh-10 g-0">
+          <Card className="mb-5" style = {{ height : "9rem"}}>
+            <Row className="sh-10 g-0" style = {{ height : "9rem"}}>
               <Col className="d-flex align-items-center col-auto">
-                <Card.Img src="/img/product/small/product-7.webp" alt="card image" className="card-img-horizontal sw-10" />
+                <Card.Img src="/img/product/small/product-7.webp" alt="card image" className="card-img-horizontal sw-20" />
               </Col>
-              <Col className="h-100 col">
-                <Row className="h-100 align-content-center g-0">
+              <Col className="h-200 col" style = {{ height : "9rem"}}>
+                <Row className="h-200 align-content-center g-0">
                   <Col xs="12" lg="5" className="d-flex align-items-center">
-                    <p className="heading mb-0 ps-card">Sugar Plum Gummi</p>
+                    <p className="heading mb-0 ps-card" style = {{ padding : "3.6rem 1.8rem" }}>Sugar Plum Gummi</p>
                   </Col>
                   <Col xs="5" sm="5" lg="3" className="d-flex align-items-center mb-1 mb-md-0">
                     <p className="mb-0 text-alternate ps-card">08.08.2021</p>

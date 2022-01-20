@@ -124,18 +124,18 @@ const BlogGrid = () => {
         <Col xl="4" xxl="3">
           <Row>
             {/* Mailing List Start */}
-            <Col xs="12" className="mb-5">
+            <Col xs="12" className="mb-3">
               <Card>
-                <Card.Body>
+                <Card.Body  style = {{ padding : '0.9rem 1.5rem' }}>
                   {/* <div className="cta-3">Ready to make bread?</div> */}
-                  <div className="mb-3 cta-3 text-primary">Enquire Now</div>
+                  <div className="mb-3 pt-0 text-primary">Enquire Now</div>
                   {/* <div className="text-muted mb-3">Cheesecake chocolate carrot cake pie lollipop lemon drops.</div> */}
                   <Form.Control type="name" className="mb-2" placeholder="Name" />
                   <Form.Control type="email" className="mb-2" placeholder="E-mail" />
                   <Form.Control type="phone" className="mb-2" placeholder="Phone" />
                   <Form.Control
                     as="select"
-                    className="mb-2"
+                    className="mb-3"
                   >
                     <option value="red">Red</option>
                     <option value="blue">Blue</option>
