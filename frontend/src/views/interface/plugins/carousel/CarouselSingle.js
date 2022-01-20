@@ -8,6 +8,7 @@ const CarouselSingle = () => {
     <Glide
       options={{
         gap: 0,
+        peek: { before: 0, after: 10 },
         perView: 1,
       }}
     >

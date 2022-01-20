@@ -219,7 +219,10 @@ const BlogHome = () => {
               1600: { perView: 2 },
               2560: { perView: 3 },
             },
+            autoplay: 3000,
           }}
+          noDots =  {true}
+          noControls = {true}
         >
           <Glide.Item>
             <Col>

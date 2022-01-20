@@ -36,9 +36,9 @@ const WizardBasic = () => {
   };
 
   return (
-    <div className="wizard wizard-default">
+    <div className="wizard wizard-default mt-1">
       <Wizard>
-        <WithWizard
+        {/* <WithWizard
           render={({ next, previous, step, steps, go, push }) => (
             <ul className="nav nav-tabs justify-content-center">
               {steps.map((stepItem, index) => {
@@ -52,13 +52,13 @@ const WizardBasic = () => {
                     </li>
                   );
                 }
-                return <span key={`topNavStep_${index}`} />;
+                // return <span key={`topNavStep_${index}`} />;
               })}
             </ul>
           )}
-        />
+        /> */}
         <Steps>
-          <Step id="step1" name="First" desc="First description">
+          <Step id="step1">
             <div className="sh-30">
               <Form>
                 <h5 className="card-title">Question 1</h5>
@@ -84,10 +84,10 @@ const WizardBasic = () => {
               </Form>
             </div>
           </Step>
-          <Step id="step2" name="Second" desc="Second description">
+          <Step id="step2">
             <div className="sh-30">
               <Form>
-                <h5 className="card-title">Second Title</h5>
+                <h5 className="card-title">Second Title </h5>
                 <p className="card-text text-alternate mb-4">Pastry wafer icing icing marshmallow dessert jelly-o apple pie lollipop.</p>
                 <div className="mb-3 top-label">
                   <Form.Control type="email" />
@@ -100,7 +100,103 @@ const WizardBasic = () => {
               </Form>
             </div>
           </Step>
-          <Step id="step3" hideTopNav>
+          <Step id="step3">
+            <div className="sh-30">
+              <Form>
+                <h5 className="card-title">Second Title 2</h5>
+                <p className="card-text text-alternate mb-4">Pastry wafer icing icing marshmallow dessert jelly-o apple pie lollipop.</p>
+                <div className="mb-3 top-label">
+                  <Form.Control type="email" />
+                  <Form.Label>EMAIL</Form.Label>
+                </div>
+                <div className="mb-3 top-label">
+                  <Form.Control type="password" />
+                  <Form.Label>PASSWORD</Form.Label>
+                </div>
+              </Form>
+            </div>
+          </Step>
+          <Step id="step4">
+            <div className="sh-30">
+              <Form>
+                <h5 className="card-title">Second Title 3</h5>
+                <p className="card-text text-alternate mb-4">Pastry wafer icing icing marshmallow dessert jelly-o apple pie lollipop.</p>
+                <div className="mb-3 top-label">
+                  <Form.Control type="email" />
+                  <Form.Label>EMAIL</Form.Label>
+                </div>
+                <div className="mb-3 top-label">
+                  <Form.Control type="password" />
+                  <Form.Label>PASSWORD</Form.Label>
+                </div>
+              </Form>
+            </div>
+          </Step>
+          <Step id="step5">
+            <div className="sh-30">
+              <Form>
+                <h5 className="card-title">Second Title 4</h5>
+                <p className="card-text text-alternate mb-4">Pastry wafer icing icing marshmallow dessert jelly-o apple pie lollipop.</p>
+                <div className="mb-3 top-label">
+                  <Form.Control type="email" />
+                  <Form.Label>EMAIL</Form.Label>
+                </div>
+                <div className="mb-3 top-label">
+                  <Form.Control type="password" />
+                  <Form.Label>PASSWORD</Form.Label>
+                </div>
+              </Form>
+            </div>
+          </Step>
+          <Step id="step6">
+            <div className="sh-30">
+              <Form>
+                <h5 className="card-title">Second Title 5</h5>
+                <p className="card-text text-alternate mb-4">Pastry wafer icing icing marshmallow dessert jelly-o apple pie lollipop.</p>
+                <div className="mb-3 top-label">
+                  <Form.Control type="email" />
+                  <Form.Label>EMAIL</Form.Label>
+                </div>
+                <div className="mb-3 top-label">
+                  <Form.Control type="password" />
+                  <Form.Label>PASSWORD</Form.Label>
+                </div>
+              </Form>
+            </div>
+          </Step>
+          <Step id="step7">
+            <div className="sh-30">
+              <Form>
+                <h5 className="card-title">Second Title 6</h5>
+                <p className="card-text text-alternate mb-4">Pastry wafer icing icing marshmallow dessert jelly-o apple pie lollipop.</p>
+                <div className="mb-3 top-label">
+                  <Form.Control type="email" />
+                  <Form.Label>EMAIL</Form.Label>
+                </div>
+                <div className="mb-3 top-label">
+                  <Form.Control type="password" />
+                  <Form.Label>PASSWORD</Form.Label>
+                </div>
+              </Form>
+            </div>
+          </Step>
+          <Step id="step8">
+            <div className="sh-30">
+              <Form>
+                <h5 className="card-title">Second Title 7</h5>
+                <p className="card-text text-alternate mb-4">Pastry wafer icing icing marshmallow dessert jelly-o apple pie lollipop.</p>
+                <div className="mb-3 top-label">
+                  <Form.Control type="email" />
+                  <Form.Label>EMAIL</Form.Label>
+                </div>
+                <div className="mb-3 top-label">
+                  <Form.Control type="password" />
+                  <Form.Label>PASSWORD</Form.Label>
+                </div>
+              </Form>
+            </div>
+          </Step>
+          <Step id="step9" hideTopNav>
             <div className="sh-30 d-flex flex-column justify-content-center align-items-center">
               <h3 className="mb-2">Thank You!</h3>
               <p>Your registration completed successfully!</p>

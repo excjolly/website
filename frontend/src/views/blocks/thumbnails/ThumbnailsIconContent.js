@@ -10,6 +10,7 @@ export const ThumbnailsIconContent = () => {
     <Glide
       options={{
         perView: 3,
+        peek: { before: -2, after: 10 },
       }}>
       {[1, 2, 3, 4, 5, 6, 7].map((i) => (
         <Glide.Item key={`basic.${i}`} >

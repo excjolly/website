@@ -476,8 +476,9 @@ const DashboardsDefault = () => {
         {/* Categories End */}
       </Row>
       <Row>
-        <h2 className="small-title">Categories</h2>
-        <ThumbnailsImagesVertical/>
+        {/* <h2 className="small-title">Categories</h2> */}
+        {/* <ThumbnailsImagesVertical/> */}
+        <BlogHome/>
         {/* autoplay */}
         {/* portfolio home left  */}
       </Row>

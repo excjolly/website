@@ -254,13 +254,13 @@ const BlogDetail = () => {
           <Row>
             {/* Must Read Start */}
             <Col xs="12" className="mb-5">
-              <h2>
-                Course Recommendation
-              </h2>
               <Row className="mb-n2">
               <Card className="w-100 sh-50">
                 <Card.Body>
-                  <WizardBasic/>
+                  <h2>
+                    Course Recommendation
+                  </h2>
+                  <WizardBasic />
                   {/* <Form.Control
                     as="select"
                     className="mb-2"

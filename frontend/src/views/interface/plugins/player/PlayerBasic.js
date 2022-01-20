@@ -17,9 +17,10 @@ const PlayerBasic = () => {
     <Glide
       options={{
         perView: 4,
+        peek: { before: 0, after: 10 },
         breakpoints: {
           400: {
-            // perView: 1
+            perView: 1
           }
         }
       }}>
