@@ -8,6 +8,7 @@ import Clamp from 'components/clamp';
 import CsLineIcons from 'cs-line-icons/CsLineIcons';
 import useCustomLayout from 'hooks/useCustomLayout';
 import GlideGallery from 'components/carousel/GlideGallery';
+import WizardBasic from 'views/interface/forms/wizard/WizardBasic';
 
 const BlogDetail = () => {
   const title = 'Blog Detail';
@@ -248,7 +249,7 @@ const BlogDetail = () => {
         </Col>
 
         {/* Sidebar Start */}
-        // Form wizard - Basic
+        {/* Form wizard - Basic */}
         <Col xl="4" xxl="3">
           <Row>
             {/* Must Read Start */}
@@ -259,10 +260,8 @@ const BlogDetail = () => {
               <Row className="mb-n2">
               <Card className="w-100 sh-50">
                 <Card.Body>
-                  {/* <div className="cta-3">Ready to make bread?</div> */}
-                  {/* <div className="mb-3 cta-3 text-primary">Enquire Now</div> */}
-                  {/* <div className="text-muted mb-3">Cheesecake chocolate carrot cake pie lollipop lemon drops.</div> */}
-                  <Form.Control
+                  <WizardBasic/>
+                  {/* <Form.Control
                     as="select"
                     className="mb-2"
                   >
@@ -328,7 +327,7 @@ const BlogDetail = () => {
                   </Form.Control>
                   <Button variant="primary" className="btn-icon btn-icon-start">
                     <CsLineIcons icon="chevron-right" /> <span>Submit</span>
-                  </Button>
+                  </Button> */}
                 </Card.Body>
               </Card>
                 {/* <Col md="6" xl="12" className="mb-2">

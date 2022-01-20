@@ -18,6 +18,8 @@ import CarouselSingle from 'views/interface/plugins/carousel/CarouselSingle';
 import 'intro.js/introjs.css';                          
 import { ThumbnailsIconContent } from 'views/blocks/thumbnails/ThumbnailsIconContent';
 import { Helmet } from 'react-helmet';
+import { ThumbnailsImagesVertical } from 'views/blocks/thumbnails/ThumbnailsImagesVertical';
+import PlayerBasic from 'views/interface/plugins/player/PlayerBasic';
 
 const DashboardsDefault = () => {
   const title = 'Dashboard';
@@ -474,8 +476,10 @@ const DashboardsDefault = () => {
         {/* Categories End */}
       </Row>
       <Row>
-        <BlogHome/>
-        // Images vertical
+        <h2 className="small-title">Categories</h2>
+        <ThumbnailsImagesVertical/>
+        {/* autoplay */}
+        {/* portfolio home left  */}
       </Row>
       <Row>
         <h2 className="small-title">Categories</h2>
@@ -489,8 +493,10 @@ const DashboardsDefault = () => {
         <h2 className="small-title">Categories</h2>
         <ThumbnailsIconContent/>
       </Row>
-      // player - interface
-      // videos - basic 2 - carousal
+      <Row>
+        <h2 className="small-title">Categories</h2>
+        <PlayerBasic/>
+      </Row>
     </>
   );
 };

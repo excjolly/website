@@ -61,16 +61,26 @@ const WizardBasic = () => {
           <Step id="step1" name="First" desc="First description">
             <div className="sh-30">
               <Form>
-                <h5 className="card-title">First Title</h5>
+                <h5 className="card-title">Question 1</h5>
                 <p className="card-text text-alternate mb-4">Cake bonbon sugar plum pudding biscuit muffin icing dessert bear claw. </p>
-                <div className="mb-3 top-label">
+                {/* <div className="mb-3 top-label">
                   <Form.Control type="text" />
                   <Form.Label>FIRST NAME</Form.Label>
                 </div>
                 <div className="mb-3 top-label">
                   <Form.Control type="text" />
                   <Form.Label>LAST NAME</Form.Label>
-                </div>
+                </div> */}
+                <Form.Control
+                    as="select"
+                    className="mb-2"
+                  >
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="black">Black</option>
+                    <option value="orange">Orange</option>
+                  </Form.Control>
               </Form>
             </div>
           </Step>
