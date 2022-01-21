@@ -41,12 +41,12 @@ const NavIconMenu = () => {
   return (
     <>
       <ul className="list-unstyled list-inline text-center menu-icons">
-        <li className="list-inline-item">
+        {/* <li className="list-inline-item">
           <a href="#/" onClick={onSearchIconClick}>
             <CsLineIcons icon="search" size="18" />
           </a>
-        </li>
-        <li className="list-inline-item">
+        </li> */}
+        {/* <li className="list-inline-item">
           <a
             href="#/"
             id="pinButton"
@@ -56,16 +56,16 @@ const NavIconMenu = () => {
             <CsLineIcons icon="lock-on" size="18" className="unpin" />
             <CsLineIcons icon="lock-off" size="18" className="pin" />
           </a>
-        </li>
+        </li> */}
         <li className="list-inline-item">
           <a href="#/" id="colorButton" onClick={onLightDarkModeClick}>
             <CsLineIcons icon="light-on" size="18" className="light" />
             <CsLineIcons icon="light-off" size="18" className="dark" />
           </a>
         </li>
-        <IconMenuNotifications />
+        {/* <IconMenuNotifications /> */}
       </ul>
-      <SearchModal show={showSearchModal} setShow={setShowSearchModal} />
+      {/* <SearchModal show={showSearchModal} setShow={setShowSearchModal} /> */}
     </>
   );
 };
