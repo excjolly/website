@@ -1,10 +1,12 @@
 import React from 'react';
-import { Row, Col, Card, Button, ProgressBar } from 'react-bootstrap';
+import { Button, Card, Col, Row, Accordion, useAccordionButton } from 'react-bootstrap';
 import Plyr from 'plyr-react';
-import Rating from 'react-rating';
 import HtmlHead from 'components/html-head/HtmlHead';
 import CsLineIcons from 'cs-line-icons/CsLineIcons';
 import { Helmet } from 'react-helmet';
+import Glide from 'components/carousel/Glide';
+import Pricing from 'views/pages/miscellaneous/Pricing';
+import BlogHome from 'views/pages/blog/BlogHome';     
 
 const PurePlyr = React.memo(() => {
   const videoSrc = {
@@ -15,6 +17,17 @@ const PurePlyr = React.memo(() => {
 
   return <Plyr source={videoSrc} options={{}} />;
 });
+
+function CustomAccordionToggle({ children, eventKey }) {
+  const decoratedOnClick = useAccordionButton(eventKey, () => {});
+  return (
+    <Card.Body className="py-4" onClick={decoratedOnClick} role="button">
+      <Button variant="link" className="list-item-heading p-0">
+        {children}
+      </Button>
+    </Card.Body>
+  );
+}
 
 const CoursesDetail = () => {
   const title = 'Bread Making Techniques';
@@ -35,20 +48,12 @@ const CoursesDetail = () => {
             <h1 className="mb-0 pb-0 display-4">{title}</h1>
           </Col>
           {/* Title End */}
-
-          {/* Top Buttons Start */}
-          <Col xs="12" sm="auto" className="d-flex align-items-end justify-content-end mb-2 mb-sm-0 order-sm-3">
-            <Button variant="primary" className="btn-icon btn-icon-start w-100 w-md-auto">
-              <CsLineIcons icon="chevron-right" /> <span>Start Now</span>
-            </Button>
-          </Col>
-          {/* Top Buttons End */}
         </Row>
       </div>
       {/* Title and Top Buttons End */}
 
       <Row className="g-5">
-        <Col xxl="8" className="mb-5">
+        <Col xxl="8" className="mb-0">
           {/* Preview Start */}
           <h2 className="small-title">Preview</h2>
           <Card className="mb-5">
@@ -123,363 +128,6 @@ const CoursesDetail = () => {
             </Card.Footer>
           </Card>
           {/* Preview End */}
-
-          {/* Table of Contents Start */}
-          <h2 className="small-title">Table of Contents</h2>
-          <Card className="mb-5">
-            <Card.Body>
-              <Row className="g-0">
-                <Col xs="auto" className="sw-1 d-flex flex-column justify-content-center align-items-center position-relative me-4">
-                  <div className="w-100 d-flex sh-1" />
-                  <div className="rounded-xl shadow d-flex flex-shrink-0 justify-content-center align-items-center">
-                    <div className="bg-gradient-light sw-1 sh-1 rounded-xl position-relative" />
-                  </div>
-                  <div className="w-100 d-flex h-100 justify-content-center position-relative">
-                    <div className="line-w-1 bg-separator h-100 position-absolute" />
-                  </div>
-                </Col>
-                <Col className="mb-4">
-                  <div className="h-100">
-                    <div className="d-flex flex-column justify-content-start">
-                      <div className="d-flex flex-column">
-                        <p className="heading">01. Dashboards</p>
-                        <ul className="list-unstyled">
-                          <li>- Danish brownie fruitcake tootsie</li>
-                          <li>- Fruitcake tart dessert</li>
-                          <li>- Bar carrot cake</li>
-                          <li>- Snaps muffin macaroon tiramisu</li>
-                          <li>- Ice cream marshmallow</li>
-                          <li>- Plum caramels fruitcake</li>
-                          <li>- Chocolate bar carrot cake</li>
-                          <li>- Cotton candy gummies</li>
-                          <li>- Danish cake gummies jelly</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </Col>
-              </Row>
-              <Row className="g-0">
-                <Col xs="auto" className="sw-1 d-flex flex-column justify-content-center align-items-center position-relative me-4">
-                  <div className="w-100 d-flex sh-1 position-relative justify-content-center">
-                    <div className="line-w-1 bg-separator h-100 position-absolute" />
-                  </div>
-                  <div className="rounded-xl shadow d-flex flex-shrink-0 justify-content-center align-items-center">
-                    <div className="bg-gradient-light sw-1 sh-1 rounded-xl position-relative" />
-                  </div>
-                  <div className="w-100 d-flex h-100 justify-content-center position-relative">
-                    <div className="line-w-1 bg-separator h-100 position-absolute" />
-                  </div>
-                </Col>
-                <Col className="mb-4">
-                  <div className="h-100">
-                    <div className="d-flex flex-column justify-content-start">
-                      <div className="d-flex flex-column">
-                        <p className="heading">02. Applications</p>
-                        <ul className="list-unstyled">
-                          <li>- Ice cream marshmallow</li>
-                          <li>- Plum caramels fruitcake</li>
-                          <li>- Chocolate bar carrot cake</li>
-                          <li>- Danish brownie fruitcake tootsie</li>
-                          <li>- Fruitcake tart dessert</li>
-                          <li>- Bar carrot cake</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </Col>
-              </Row>
-              <Row className="g-0">
-                <Col xs="auto" className="sw-1 d-flex flex-column justify-content-center align-items-center position-relative me-4">
-                  <div className="w-100 d-flex sh-1 position-relative justify-content-center">
-                    <div className="line-w-1 bg-separator h-100 position-absolute" />
-                  </div>
-                  <div className="rounded-xl shadow d-flex flex-shrink-0 justify-content-center align-items-center">
-                    <div className="bg-gradient-light sw-1 sh-1 rounded-xl position-relative" />
-                  </div>
-                  <div className="w-100 d-flex h-100 justify-content-center position-relative">
-                    <div className="line-w-1 bg-separator h-100 position-absolute" />
-                  </div>
-                </Col>
-                <Col className="mb-4">
-                  <div className="h-100">
-                    <div className="d-flex flex-column justify-content-start">
-                      <div className="d-flex flex-column">
-                        <p className="heading">03. Interface</p>
-                        <ul className="list-unstyled">
-                          <li>- Ice cream marshmallow</li>
-                          <li>- Plum caramels fruitcake</li>
-                          <li>- Chocolate bar carrot cake</li>
-                          <li>- Danish brownie fruitcake tootsie</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </Col>
-              </Row>
-              <Row className="g-0">
-                <Col xs="auto" className="sw-1 d-flex flex-column justify-content-center align-items-center position-relative me-4">
-                  <div className="w-100 d-flex sh-1 position-relative justify-content-center">
-                    <div className="line-w-1 bg-separator h-100 position-absolute" />
-                  </div>
-                  <div className="rounded-xl shadow d-flex flex-shrink-0 justify-content-center align-items-center">
-                    <div className="bg-gradient-light sw-1 sh-1 rounded-xl position-relative" />
-                  </div>
-                  <div className="w-100 d-flex h-100 justify-content-center position-relative">
-                    <div className="line-w-1 bg-separator h-100 position-absolute" />
-                  </div>
-                </Col>
-                <Col className="mb-4">
-                  <div className="h-100">
-                    <div className="d-flex flex-column justify-content-start">
-                      <div className="d-flex flex-column">
-                        <p className="heading">04. Conclusion</p>
-                        <ul className="list-unstyled">
-                          <li>- Chocolate bar carrot cake</li>
-                          <li>- Danish brownie fruitcake tootsie</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </Col>
-              </Row>
-              <Row className="g-0">
-                <Col xs="auto" className="sw-1 d-flex flex-column justify-content-center align-items-center position-relative me-4">
-                  <div className="w-100 d-flex sh-1 position-relative justify-content-center">
-                    <div className="line-w-1 bg-separator h-100 position-absolute" />
-                  </div>
-                  <div className="rounded-xl shadow d-flex flex-shrink-0 justify-content-center align-items-center">
-                    <div className="bg-gradient-light sw-1 sh-1 rounded-xl position-relative" />
-                  </div>
-                  <div className="w-100 d-flex h-100 justify-content-center position-relative">
-                    <div className="line-w-1 bg-separator h-100 position-absolute" />
-                  </div>
-                </Col>
-                <Col className="mb-4">
-                  <div className="h-100">
-                    <div className="d-flex flex-column justify-content-start">
-                      <div className="d-flex flex-column">
-                        <p className="heading">05. What is Next?</p>
-                        <ul className="list-unstyled">
-                          <li>- Danish brownie fruitcake tootsie</li>
-                          <li>- Fruitcake tart dessert</li>
-                          <li>- Bar carrot cake</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </Col>
-              </Row>
-              <Row className="g-0">
-                <Col xs="auto" className="sw-1 d-flex flex-column justify-content-center align-items-center position-relative me-4">
-                  <div className="w-100 d-flex sh-1 position-relative justify-content-center">
-                    <div className="line-w-1 bg-separator h-100 position-absolute" />
-                  </div>
-                  <div className="rounded-xl shadow d-flex flex-shrink-0 justify-content-center align-items-center">
-                    <div className="bg-gradient-light sw-1 sh-1 rounded-xl position-relative" />
-                  </div>
-                  <div className="w-100 d-flex h-100 justify-content-center position-relative" />
-                </Col>
-                <Col>
-                  <div className="h-100">
-                    <div className="d-flex flex-column justify-content-start">
-                      <div className="d-flex flex-column">
-                        <p className="heading">06. Credits</p>
-                        <ul className="list-unstyled">
-                          <li>- Chocolate bar carrot cake</li>
-                          <li>- Danish brownie fruitcake tootsie</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </Col>
-              </Row>
-            </Card.Body>
-          </Card>
-          {/* Table of Contents End */}
-
-          {/* Reviews Start */}
-          <h2 className="small-title">Reviews</h2>
-          <Card>
-            <Card.Body>
-              <Row className="mb-5">
-                <Col xs="12" sm="auto" className="mb-3 mb-sm-0">
-                  <div className="w-100 sw-sm-19 sw-md-23 border sh-16 rounded-md d-flex flex-column align-items-center justify-content-center">
-                    <div className="cta-1 text-alternate mb-2">4.8</div>
-                    <div>
-                      <Rating
-                        className="align-middle"
-                        initialRating={5}
-                        readonly
-                        emptySymbol={<i className="cs-star text-primary" />}
-                        fullSymbol={<i className="cs-star-full text-primary" />}
-                      />
-                      <span className="text-muted"> (22)</span>
-                    </div>
-                  </div>
-                </Col>
-                <Col>
-                  <Row className="align-items-center">
-                    <Col>
-                      <ProgressBar className="progress-md" now={80} />
-                    </Col>
-                    <Col xs="auto" className="sw-20 text-end">
-                      <span className="me-3 text-muted text-small">%80</span>
-                      <Rating
-                        className="align-middle"
-                        initialRating={5}
-                        readonly
-                        emptySymbol={<i className="cs-star text-muted" />}
-                        fullSymbol={<i className="cs-star-full text-primary" />}
-                      />
-                    </Col>
-                  </Row>
-                  <Row className="align-items-center">
-                    <Col>
-                      <ProgressBar className="progress-md" now={10} />
-                    </Col>
-                    <Col xs="auto" className="sw-20 text-end">
-                      <span className="me-3 text-muted text-small">%10</span>
-                      <Rating
-                        className="align-middle"
-                        initialRating={4}
-                        readonly
-                        emptySymbol={<i className="cs-star text-muted" />}
-                        fullSymbol={<i className="cs-star-full text-primary" />}
-                      />
-                    </Col>
-                  </Row>
-                  <Row className="align-items-center">
-                    <Col>
-                      <ProgressBar className="progress-md" now={5} />
-                    </Col>
-                    <Col xs="auto" className="sw-20 text-end">
-                      <span className="me-3 text-muted text-small">%5</span>
-                      <Rating
-                        className="align-middle"
-                        initialRating={3}
-                        readonly
-                        emptySymbol={<i className="cs-star text-muted" />}
-                        fullSymbol={<i className="cs-star-full text-primary" />}
-                      />
-                    </Col>
-                  </Row>
-                  <Row className="align-items-center">
-                    <Col>
-                      <ProgressBar className="progress-md" now={0} />
-                    </Col>
-                    <Col xs="auto" className="sw-20 text-end">
-                      <span className="me-3 text-muted text-small">%0</span>
-                      <Rating
-                        className="align-middle"
-                        initialRating={2}
-                        readonly
-                        emptySymbol={<i className="cs-star text-muted" />}
-                        fullSymbol={<i className="cs-star-full text-primary" />}
-                      />
-                    </Col>
-                  </Row>
-                  <Row className="align-items-center">
-                    <Col>
-                      <ProgressBar className="progress-md" now={5} />
-                    </Col>
-                    <Col xs="auto" className="sw-20 text-end">
-                      <span className="me-3 text-muted text-small">%5</span>
-                      <Rating
-                        className="align-middle"
-                        initialRating={1}
-                        readonly
-                        emptySymbol={<i className="cs-star text-muted" />}
-                        fullSymbol={<i className="cs-star-full text-primary" />}
-                      />
-                    </Col>
-                  </Row>
-                </Col>
-              </Row>
-              <div className="mb-n3 border-last-none">
-                <Row className="g-0 w-100 border-bottom border-separator-light pb-3 mb-3">
-                  <Col xs="auto">
-                    <div className="sw-5 me-3">
-                      <img src="/img/profile/profile-2.webp" className="img-fluid rounded-xl" alt="thumb" />
-                    </div>
-                  </Col>
-                  <Col className="pe-3">
-                    <div>Cherish Kerr</div>
-                    <div className="text-muted text-small mb-2">2 days ago</div>
-                    <Rating
-                      className="align-middle"
-                      initialRating={5}
-                      readonly
-                      emptySymbol={<i className="cs-star text-primary" />}
-                      fullSymbol={<i className="cs-star-full text-primary" />}
-                    />
-                    <div className="text-medium text-alternate lh-1-25">Macaroon!</div>
-                  </Col>
-                </Row>
-                <Row className="g-0 w-100 border-bottom border-separator-light pb-3 mb-3">
-                  <Col xs="auto">
-                    <div className="sw-5 me-3">
-                      <img src="/img/profile/profile-1.webp" className="img-fluid rounded-xl" alt="thumb" />
-                    </div>
-                  </Col>
-                  <Col className="pe-3">
-                    <div>Olli Hawkins</div>
-                    <div className="text-muted text-small mb-2">3 days ago</div>
-                    <Rating
-                      className="align-middle"
-                      initialRating={5}
-                      readonly
-                      emptySymbol={<i className="cs-star text-primary" />}
-                      fullSymbol={<i className="cs-star-full text-primary" />}
-                    />
-                    <div className="text-medium text-alternate lh-1-25">Cupcake cake fruitcake. Powder chocolate bar soufflé gummi bears topping donut.</div>
-                  </Col>
-                </Row>
-                <Row className="g-0 w-100 border-bottom border-separator-light pb-3 mb-3">
-                  <Col xs="auto">
-                    <div className="sw-5 me-3">
-                      <img src="/img/profile/profile-3.webp" className="img-fluid rounded-xl" alt="thumb" />
-                    </div>
-                  </Col>
-                  <Col className="pe-3">
-                    <div>Kirby Peters</div>
-                    <div className="text-muted text-small mb-2">4 days ago</div>
-                    <Rating
-                      className="align-middle"
-                      initialRating={5}
-                      readonly
-                      emptySymbol={<i className="cs-star text-primary" />}
-                      fullSymbol={<i className="cs-star-full text-primary" />}
-                    />
-                    <div className="text-medium text-alternate lh-1-25">Nice, very tasty.</div>
-                  </Col>
-                </Row>
-                <Row className="g-0 w-100 border-bottom border-separator-light pb-3 mb-3">
-                  <Col xs="auto">
-                    <div className="sw-5 me-3">
-                      <img src="/img/profile/profile-4.webp" className="img-fluid rounded-xl" alt="thumb" />
-                    </div>
-                  </Col>
-                  <Col className="pe-3">
-                    <div>Zayn Hartley</div>
-                    <div className="text-muted text-small mb-2">1 week ago</div>
-                    <Rating
-                      className="align-middle"
-                      initialRating={5}
-                      readonly
-                      emptySymbol={<i className="cs-star text-primary" />}
-                      fullSymbol={<i className="cs-star-full text-primary" />}
-                    />
-                    <div className="text-medium text-alternate lh-1-25">
-                      Chupa chups topping pastry halvah. Jelly cake jelly sesame snaps jelly beans jelly beans. Biscuit powder brownie powder sesame snaps
-                      jelly-o dragée cake. Pie tiramisu cake jelly lemon drops. Macaroon sugar plum apple pie carrot cake jelly beans chocolate.
-                    </div>
-                  </Col>
-                </Row>
-              </div>
-            </Card.Body>
-          </Card>
-          {/* Reviews End */}
         </Col>
         <Col xxl="4">
           {/* At a Glance Start  */}
@@ -616,71 +264,263 @@ const CoursesDetail = () => {
               </Button>
             </Card.Body>
           </Card>
+          
+          <h2 className="small-title">Download Brochure</h2>
+          <Card className="mb-5">
+            <Card.Body>
+              <div className="cta-3">Need more details?</div>
+              <div className="mb-3 cta-3 text-primary">Read the docs!</div>
+              <div className="text-muted mb-4">Cheesecake chocolate carrot cake pie lollipop lemon toffee lollipop. Oat cake pie cake cotton.</div>
+              <Button variant="outline-primary" className="btn-icon btn-icon-start sw-15 stretched-link">
+                <CsLineIcons icon="file-text" /> <span>Docs</span>
+              </Button>
+            </Card.Body>
+          </Card>
           {/* Tags End */}
-
-          {/* Badges Start */}
-          <h2 className="small-title">Badges</h2>
-          <Card className="mb-2 sh-15">
-            <Card.Body className="text-center align-items-center d-flex flex-row">
-              <div className="d-flex sw-6 sh-6 bg-gradient-light align-items-center justify-content-center rounded-xl position-relative ms-1">
-                <CsLineIcons icon="burger" className="text-white" />
-                <div className="achievement bg position-absolute">
-                  <svg width="75" height="75" viewBox="0 0 75 75" fill="black" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M15.3422 7.24333C21.5482 2.69119 29.2117 0 37.5 0C45.7883 0 53.4518 2.69119 59.6578 7.24333C60.5562 7.90233 60.7431 9.15516 60.0752 10.0416C59.4073 10.9281 58.1375 11.1124 57.2391 10.4534C51.7048 6.39402 44.8833 4 37.5 4C30.1167 4 23.2952 6.39403 17.7609 10.4535C16.8625 11.1124 15.5927 10.9281 14.9248 10.0416C14.2569 9.15516 14.4438 7.90233 15.3422 7.24333ZM65.0942 15.1001C66.006 14.4592 67.2717 14.6688 67.9213 15.5684C72.3763 21.7377 75 29.3164 75 37.5C75 45.6836 72.3763 53.2623 67.9213 59.4316C67.2717 60.3311 66.006 60.5408 65.0942 59.8999C64.1825 59.2589 63.97 58.0101 64.6196 57.1105C68.599 51.5998 70.9459 44.8284 70.9459 37.5C70.9459 30.1716 68.599 23.4002 64.6196 17.8895C63.97 16.9899 64.1825 15.7411 65.0942 15.1001ZM9.90579 15.1001C10.8175 15.7411 11.03 16.9899 10.3804 17.8895C6.40105 23.4002 4.05405 30.1716 4.05405 37.5C4.05405 44.8284 6.40105 51.5998 10.3804 57.1105C11.03 58.0101 10.8175 59.2589 9.90579 59.8999C8.99405 60.5408 7.72832 60.3312 7.07871 59.4316C2.62373 53.2623 0 45.6836 0 37.5C0 29.3164 2.62373 21.7377 7.07871 15.5684C7.72832 14.6689 8.99404 14.4592 9.90579 15.1001ZM14.9248 64.9584C15.5927 64.0719 16.8625 63.8876 17.7609 64.5466C23.2952 68.606 30.1167 71 37.5 71C44.8833 71 51.7048 68.606 57.2391 64.5465C58.1375 63.8876 59.4073 64.0719 60.0752 64.9584C60.7431 65.8448 60.5562 67.0977 59.6578 67.7567C53.4518 72.3088 45.7883 75 37.5 75C29.2117 75 21.5483 72.3088 15.3422 67.7567C14.4438 67.0977 14.2569 65.8448 14.9248 64.9584Z"
-                    />
-                  </svg>
-                </div>
-                <div className="achievement level position-absolute">
-                  <svg width="75" height="75" viewBox="0 0 75 75" fill="black" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M15.3422 7.24333C21.5482 2.69119 29.2117 0 37.5 0C45.7883 0 53.4517 2.69119 59.6578 7.24333C60.5562 7.90233 60.7431 9.15516 60.0752 10.0416C59.4073 10.9281 58.1375 11.1124 57.2391 10.4534C51.7048 6.39402 44.8833 4 37.5 4C30.1167 4 23.2952 6.39403 17.7609 10.4535C16.8625 11.1124 15.5927 10.9281 14.9248 10.0416C14.2569 9.15516 14.4438 7.90233 15.3422 7.24333Z"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div className="ms-5 text-start">
-                <p className="mb-1">Sandwich Novice</p>
-                <p className="mb-0 text-primary">Level 1</p>
-              </div>
-            </Card.Body>
-          </Card>
-          <Card className="mb-2 sh-15">
-            <Card.Body className="text-center align-items-center d-flex flex-row">
-              <div className="d-flex sw-6 sh-6 bg-gradient-light align-items-center justify-content-center rounded-xl position-relative ms-1">
-                <CsLineIcons icon="cupcake" className="text-white" />
-                <div className="achievement bg position-absolute">
-                  <svg width="75" height="75" viewBox="0 0 75 75" fill="black" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M15.3422 7.24333C21.5482 2.69119 29.2117 0 37.5 0C45.7883 0 53.4518 2.69119 59.6578 7.24333C60.5562 7.90233 60.7431 9.15516 60.0752 10.0416C59.4073 10.9281 58.1375 11.1124 57.2391 10.4534C51.7048 6.39402 44.8833 4 37.5 4C30.1167 4 23.2952 6.39403 17.7609 10.4535C16.8625 11.1124 15.5927 10.9281 14.9248 10.0416C14.2569 9.15516 14.4438 7.90233 15.3422 7.24333ZM65.0942 15.1001C66.006 14.4592 67.2717 14.6688 67.9213 15.5684C72.3763 21.7377 75 29.3164 75 37.5C75 45.6836 72.3763 53.2623 67.9213 59.4316C67.2717 60.3311 66.006 60.5408 65.0942 59.8999C64.1825 59.2589 63.97 58.0101 64.6196 57.1105C68.599 51.5998 70.9459 44.8284 70.9459 37.5C70.9459 30.1716 68.599 23.4002 64.6196 17.8895C63.97 16.9899 64.1825 15.7411 65.0942 15.1001ZM9.90579 15.1001C10.8175 15.7411 11.03 16.9899 10.3804 17.8895C6.40105 23.4002 4.05405 30.1716 4.05405 37.5C4.05405 44.8284 6.40105 51.5998 10.3804 57.1105C11.03 58.0101 10.8175 59.2589 9.90579 59.8999C8.99405 60.5408 7.72832 60.3312 7.07871 59.4316C2.62373 53.2623 0 45.6836 0 37.5C0 29.3164 2.62373 21.7377 7.07871 15.5684C7.72832 14.6689 8.99404 14.4592 9.90579 15.1001ZM14.9248 64.9584C15.5927 64.0719 16.8625 63.8876 17.7609 64.5466C23.2952 68.606 30.1167 71 37.5 71C44.8833 71 51.7048 68.606 57.2391 64.5465C58.1375 63.8876 59.4073 64.0719 60.0752 64.9584C60.7431 65.8448 60.5562 67.0977 59.6578 67.7567C53.4518 72.3088 45.7883 75 37.5 75C29.2117 75 21.5483 72.3088 15.3422 67.7567C14.4438 67.0977 14.2569 65.8448 14.9248 64.9584Z"
-                    />
-                  </svg>
-                </div>
-                <div className="achievement level position-absolute">
-                  <svg width="75" height="75" viewBox="0 0 75 75" fill="black" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M15.3422 7.24333C21.5482 2.69119 29.2117 0 37.5 0C45.7883 0 53.4517 2.69119 59.6578 7.24333C60.5562 7.90233 60.7431 9.15516 60.0752 10.0416C59.4073 10.9281 58.1375 11.1124 57.2391 10.4534C51.7048 6.39402 44.8833 4 37.5 4C30.1167 4 23.2952 6.39403 17.7609 10.4535C16.8625 11.1124 15.5927 10.9281 14.9248 10.0416C14.2569 9.15516 14.4438 7.90233 15.3422 7.24333ZM65.0942 15.1001C66.006 14.4592 67.2717 14.6688 67.9213 15.5684C72.3763 21.7377 75 29.3164 75 37.5C75 45.6836 72.3763 53.2623 67.9213 59.4316C67.2717 60.3311 66.006 60.5408 65.0942 59.8999C64.1825 59.2589 63.97 58.0101 64.6196 57.1105C68.599 51.5998 70.9459 44.8284 70.9459 37.5C70.9459 30.1716 68.5989 23.4002 64.6196 17.8895C63.97 16.9899 64.1825 15.7411 65.0942 15.1001Z"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div className="ms-5 text-start">
-                <p className="mb-1">Cake Apprentice</p>
-                <p className="mb-0 text-primary">Level 2</p>
-              </div>
-            </Card.Body>
-          </Card>
-          {/* Badges End */}
         </Col>
       </Row>
+      <Row className="mb-5">
+        <h2 className="small-title">Curriculum</h2>
+        <Accordion className="mb-n2" defaultActiveKey="1">
+            <Card className="d-flex mb-2 flex-grow-1">
+              <CustomAccordionToggle eventKey="1">Cupcake Lollipop Biscuit</CustomAccordionToggle>
+              <Accordion.Collapse eventKey="1">
+                <Card.Body className="pt-0">
+                  <p>
+                    <strong>Moon Tempor</strong>
+                  </p>
+                  <p>
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                    skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                    single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+                    proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+                    haven't heard of them accusamus labore sustainable VHS.
+                  </p>
+                  <br />
+                  <p>
+                    <strong>Accusamus Labore</strong>
+                  </p>
+                  <p>
+                    Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                    helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                    beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    <br />
+                    <br />
+                    Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore
+                    sustainable VHS. Ad vegan excepteur butcher vice lomo. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee
+                    nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+                    excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of
+                    them accusamus labore sustainable VHS.
+                  </p>
+                  <p className="mb-0">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                    skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                    single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+                    proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+                    haven't heard of them accusamus labore sustainable VHS.
+                  </p>
+                </Card.Body>
+              </Accordion.Collapse>
+            </Card>
+            <Card className="d-flex mb-2 flex-grow-1">
+              <CustomAccordionToggle eventKey="2">Roll Marshmallow</CustomAccordionToggle>
+              <Accordion.Collapse eventKey="2">
+                <Card.Body className="pt-0">
+                  <p>
+                    <strong>Moon Tempor</strong>
+                  </p>
+                  <p className="mb-0">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                    skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                    single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+                    proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+                    haven't heard of them accusamus labore sustainable VHS.
+                  </p>
+                </Card.Body>
+              </Accordion.Collapse>
+            </Card>
+            <Card className="d-flex mb-2 flex-grow-1">
+              <CustomAccordionToggle eventKey="3">Pudding Soufflé Macaroon Carrot Cake</CustomAccordionToggle>
+              <Accordion.Collapse eventKey="3">
+                <Card.Body className="pt-0">
+                  <p>
+                    <strong>Moon Tempor</strong>
+                  </p>
+                  <p className="mb-0">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                    skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                    single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+                    proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+                    haven't heard of them accusamus labore sustainable VHS.
+                  </p>
+                </Card.Body>
+              </Accordion.Collapse>
+            </Card>
+            <Card className="d-flex mb-2 flex-grow-1">
+              <CustomAccordionToggle eventKey="4">Sesame Snaps Cheesecake Muffin</CustomAccordionToggle>
+              <Accordion.Collapse eventKey="4">
+                <Card.Body className="pt-0">
+                  <p>
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                    skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                    single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+                    proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+                    haven't heard of them accusamus labore sustainable VHS.
+                  </p>
+                </Card.Body>
+              </Accordion.Collapse>
+            </Card>
+            <Card className="d-flex mb-2 flex-grow-1">
+              <CustomAccordionToggle eventKey="5">Candy Cupcake Ice Cream Gummies Dessert Muffin</CustomAccordionToggle>
+              <Accordion.Collapse eventKey="5">
+                <Card.Body className="pt-0">
+                  <p>
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                    skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                    single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+                    proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+                    haven't heard of them accusamus labore sustainable VHS.
+                  </p>
+                </Card.Body>
+              </Accordion.Collapse>
+            </Card>
+            <Card className="d-flex mb-2 flex-grow-1">
+              <CustomAccordionToggle eventKey="6">Powder Halvah Dessert Ice Cream</CustomAccordionToggle>
+              <Accordion.Collapse eventKey="6">
+                <Card.Body className="pt-0">
+                  <p>
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                    skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                    single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+                    proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+                    haven't heard of them accusamus labore sustainable VHS.
+                  </p>
+                </Card.Body>
+              </Accordion.Collapse>
+            </Card>
+          </Accordion>
+      </Row>
+
+      <Row className="mb-5">
+        <h2 className="small-title">Tools Covered</h2>
+        <Glide
+          noControls
+          options={{
+            gap: 0,
+            rewind: false,
+            type: 'carousel',
+            autoplay: 3000,
+            hoverpause: false,
+            animationDuration: 3000,
+            animationTimingFunc: 'linear',
+            perView: 6,
+            breakpoints: {
+              400: { perView: 1 },
+              600: { perView: 3 },
+              1400: { perView: 4 },
+              1600: { perView: 6 },
+              1900: { perView: 6 },
+              3840: { perView: 8 },
+            },
+        }}>
+          {['codecanyon', 'graphicriver', 'photodune', 'themeforest', 'codecanyon', 'graphicriver'].map((brand, i) => (
+            <Glide.Item key={`flow.${i}`} style = {{ margin : "auto 0px", padding : "0px 0px 0px 0px"}}>
+              <Col>
+                <div className="card hover-img-scale-up">
+                  <img
+                    className="card-img sh-15 sh-sm-25 scale cursor-pointer"
+                    src="/img/product/small/product-3.webp"
+                    alt="card image"
+                  />
+                </div>
+              </Col>
+            </Glide.Item>
+          ))}
+        </Glide>
+      </Row>
+
+      <h2 className="small-title">Sample Projects</h2>
+      <Row className="mb-5 row-cols-1 row-cols-md-3 g-1">
+        <Col>
+          <Card className="hover-scale-up h-100">
+            <Card.Body>
+              <Row className="g-0">
+                <Col xs="auto">
+                  <div className="sw-6 sh-6 rounded-xl d-flex justify-content-center align-items-center border border-primary mb-4">
+                    <CsLineIcons icon="laptop" className="text-primary" />
+                  </div>
+                </Col>
+                <Col>
+                  <div className="d-flex flex-column ps-card justify-content-start">
+                    <div className="d-flex flex-column justify-content-center mb-2">
+                      <h2 className='text-primary heading'>Project</h2>
+                    </div>
+                    <div className="text-alternate">
+                      Lollipop apple pie lollipop toffee croissant. Sugar plum fruitcake cotton candy lemon drops. Carrot cake fruitcake dragée pie cotton candy
+                      sesame snaps lollipop croissant.
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col>
+          <Card className="hover-scale-up h-100">
+            <Card.Body>
+              <Row className="g-0">
+                <Col xs="auto">
+                  <div className="sw-6 sh-6 rounded-xl d-flex justify-content-center align-items-center border border-primary mb-4">
+                    <CsLineIcons icon="laptop" className="text-primary" />
+                  </div>
+                </Col>
+                <Col>
+                  <div className="d-flex flex-column ps-card justify-content-start">
+                    <div className="d-flex flex-column justify-content-center mb-2">
+                      <h2 className='text-primary heading'>Project</h2>
+                    </div>
+                    <div className="text-alternate">
+                      Lollipop apple pie lollipop toffee croissant. Sugar plum fruitcake cotton candy lemon drops. Carrot cake fruitcake dragée pie cotton candy
+                      sesame snaps lollipop croissant.
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col>
+          <Card className="hover-scale-up h-100">
+            <Card.Body>
+              <Row className="g-0">
+                <Col xs="auto">
+                  <div className="sw-6 sh-6 rounded-xl d-flex justify-content-center align-items-center border border-primary mb-4">
+                    <CsLineIcons icon="laptop" className="text-primary" />
+                  </div>
+                </Col>
+                <Col>
+                  <div className="d-flex flex-column ps-card justify-content-start">
+                    <div className="d-flex flex-column justify-content-center mb-2">
+                      <h2 className='text-primary heading'>Project</h2>
+                    </div>
+                    <div className="text-alternate">
+                      Lollipop apple pie lollipop toffee croissant. Sugar plum fruitcake cotton candy lemon drops. Carrot cake fruitcake dragée pie cotton candy
+                      sesame snaps lollipop croissant.
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+
+      <Row>
+        <h2 className="small-title">Testimonials</h2>
+        <BlogHome/>
+      </Row>
+
+      <Pricing/>
     </>
   );
 };

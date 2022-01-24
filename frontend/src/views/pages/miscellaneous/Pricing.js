@@ -18,29 +18,13 @@ function CustomAccordionToggle({ children, eventKey }) {
 }
 
 const MiscellaneousPricing = () => {
-  const title = 'Pricing';
-  const description = 'Pricing';
-
-  const breadcrumbs = [
-    { to: '', text: 'Home' },
-    { to: 'pages', text: 'Pages' },
-    { to: 'pages/miscellaneous', text: 'Miscellaneous' },
-  ];
 
   useCustomLayout({ layout: LAYOUT.Boxed });
 
   return (
     <>
-      <HtmlHead title={title} description={description} />
-      {/* Title Start */}
-      <div className="page-title-container">
-        <h1 className="mb-0 pb-0 display-4">{title}</h1>
-        <BreadcrumbList items={breadcrumbs} />
-      </div>
-      {/* Title End */}
-
       {/* Plans Start */}
-      <h2 className="small-title">Choose a Plan</h2>
+      <h2 className="small-title">Pricing</h2>
       <div className="mb-5">
         <Row className="row-cols-1 row-cols-lg-3 g-2">
           <Col>
@@ -225,7 +209,7 @@ const MiscellaneousPricing = () => {
 
       {/* Faq Start */}
       <h2 className="small-title">Faq</h2>
-      <Accordion className="mb-n2" defaultActiveKey="1">
+      <Accordion className="mb-5" defaultActiveKey="1">
         <Card className="d-flex mb-2 flex-grow-1">
           <CustomAccordionToggle eventKey="1">Cupcake Lollipop Biscuit</CustomAccordionToggle>
           <Accordion.Collapse eventKey="1">
