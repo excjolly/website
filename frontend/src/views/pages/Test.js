@@ -3,15 +3,15 @@ import { Card } from 'react-bootstrap';
 import HtmlHead from 'components/html-head/HtmlHead';
 import { Helmet } from 'react-helmet';
 
-const Contact = () => {
-  const title = 'Contact';
-  const description = 'Contact';
+const Empty = () => {
+  const title = 'Empty';
+  const description = 'Empty';
 
   return (
     <>
       <HtmlHead title={title} description={description} />
       <Helmet>
-        <link rel="canonical" href="/contact">
+        <link rel="canonical" href="/knowledge-centre/sample-tests">
         </link>
       </Helmet>
       {/* Title Start */}
@@ -28,4 +28,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Empty;

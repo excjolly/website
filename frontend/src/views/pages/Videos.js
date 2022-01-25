@@ -3,15 +3,15 @@ import { Card } from 'react-bootstrap';
 import HtmlHead from 'components/html-head/HtmlHead';
 import { Helmet } from 'react-helmet';
 
-const Empty = () => {
-  const title = 'Empty';
-  const description = 'Empty';
+const Videos = () => {
+  const title = 'Videos';
+  const description = 'Videos';
 
   return (
     <>
       <HtmlHead title={title} description={description} />
       <Helmet>
-        <link rel="canonical" href="/videos">
+        <link rel="canonical" href="/knowledge-centre/videos">
         </link>
       </Helmet>
       {/* Title Start */}
@@ -28,4 +28,4 @@ const Empty = () => {
   );
 };
 
-export default Empty;
+export default Videos;

@@ -16,8 +16,8 @@ import { Helmet } from 'react-helmet';
 import PlayerBasic from 'views/interface/plugins/player/PlayerBasic';
 
 const DashboardsDefault = () => {
-  const title = 'Dashboard';
-  const description = 'Default Dashboard';
+  const title = 'Home';
+  const description = 'Home';
   return (
     <>
     <HtmlHead title={title} description={description} />
@@ -345,6 +345,11 @@ const DashboardsDefault = () => {
     </Row>
 
     <Row>
+        <h2 className="small-title">Videos</h2>
+        <PlayerBasic/>
+    </Row>
+
+    <Row>
         <h2 className="small-title">Testimonials</h2>
         <BlogHome/>
     </Row>
@@ -360,10 +365,6 @@ const DashboardsDefault = () => {
     <h2 className="small-title">Our Courses</h2>
     <ThumbnailsIconContent/>
 
-    <Row>
-        <h2 className="small-title">Videos</h2>
-        <PlayerBasic/>
-    </Row>
     </>
   );
 };

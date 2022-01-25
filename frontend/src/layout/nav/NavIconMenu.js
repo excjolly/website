@@ -59,8 +59,8 @@ const NavIconMenu = () => {
         </li> */}
         <li className="list-inline-item">
           <a href="#/" id="colorButton" onClick={onLightDarkModeClick}>
-            <CsLineIcons icon="light-on" size="18" className="light" />
-            <CsLineIcons icon="light-off" size="18" className="dark" />
+            <CsLineIcons icon="light-on" size="22" className="light" />
+            <CsLineIcons icon="light-off" size="22" className="dark" />
           </a>
         </li>
         {/* <IconMenuNotifications /> */}

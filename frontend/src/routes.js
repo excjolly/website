@@ -10,7 +10,6 @@ const apps = {
   calendar: lazy(() => import('views/apps/calendar/Calendar')),
 };
 const pages = {
-  index: lazy(() => import('views/pages/Pages')),
   home: lazy(() => import('views/pages/Home')),
   programHome: lazy(() => import('views/pages/ProgramHome')),
   program: lazy(() => import('views/pages/Program')),
@@ -19,6 +18,11 @@ const pages = {
   scholarship: lazy(() => import('views/pages/Scholarship')),
   videos: lazy(() => import('views/pages/Videos')),
   contact: lazy(() => import('views/pages/Contact')),  
+  aboutUs: lazy(() => import('views/pages/AboutUs')),
+  test: lazy(() => import('views/pages/Test')),
+  terms: lazy(() => import('views/pages/Terms')),
+  disclaimer: lazy(() => import('views/pages/Disclaimer')),
+  privacy: lazy(() => import('views/pages/Privacy')),
 };
 const blocks = {
   index: lazy(() => import('views/blocks/Blocks')),
@@ -47,30 +51,42 @@ const routesAndMenuItems = {
       label: 'Programs',
       icon: 'screen',
       subs: [
-        { path: '/all', label: 'All Programs', component: pages.programHome },
-        { path: '/program_name', label: 'Program Name', component: pages.program },
-        { path: '/program_name', label: 'Program Name', component: pages.program },
-        { path: '/program_name', label: 'Program Name', component: pages.program },
-        { path: '/program_name', label: 'Program Name', component: pages.program },
+        { path: '/all', label: 'All Programs', icon: 'list', component: pages.programHome },
+        { path: '/program_name', label: 'Program Name', icon: 'code', component: pages.program },
+        { path: '/program_name', label: 'Program Name', icon: 'code', component: pages.program },
+        { path: '/program_name', label: 'Program Name', icon: 'code', component: pages.program },
+        { path: '/program_name', label: 'Program Name', icon: 'code', component: pages.program },
       ],
+    },
+    {
+      path: `${appRoot}/about-us`,
+      label: 'About Us',
+      icon: 'question-hexagon',
+      component: pages.aboutUs,
     },
     {
       path: `${appRoot}/scholarship`,
       label: 'Scholarship',
-      icon: 'quiz',
+      icon: 'diploma',
       component: pages.scholarship,
     },
     {
-      path: `${appRoot}/videos`,
-      label: 'Videos',
-      icon: 'play',
-      component: pages.videos,
-    },
-    {
-      path: `${appRoot}/blogs`,
-      label: 'Blogs',
-      icon: 'file-text',
-      component: pages.blogHome,
+      path: `${appRoot}/knowledge-centre`,
+      label: 'Knowledge Centre',
+      icon: 'graduation',
+      subs: [
+        { path: '/sample-tests', label: 'Sample Tests', icon: 'quiz', component: pages.test },
+        {
+          path: `/blogs`,
+          label: 'Blogs',
+          icon: 'file-text',
+          component: pages.blogHome,
+          subs: [
+            { path: '/blog-name', component: pages.scholarship }
+          ],
+        },
+        { path: `/videos`, label: 'Videos', icon: 'play', component: pages.videos }
+      ]
     },
     {
       path: `${appRoot}/contact`,
@@ -78,6 +94,18 @@ const routesAndMenuItems = {
       icon: 'phone',
       component: pages.contact,
     },
+    {
+      path: `${appRoot}/terms-and-contitions`,
+      component: pages.terms,
+    },
+    {
+      path: `${appRoot}/disclaimer`,
+      component: pages.disclaimer,
+    },
+    {
+      path: `${appRoot}/privacy-policy`,
+      component: pages.privacy,
+    }
   ],
   sidebarItems: [
   ],

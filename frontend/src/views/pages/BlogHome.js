@@ -18,7 +18,7 @@ const BlogGrid = () => {
     <>
       <HtmlHead title={title} description={description} />
       <Helmet>
-        <link rel="canonical" href="/blogs">
+        <link rel="canonical" href="/knowledge-centre/blogs">
         </link>
       </Helmet>
       {/* Title Start */}

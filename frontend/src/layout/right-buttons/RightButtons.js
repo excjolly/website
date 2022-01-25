@@ -26,22 +26,7 @@ const RightButtons = () => {
   return (
     <>
       <div className="settings-buttons-container">
-        <OverlayTrigger delay={{ show: 1000, hide: 0 }} overlay={<Tooltip>Settings</Tooltip>} placement="left">
-          <Button variant="primary" className="settings-button p-0" onClick={showSettingsModal}>
-            <span>
-              <CsLineIcons icon="paint-roller" className="position-relative" />
-            </span>
-          </Button>
-        </OverlayTrigger>
-
-        <OverlayTrigger delay={{ show: 1000, hide: 0 }} overlay={<Tooltip>Niches</Tooltip>} placement="left">
-          <Button variant="primary" className="settings-button p-0" onClick={showNichesModal}>
-            <span>
-              <CsLineIcons icon="toy" className="position-relative" />
-            </span>
-          </Button>
-        </OverlayTrigger>
-        <OverlayTrigger delay={{ show: 1000, hide: 0 }} overlay={<Tooltip>Purchase</Tooltip>} placement="left">
+        <OverlayTrigger delay={{ show: 1000, hide: 0 }} overlay={<Tooltip>Instagram</Tooltip>} placement="left">
           <Button
             variant="primary"
             href="https://themeforest.net/item/acorn-react-admin-template/33951408"
@@ -50,7 +35,46 @@ const RightButtons = () => {
             className="settings-button p-0"
           >
             <span>
-              <CsLineIcons icon="cart" className="position-relative" />
+              <CsLineIcons icon="instagram" className="position-relative" />
+            </span>
+          </Button>
+        </OverlayTrigger>
+        <OverlayTrigger delay={{ show: 1000, hide: 0 }} overlay={<Tooltip>LinkedIn</Tooltip>} placement="left">
+          <Button
+            variant="primary"
+            href="https://themeforest.net/item/acorn-react-admin-template/33951408"
+            rel="noreferrer"
+            target="_blank"
+            className="settings-button p-0"
+          >
+            <span>
+              <CsLineIcons icon="linkedin" className="position-relative" />
+            </span>
+          </Button>
+        </OverlayTrigger>
+        <OverlayTrigger delay={{ show: 1000, hide: 0 }} overlay={<Tooltip>Facebook</Tooltip>} placement="left">
+          <Button
+            variant="primary"
+            href="https://themeforest.net/item/acorn-react-admin-template/33951408"
+            rel="noreferrer"
+            target="_blank"
+            className="settings-button p-0"
+          >
+            <span>
+              <CsLineIcons icon="facebook" className="position-relative" />
+            </span>
+          </Button>
+        </OverlayTrigger>
+        <OverlayTrigger delay={{ show: 1000, hide: 0 }} overlay={<Tooltip>YouTube</Tooltip>} placement="left">
+          <Button
+            variant="primary"
+            href="https://themeforest.net/item/acorn-react-admin-template/33951408"
+            rel="noreferrer"
+            target="_blank"
+            className="settings-button p-0"
+          >
+            <span>
+              <CsLineIcons icon="youtube" className="position-relative" />
             </span>
           </Button>
         </OverlayTrigger>
