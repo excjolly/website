@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
-import classNames from 'classnames';
 import { useDispatch, useSelector } from 'react-redux';
 import { MENU_BEHAVIOUR } from 'constants.js';
 import CsLineIcons from 'cs-line-icons/CsLineIcons';
 import { settingsChangeColor } from 'settings/settingsSlice';
-import IconMenuNotifications from './notifications/Notifications';
-import SearchModal from './search/SearchModal';
 import { menuChangeBehaviour } from './main-menu/menuSlice';
 
 const NavIconMenu = () => {

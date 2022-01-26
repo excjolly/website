@@ -19,9 +19,6 @@ const Footer = () => {
             </Col>
             <Col sm="6" className="d-none d-sm-block">
               <Breadcrumb className="pt-0 pe-0 mb-0 float-end">
-                <Breadcrumb.Item className="mb-0 text-medium" href="/about-us" linkProps={{ className: 'btn-link' }}>
-                  About Us
-                </Breadcrumb.Item>
                 <Breadcrumb.Item className="mb-0 text-medium" href="/terms-and-conditions" linkProps={{ className: 'btn-link' }}>
                   Terms & Conditions
                 </Breadcrumb.Item>

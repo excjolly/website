@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card, Col, Row, Accordion, useAccordionButton } from 'react-bootstrap';
+import { Button, Card, Col, Row, Accordion, useAccordionButton, Form } from 'react-bootstrap';
 import Plyr from 'plyr-react';
 import HtmlHead from 'components/html-head/HtmlHead';
 import CsLineIcons from 'cs-line-icons/CsLineIcons';
@@ -7,6 +7,9 @@ import { Helmet } from 'react-helmet';
 import Glide from 'components/carousel/Glide';
 import Pricing from 'views/pages/miscellaneous/Pricing';
 import BlogHome from 'views/pages/blog/BlogHome';     
+import Clamp from 'components/clamp';
+import { NavLink } from 'react-router-dom';
+import ListBasicItems from 'views/blocks/list/ListBasicItems';
 
 const PurePlyr = React.memo(() => {
   const videoSrc = {
@@ -57,77 +60,73 @@ const CoursesDetail = () => {
           {/* Preview Start */}
           <h2 className="small-title">Preview</h2>
           <Card className="mb-5">
-            <div className="card-img-top sh-50 cover">
               <PurePlyr />
-            </div>
-            <Card.Body>
-              <h4 className="mb-3">Carrot Cake Gingerbread</h4>
-              <div>
-                <p>
-                  Toffee croissant icing toffee. Sweet roll chupa chups marshmallow muffin liquorice chupa chups soufflé bonbon. Liquorice gummi bears cake
-                  donut chocolate lollipop gummi bears. Cotton candy cupcake ice cream gummies dessert muffin chocolate jelly. Danish brownie chocolate bar
-                  lollipop cookie tootsie roll candy canes. Jujubes lollipop cheesecake gummi bears cheesecake. Cake jujubes soufflé.
-                </p>
-                <p>
-                  Cake chocolate bar biscuit sweet roll liquorice jelly jujubes. Gingerbread icing macaroon bear claw jelly toffee. Chocolate cake marshmallow
-                  muffin wafer. Pastry cake tart apple pie bear claw sweet. Apple pie macaroon sesame snaps cotton candy jelly
-                  <u>pudding lollipop caramels</u>
-                  marshmallow. Powder halvah dessert ice cream. Carrot cake gingerbread chocolate cake tootsie roll. Oat cake jujubes jelly-o jelly chupa chups
-                  lollipop jelly wafer soufflé.
-                </p>
-                <h6 className="mb-3 mt-5 text-alternate">Sesame Snaps Lollipop Macaroon</h6>
-                <p>
-                  Jelly-o jelly oat cake cheesecake halvah. Cupcake sweet roll donut. Sesame snaps lollipop macaroon. Oat cake chocolate cake marzipan pudding
-                  danish gummies. Dragée liquorice jelly beans jelly jelly sesame snaps brownie. Cheesecake chocolate cake sweet roll cupcake dragée croissant
-                  muffin. Lemon drops cupcake croissant liquorice donut cookie cake. Gingerbread biscuit bear claw marzipan tiramisu topping. Jelly-o croissant
-                  chocolate bar gummi bears dessert lemon drops gingerbread croissant. Donut candy jelly.
-                </p>
-                <ul className="list-unstyled">
-                  <li>Croissant</li>
-                  <li>Sesame snaps</li>
-                  <li>Ice cream</li>
-                  <li>Candy canes</li>
-                  <li>Lemon drops</li>
-                </ul>
-                <h6 className="mb-3 mt-5 text-alternate">Muffin Sweet Roll Apple Pie</h6>
-                <p>
-                  Carrot cake gummi bears wafer sesame snaps soufflé cheesecake cheesecake cake. Sweet roll apple pie tiramisu bonbon sugar plum muffin sesame
-                  snaps chocolate. Lollipop sweet roll gingerbread halvah sesame snaps powder. Wafer halvah chocolate soufflé icing. Cotton candy danish
-                  lollipop jelly-o candy caramels.
-                </p>
-              </div>
-            </Card.Body>
-            <Card.Footer className="border-0 pt-0">
-              <Row className="align-items-center">
-                <Col xs="6">
-                  <div className="d-flex align-items-center">
-                    <div className="sw-5 d-inline-block position-relative me-3">
-                      <img src="/img/profile/profile-1.webp" className="img-fluid rounded-xl" alt="thumb" />
-                    </div>
-                    <div className="d-inline-block">
-                      <Button variant="link" className="lh-1 d-inline-block p-0">
-                        Olli Hawkins
-                      </Button>
-                      <div className="text-muted text-small">Development Lead</div>
-                    </div>
-                  </div>
-                </Col>
-                <Col xs="6">
-                  <Row className="g-0 justify-content-end">
-                    <Col xs="auto" className="pe-3">
-                      <CsLineIcons icon="eye" width="15" height="15" className="cs-icon icon text-primary me-1" />
-                      <span className="align-middle">221</span>
-                    </Col>
-                    <Col xs="auto">
-                      <CsLineIcons icon="message" width="15" height="15" className="cs-icon icon text-primary me-1" />
-                      <span className="align-middle">17</span>
-                    </Col>
-                  </Row>
-                </Col>
-              </Row>
-            </Card.Footer>
           </Card>
           {/* Preview End */}
+          
+          <h2 className="small-title">Program Overview</h2>
+          <Row xxl="2">
+            <Col>
+              <Card className="mb-5">
+                <Card.Body>
+                  <div className="mb-2">
+                    <NavLink to="#" className="heading">
+                      How the Paths are Created
+                    </NavLink>
+                  </div>
+                  <Clamp tag="span" clamp="2" className="text-alternate mb-0 sh-5">
+                    Jujubes brownie marshmallow apple pie donut ice cream jelly-o jelly-o gummi bears. Tootsie roll chocolate bar dragée bonbon cheesecake icing.
+                    Danish wafer donut cookie caramels gummies topping.
+                  </Clamp>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col>
+              <Card className="mb-5">
+                <Card.Body>
+                  <div className="mb-2">
+                    <NavLink to="#" className="heading">
+                      Why Should You Take a Path
+                    </NavLink>
+                  </div>
+                  <Clamp tag="span" clamp="2" className="text-alternate mb-0 sh-5">
+                    Jujubes brownie marshmallow apple pie donut ice cream jelly-o jelly-o gummi bears. Tootsie roll chocolate bar dragée bonbon cheesecake icing.
+                    Danish wafer donut cookie caramels gummies topping.
+                  </Clamp>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col>
+              <Card className="mb-5">
+                <Card.Body>
+                  <div className="mb-2">
+                    <NavLink to="#" className="heading">
+                      Benefits of Learning with a Path
+                    </NavLink>
+                  </div>
+                  <Clamp tag="span" clamp="2" className="text-alternate mb-0 sh-5">
+                    Jujubes brownie marshmallow apple pie donut ice cream jelly-o jelly-o gummi bears. Tootsie roll chocolate bar dragée bonbon cheesecake icing.
+                    Danish wafer donut cookie caramels gummies topping.
+                  </Clamp>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col>
+              <Card className="mb-5">
+                <Card.Body>
+                  <div className="mb-2">
+                    <NavLink to="#" className="heading">
+                      Path Courses and Quizes
+                    </NavLink>
+                  </div>
+                  <Clamp tag="span" clamp="2" className="text-alternate mb-0 sh-5">
+                    Jujubes brownie marshmallow apple pie donut ice cream jelly-o jelly-o gummi bears. Tootsie roll chocolate bar dragée bonbon cheesecake icing.
+                    Danish wafer donut cookie caramels gummies topping.
+                  </Clamp>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
         </Col>
         <Col xxl="4">
           {/* At a Glance Start  */}
@@ -240,31 +239,19 @@ const CoursesDetail = () => {
           </Card>
           {/* At a Glance End  */}
 
-          {/* Tags Start */}
-          <h2 className="small-title">Tags</h2>
+          {/* Tags Start */}          
+          <h2 className="small-title">Download Brochure</h2>
           <Card className="mb-5">
-            <Card.Body className="mb-n1">
-              <Button size="sm" variant="outline-alternate" className="mb-1 me-1">
-                Food (12)
-              </Button>
-              <Button size="sm" variant="outline-alternate" className="mb-1 me-1">
-                Baking (3)
-              </Button>
-              <Button size="sm" variant="outline-alternate" className="mb-1 me-1">
-                Sweet (1)
-              </Button>
-              <Button size="sm" variant="outline-alternate" className="mb-1 me-1">
-                Molding (3)
-              </Button>
-              <Button size="sm" variant="outline-alternate" className="mb-1 me-1">
-                Pastry (5)
-              </Button>
-              <Button size="sm" variant="outline-alternate" className="mb-1 me-1">
-                Healthy (7)
+            <Card.Body>
+              <div className="cta-3">Need more details?</div>
+              <div className="mb-3 cta-3 text-primary">Read the docs!</div>
+              <div className="text-muted mb-4">Cheesecake chocolate carrot cake pie lollipop lemon toffee lollipop. Oat cake pie cake cotton.</div>
+              <Button variant="outline-primary" className="btn-icon btn-icon-start sw-15 stretched-link">
+                <CsLineIcons icon="file-text" /> <span>Docs</span>
               </Button>
             </Card.Body>
           </Card>
-          
+
           <h2 className="small-title">Download Brochure</h2>
           <Card className="mb-5">
             <Card.Body>
@@ -279,126 +266,311 @@ const CoursesDetail = () => {
           {/* Tags End */}
         </Col>
       </Row>
+
+      <h2 className='small-title'> List </h2>
+      <Row className='mb-5' xxl="2">
+        <ListBasicItems/>
+        <ListBasicItems/>
+      </Row>
+
+      <Row>
+        <Col>
+          <h2 className="small-title">Student Journey</h2>
+          <Row className="mb-5">
+            <Card>
+            <Card.Body>
+              <Row className="g-0">
+                <Col xs="auto" className="sw-5 d-flex flex-column justify-content-center align-items-center position-relative">
+                  <div className="w-100 d-flex h-0" />
+                  <div className="sw-5 sh-5 rounded-xl d-flex flex-shrink-0 justify-content-center align-items-center">
+                    <div className="bg-gradient-light sw-5 sh-5 rounded-xl">
+                      <div className="text-white d-flex justify-content-center align-items-center h-100">
+                        <CsLineIcons icon="cupcake" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="w-100 d-flex h-100 justify-content-center position-relative">
+                    <div className="line-w-1 bg-separator h-100 position-absolute" />
+                  </div>
+                </Col>
+                <Col className="mb-4 ps-4">
+                  <div className="h-100">
+                    <div className="d-flex flex-column justify-content-start">
+                      <div className="d-flex flex-column">
+                        <Button variant="link" className="p-0 pt-1 heading text-start">
+                          Powder Sesame Snaps Cupcake
+                        </Button>
+                        {/* <div className="text-muted mt-1">
+                          Jujubes tootsie roll liquorice cake jelly beans pudding gummi bears chocolate cake donut. Jelly-o sugar plum fruitcake bonbon bear claw cake
+                          cookie chocolate bar. Tiramisu soufflé apple pie.
+                        </div> */}
+                      </div>
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+              <Row className="g-0">
+                <Col xs="auto" className="sw-5 d-flex flex-column justify-content-center align-items-center position-relative">
+                  <div className="w-100 d-flex h-0" />
+                  <div className="sw-5 sh-5 rounded-xl d-flex flex-shrink-0 justify-content-center align-items-center">
+                    <div className="bg-gradient-light sw-5 sh-5 rounded-xl">
+                      <div className="text-white d-flex justify-content-center align-items-center h-100">
+                        <CsLineIcons icon="pepper" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="w-100 d-flex h-100 justify-content-center position-relative">
+                    <div className="line-w-1 bg-separator h-100 position-absolute" />
+                  </div>
+                </Col>
+                <Col className="mb-4 ps-4">
+                  <div className="h-100">
+                    <div className="d-flex flex-column justify-content-start">
+                      <div className="d-flex flex-column">
+                        <Button variant="link" className="p-0 pt-1 heading text-start">
+                          Jujubes Wafer Topping Biscuit
+                        </Button>
+                        {/* <div className="text-muted mt-1">
+                          Jelly-o wafer sesame snaps candy canes. Danish dragée toffee bonbon. Jelly-o marshmallow cake oat cake caramels jujubes.
+                        </div> */}
+                      </div>
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+              <Row className="g-0">
+                <Col xs="auto" className="sw-5 d-flex flex-column justify-content-center align-items-center position-relative">
+                  <div className="w-100 d-flex h-0" />
+                  <div className="sw-5 sh-5 rounded-xl d-flex flex-shrink-0 justify-content-center align-items-center">
+                    <div className="bg-gradient-light sw-5 sh-5 rounded-xl">
+                      <div className="text-white d-flex justify-content-center align-items-center h-100">
+                        <CsLineIcons icon="pepper" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="w-100 d-flex h-100 justify-content-center position-relative">
+                    <div className="line-w-1 bg-separator h-100 position-absolute" />
+                  </div>
+                </Col>
+                <Col className="mb-4 ps-4">
+                  <div className="h-100">
+                    <div className="d-flex flex-column justify-content-start">
+                      <div className="d-flex flex-column">
+                        <Button variant="link" className="p-0 pt-1 heading text-start">
+                          Jujubes Wafer Topping Biscuit
+                        </Button>
+                        {/* <div className="text-muted mt-1">
+                          Jelly-o wafer sesame snaps candy canes. Danish dragée toffee bonbon. Jelly-o marshmallow cake oat cake caramels jujubes.
+                        </div> */}
+                      </div>
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+              <Row className="g-0">
+                <Col xs="auto" className="sw-5 d-flex flex-column justify-content-center align-items-center position-relative">
+                  <div className="w-100 d-flex h-0" />
+                  <div className="sw-5 sh-5 rounded-xl d-flex flex-shrink-0 justify-content-center align-items-center">
+                    <div className="bg-gradient-light sw-5 sh-5 rounded-xl">
+                      <div className="text-white d-flex justify-content-center align-items-center h-100">
+                        <CsLineIcons icon="pepper" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="w-100 d-flex h-100 justify-content-center position-relative">
+                    <div className="line-w-1 bg-separator h-100 position-absolute" />
+                  </div>
+                </Col>
+                <Col className="mb-4 ps-4">
+                  <div className="h-100">
+                    <div className="d-flex flex-column justify-content-start">
+                      <div className="d-flex flex-column">
+                        <Button variant="link" className="p-0 pt-1 heading text-start">
+                          Jujubes Wafer Topping Biscuit
+                        </Button>
+                        {/* <div className="text-muted mt-1">
+                          Jelly-o wafer sesame snaps candy canes. Danish dragée toffee bonbon. Jelly-o marshmallow cake oat cake caramels jujubes.
+                        </div> */}
+                      </div>
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+              <Row className="g-0">
+                <Col xs="auto" className="sw-5 d-flex flex-column justify-content-center align-items-center position-relative">
+                  <div className="w-100 d-flex h-0" />
+                  <div className="sw-5 sh-5 rounded-xl d-flex flex-shrink-0 justify-content-center align-items-center">
+                    <div className="bg-gradient-light sw-5 sh-5 rounded-xl">
+                      <div className="text-white d-flex justify-content-center align-items-center h-100">
+                        <CsLineIcons icon="loaf" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="w-100 d-flex h-100 justify-content-center position-relative" />
+                </Col>
+                <Col className="ps-4">
+                  <div className="h-100">
+                    <div className="d-flex flex-column justify-content-start">
+                      <div className="d-flex flex-column">
+                        <Button variant="link" className="p-0 pt-1 heading text-start">
+                          Jelly Beans Lemon Danish
+                        </Button>
+                        {/* <div className="text-muted mt-1">
+                          Cake fruitcake oat cake. Muffin jelly bonbon croissant. Bonbon topping donut marshmallow carrot cake muffin.
+                        </div> */}
+                      </div>
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+            </Card.Body>
+          </Card>
+        </Row>
+      </Col>
+
+      <Col>
+        <h2 className='small-title'></h2>
+        <Card>
+          <Card.Body>
+            <h2 className="small-title">Enquiry Form</h2>
+            <Form.Control type="name" className="mb-2" placeholder="Name" />
+            <Form.Control type="email" className="mb-2" placeholder="E-mail" />
+            <Form.Control type="phone" className="mb-2" placeholder="Phone" />
+            <Form.Control
+              as="select"
+              className="mb-4"
+            >
+              <option value="red">Red</option>
+              <option value="blue">Blue</option>
+              <option value="green">Green</option>
+              <option value="black">Black</option>
+              <option value="orange">Orange</option>
+            </Form.Control>
+            <Button variant="primary" className="btn-icon btn-icon-start">
+              <CsLineIcons icon="chevron-right" /> <span>Submit</span>
+            </Button>
+          </Card.Body>
+        </Card>
+      </Col>
+
+      </Row>
+
+      <h2 className="small-title">Curriculum</h2>
       <Row className="mb-5">
-        <h2 className="small-title">Curriculum</h2>
         <Accordion className="mb-n2" defaultActiveKey="1">
             <Card className="d-flex mb-2 flex-grow-1">
               <CustomAccordionToggle eventKey="1">Cupcake Lollipop Biscuit</CustomAccordionToggle>
-              <Accordion.Collapse eventKey="1">
-                <Card.Body className="pt-0">
-                  <p>
-                    <strong>Moon Tempor</strong>
-                  </p>
-                  <p>
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
-                    skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
-                    single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
-                    proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
-                    haven't heard of them accusamus labore sustainable VHS.
-                  </p>
-                  <br />
-                  <p>
-                    <strong>Accusamus Labore</strong>
-                  </p>
-                  <p>
-                    Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
-                    helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
-                    beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                    <br />
-                    <br />
-                    Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore
-                    sustainable VHS. Ad vegan excepteur butcher vice lomo. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee
-                    nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
-                    excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of
-                    them accusamus labore sustainable VHS.
-                  </p>
-                  <p className="mb-0">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
-                    skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
-                    single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
-                    proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
-                    haven't heard of them accusamus labore sustainable VHS.
-                  </p>
-                </Card.Body>
-              </Accordion.Collapse>
             </Card>
             <Card className="d-flex mb-2 flex-grow-1">
               <CustomAccordionToggle eventKey="2">Roll Marshmallow</CustomAccordionToggle>
-              <Accordion.Collapse eventKey="2">
-                <Card.Body className="pt-0">
-                  <p>
-                    <strong>Moon Tempor</strong>
-                  </p>
-                  <p className="mb-0">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
-                    skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
-                    single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
-                    proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
-                    haven't heard of them accusamus labore sustainable VHS.
-                  </p>
-                </Card.Body>
-              </Accordion.Collapse>
             </Card>
             <Card className="d-flex mb-2 flex-grow-1">
               <CustomAccordionToggle eventKey="3">Pudding Soufflé Macaroon Carrot Cake</CustomAccordionToggle>
-              <Accordion.Collapse eventKey="3">
-                <Card.Body className="pt-0">
-                  <p>
-                    <strong>Moon Tempor</strong>
-                  </p>
-                  <p className="mb-0">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
-                    skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
-                    single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
-                    proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
-                    haven't heard of them accusamus labore sustainable VHS.
-                  </p>
-                </Card.Body>
-              </Accordion.Collapse>
             </Card>
             <Card className="d-flex mb-2 flex-grow-1">
               <CustomAccordionToggle eventKey="4">Sesame Snaps Cheesecake Muffin</CustomAccordionToggle>
-              <Accordion.Collapse eventKey="4">
-                <Card.Body className="pt-0">
-                  <p>
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
-                    skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
-                    single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
-                    proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
-                    haven't heard of them accusamus labore sustainable VHS.
-                  </p>
-                </Card.Body>
-              </Accordion.Collapse>
             </Card>
             <Card className="d-flex mb-2 flex-grow-1">
               <CustomAccordionToggle eventKey="5">Candy Cupcake Ice Cream Gummies Dessert Muffin</CustomAccordionToggle>
-              <Accordion.Collapse eventKey="5">
-                <Card.Body className="pt-0">
-                  <p>
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
-                    skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
-                    single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
-                    proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
-                    haven't heard of them accusamus labore sustainable VHS.
-                  </p>
-                </Card.Body>
-              </Accordion.Collapse>
             </Card>
             <Card className="d-flex mb-2 flex-grow-1">
               <CustomAccordionToggle eventKey="6">Powder Halvah Dessert Ice Cream</CustomAccordionToggle>
-              <Accordion.Collapse eventKey="6">
-                <Card.Body className="pt-0">
-                  <p>
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
-                    skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
-                    single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
-                    proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
-                    haven't heard of them accusamus labore sustainable VHS.
-                  </p>
-                </Card.Body>
-              </Accordion.Collapse>
             </Card>
           </Accordion>
+      </Row>
+
+      <h2 className="small-title">Mentors</h2>
+      <Row xxl="4">
+        <Col>
+          <Card className="mb-5">
+            <Card.Body>
+              <div className="d-flex align-items-center flex-column mb-4">
+                <div className="d-flex align-items-center flex-column">
+                  <div className="sw-13 position-relative mb-3">
+                    <img src="/img/profile/profile-1.webp" className="img-fluid rounded-xl" alt="thumb" />
+                  </div>
+                  <div className="h5 mb-0">Blaine Cottrell</div>
+                  <div className="text-muted">Executive UI/UX Designer</div>
+                  <div className="text-muted mb-3">
+                    <CsLineIcons icon="pin" className="me-1" />
+                    <span className="align-middle">Montreal, Canada</span>
+                  </div>
+                </div>
+                <Button size='xl'>About</Button>
+              </div>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col>
+          <Card className="mb-5">
+            <Card.Body>
+              <div className="d-flex align-items-center flex-column mb-4">
+                <div className="d-flex align-items-center flex-column">
+                  <div className="sw-13 position-relative mb-3">
+                    <img src="/img/profile/profile-1.webp" className="img-fluid rounded-xl" alt="thumb" />
+                  </div>
+                  <div className="h5 mb-0">Blaine Cottrell</div>
+                  <div className="text-muted">Executive UI/UX Designer</div>
+                  <div className="text-muted mb-3">
+                    <CsLineIcons icon="pin" className="me-1" />
+                    <span className="align-middle">Montreal, Canada</span>
+                  </div>
+                </div>
+                <Button size='xl'>About</Button>
+              </div>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col>
+          <Card className="mb-5">
+            <Card.Body>
+              <div className="d-flex align-items-center flex-column mb-4">
+                <div className="d-flex align-items-center flex-column">
+                  <div className="sw-13 position-relative mb-3">
+                    <img src="/img/profile/profile-1.webp" className="img-fluid rounded-xl" alt="thumb" />
+                  </div>
+                  <div className="h5 mb-0">Blaine Cottrell</div>
+                  <div className="text-muted">Executive UI/UX Designer</div>
+                  <div className="text-muted mb-3">
+                    <CsLineIcons icon="pin" className="me-1" />
+                    <span className="align-middle">Montreal, Canada</span>
+                  </div>
+                </div>
+                <Button size='xl'>About</Button>
+              </div>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col>
+          <Card className="mb-5">
+            <Card.Body>
+              <div className="d-flex align-items-center flex-column mb-4">
+                <div className="d-flex align-items-center flex-column">
+                  <div className="sw-13 position-relative mb-3">
+                    <img src="/img/profile/profile-1.webp" className="img-fluid rounded-xl" alt="thumb" />
+                  </div>
+                  <div className="h5 mb-0">Blaine Cottrell</div>
+                  <div className="text-muted">Executive UI/UX Designer</div>
+                  <div className="text-muted mb-3">
+                    <CsLineIcons icon="pin" className="me-1" />
+                    <span className="align-middle">Montreal, Canada</span>
+                  </div>
+                </div>
+                <Button size='xl'>About</Button>
+              </div>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+
+      <h2 className='small-title'>Mentor Videos</h2>
+      <Row className='mb-5'>
+        <Col>
+          <PurePlyr />
+        </Col>
+        <Col>
+          <PurePlyr />
+        </Col>
       </Row>
 
       <Row className="mb-5">
@@ -440,9 +612,33 @@ const CoursesDetail = () => {
       </Row>
 
       <h2 className="small-title">Sample Projects</h2>
-      <Row className="mb-5 row-cols-1 row-cols-md-3 g-1">
+      <Row className="mb-5 row-cols-1 row-cols-md-4 g-1">
         <Col>
           <Card className="hover-scale-up h-100">
+            <Card.Body>
+              <Row className="g-0">
+                <Col xs="auto">
+                  <div className="sw-6 sh-6 rounded-xl d-flex justify-content-center align-items-center border border-primary mb-4">
+                    <CsLineIcons icon="laptop" className="text-primary" />
+                  </div>
+                </Col>
+                <Col>
+                  <div className="d-flex flex-column ps-card justify-content-start">
+                    <div className="d-flex flex-column justify-content-center mb-2">
+                      <h2 className='text-primary heading'>Project</h2>
+                    </div>
+                    <div className="text-alternate">
+                      Lollipop apple pie lollipop toffee croissant. Sugar plum fruitcake cotton candy lemon drops. Carrot cake fruitcake dragée pie cotton candy
+                      sesame snaps lollipop croissant.
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col>
+        <Card className="hover-scale-up h-100">
             <Card.Body>
               <Row className="g-0">
                 <Col xs="auto">
