@@ -209,7 +209,7 @@ const MiscellaneousPricing = () => {
 
       {/* Faq Start */}
       <h2 className="small-title">Faq</h2>
-      <Accordion className="mb-5" defaultActiveKey="1">
+      <Accordion className="mb-5">
         <Card className="d-flex mb-2 flex-grow-1">
           <CustomAccordionToggle eventKey="1">Cupcake Lollipop Biscuit</CustomAccordionToggle>
           <Accordion.Collapse eventKey="1">

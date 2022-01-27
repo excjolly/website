@@ -34,29 +34,21 @@ const LayoutsBasic = () => {
 
   return (
     <Form>
-      <div className="mb-3">
+      <div className="mb-2">
+        <Form.Label>Name</Form.Label>
+        <Form.Control type="name" />
+      </div>
+      <div className="mb-2">
         <Form.Label>Email</Form.Label>
         <Form.Control type="email" />
       </div>
-      <div className="mb-3">
-        <Form.Label>Password</Form.Label>
-        <Form.Control type="password" />
-      </div>
-      <div className="mb-3">
-        <Form.Label>Tag</Form.Label>
-        <ReactTags tags={tags} allowNew onDelete={onTagDelete} onAddition={onTagAddition} placeholderText="" />
-      </div>
-      <div className="mb-3">
-        <Form.Label>Date</Form.Label>
-        <DatePicker className="form-control" selected={startDate} onChange={(date) => setStartDate(date)} />
+      <div className="mb-2">
+        <Form.Label>Phone</Form.Label>
+        <Form.Control type="phone" />
       </div>
       <div className="mb-3">
         <Form.Label>Select</Form.Label>
         <Select classNamePrefix="react-select" options={options} value={selectValue} onChange={setSelectValue} placeholder="" />
-      </div>
-      <div className="mb-3">
-        <Form.Label>Address</Form.Label>
-        <Form.Control as="textarea" rows={3} />
       </div>
       <Button variant="primary">Submit</Button>
     </Form>

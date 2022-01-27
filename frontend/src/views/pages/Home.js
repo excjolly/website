@@ -353,10 +353,12 @@ const DashboardsDefault = () => {
         <h2 className="small-title">Testimonials</h2>
         <BlogHome/>
     </Row>
+
     <Row>
         <h2 className="small-title">Admission Procedure</h2>
         <CarouselSingle/>
     </Row>
+    
     <Row>
         <h2 className="small-title">Our Partners</h2>
         <CarouselFlow/>
