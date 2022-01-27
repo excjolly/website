@@ -6,6 +6,7 @@ import ContextMenuBasic from 'views/interface/plugins/context-menu/ContextMenuBa
 import CsLineIcons from 'cs-line-icons/CsLineIcons';
 import { h2 } from 'react-router-dom';
 import ChartDoughnut from 'views/interface/plugins/chart/ChartDoughnut';
+import { CtaTextAndButtonsFirst } from 'views/blocks/cta/CtaTextAndButtons';
 
 const AboutUs = () => {
   const title = 'About Us';
@@ -34,16 +35,26 @@ const AboutUs = () => {
           Soufflé bonbon cookie. Jujubes ice cream cotton candy tootsie roll sweet.
         </p>
       </Card>
-
-      <h2 className="small-title">Our Values</h2>
-      <Row xxl="3">
-        <ContextMenuBasic/>
-        <ContextMenuBasic/>
-        <ContextMenuBasic/>
+      <Row xxl="3" xs="1">
+        <Col className="mb-5">
+          <h2 className="small-title">Our Values</h2>
+          <ContextMenuBasic/>
+          <ContextMenuBasic/>
+          <ContextMenuBasic/>
+        </Col>
+        <Col className="mb-5">
+          <h2 className="small-title">Our Mission</h2>
+          <CtaTextAndButtonsFirst/>
+        </Col>
+        <Col className="mb-5">
+          <h2 className="small-title">Our Vision</h2>
+          <CtaTextAndButtonsFirst/>
+        </Col>
       </Row>
 
       <h2 className="small-title">Timeline</h2>
       <Row className="mb-5">
+      <Col>
         <Card>
         <Card.Body>
           <Row className="g-0">
@@ -197,13 +208,14 @@ const AboutUs = () => {
           </Row>
         </Card.Body>
       </Card>
+      </Col>
       </Row>
 
       <h2 className="small-title">Chart</h2>
-      <Row xxl="2">            
+      <Row xxl="2" className="mb-3">            
         <Col xs="12" xl="6">
           <section className="scroll-section" id="doughnutChart">
-            <Card body className="mb-5">
+            <Card body className="mb-2">
               <div className="sh-35">
                 <ChartDoughnut />
               </div>
@@ -212,7 +224,7 @@ const AboutUs = () => {
         </Col>            
         <Col xs="12" xl="6">
           <section className="scroll-section" id="doughnutChart">
-            <Card body className="mb-5">
+            <Card body className="mb-2">
               <div className="sh-35">
                 <ChartDoughnut />
               </div>
@@ -442,8 +454,8 @@ const AboutUs = () => {
       </Row>
 
       <h2 className="small-title">Our Achievements</h2>
-      <Row className="g-2 row-cols-1 row-cols-xl-2 row-cols-xxl-4 mb-5">
-        <Col>
+      <Row xs="1" xxl="4">
+        <Col className="mb-2">
           <Card className="h-100">
             <Card.Body>
               <div className="text-center">
@@ -458,7 +470,7 @@ const AboutUs = () => {
             </Card.Body>
           </Card>
         </Col>
-        <Col>
+        <Col className="mb-2">
           <Card className="h-100">
             <Card.Body>
               <div className="text-center">
@@ -473,7 +485,7 @@ const AboutUs = () => {
             </Card.Body>
           </Card>
         </Col>
-        <Col>
+        <Col className="mb-2">
           <Card className="h-100">
             <Card.Body>
               <div className="text-center">
@@ -488,7 +500,7 @@ const AboutUs = () => {
             </Card.Body>
           </Card>
         </Col>
-        <Col>
+        <Col className="mb-2">
           <Card className="h-100">
             <Card.Body>
               <div className="text-center">

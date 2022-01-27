@@ -19,7 +19,7 @@ const ContextMenuBasic = () => {
   return (
     <>
       <div onContextMenu={(e) => displayContextMenu(e, 'context-menu-basic')}>
-        <Card className="mb-5 cursor-default">
+        <Card className="mb-2 cursor-default">
           <Row className="sh-9 p-card pt-0 pb-0 g-0">
             <Col xs="2" className="d-flex align-items-center justify-content-center">
               <div className="pe-card">

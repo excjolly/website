@@ -74,7 +74,7 @@ const CoursesDetail = () => {
           <h2 className="small-title">Program Overview</h2>
           <Row xxl="2" xs="1">
             <Col>
-              <Card className="mb-5">
+              <Card className="mb-2">
                 <Card.Body>
                   <div className="mb-2">
                     <NavLink to="#" className="heading">
@@ -89,7 +89,7 @@ const CoursesDetail = () => {
               </Card>
             </Col>
             <Col>
-              <Card className="mb-5">
+              <Card className="mb-2">
                 <Card.Body>
                   <div className="mb-2">
                     <NavLink to="#" className="heading">
@@ -104,7 +104,7 @@ const CoursesDetail = () => {
               </Card>
             </Col>
             <Col>
-              <Card className="mb-5">
+              <Card className="mb-2">
                 <Card.Body>
                   <div className="mb-2">
                     <NavLink to="#" className="heading">
@@ -251,7 +251,6 @@ const CoursesDetail = () => {
           <Card className="mb-5">
             <Card.Body>
               <div className="cta-3">Need more details?</div>
-              <div className="mb-3 cta-3 text-primary">Read the docs!</div>
               <div className="text-muted mb-4">Cheesecake chocolate carrot cake pie lollipop lemon toffee lollipop. Oat cake pie cake cotton.</div>
               <Button variant="outline-primary" className="btn-icon btn-icon-start sw-15 stretched-link">
                 <CsLineIcons icon="file-text" /> <span>Docs</span>
@@ -263,7 +262,6 @@ const CoursesDetail = () => {
           <Card className="mb-5">
             <Card.Body>
               <div className="cta-3">Need more details?</div>
-              <div className="mb-3 cta-3 text-primary">Read the docs!</div>
               <div className="text-muted mb-4">Cheesecake chocolate carrot cake pie lollipop lemon toffee lollipop. Oat cake pie cake cotton.</div>
               <Button variant="outline-primary" className="btn-icon btn-icon-start sw-15 stretched-link">
                 <CsLineIcons icon="file-text" /> <span>Docs</span>
@@ -1235,12 +1233,6 @@ const CoursesDetail = () => {
       </Row>
 
       <Pricing/>
-    
-      <h2 className="small-title">Blogs</h2> 
-      <BlogGrid/>
-
-      <h2 className="small-title">Our Courses</h2>
-      <ThumbnailsIconContent/>
 
       <Row>
         <h2 className="small-title">Videos</h2>
@@ -1252,14 +1244,139 @@ const CoursesDetail = () => {
         <BlogHome/>
       </Row>
 
+    
+      <h2 className="small-title">Blogs</h2> 
+      <BlogGrid/>
+
+      <h2 className="small-title">Other Courses</h2>
+      <ThumbnailsIconContent/>
+
       <h2 className="small-title">Cta</h2>    
-      <Row xs="1" xxl="2">
+      <Row xs="1" xxl="2" className="mb-5">
         <Col> <CtaTextAndButtonsSecond/> </Col>
         <Col> <CtaTextAndButtonsSecond/> </Col>
       </Row>
 
 
-
+      <h2 className="small-title">Faq</h2>
+      <Accordion className="mb-5">
+        <Card className="d-flex mb-2 flex-grow-1">
+          <CustomAccordionToggle eventKey="1">Cupcake Lollipop Biscuit</CustomAccordionToggle>
+          <Accordion.Collapse eventKey="1">
+            <Card.Body className="pt-0">
+              <p>
+                <strong>Moon Tempor</strong>
+              </p>
+              <p>
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+                excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                accusamus labore sustainable VHS.
+              </p>
+              <br />
+              <p>
+                <strong>Accusamus Labore</strong>
+              </p>
+              <p>
+                Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+                craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                <br />
+                <br />
+                Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable
+                VHS. Ad vegan excepteur butcher vice lomo. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice
+                lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore
+                sustainable VHS.
+              </p>
+              <p className="mb-0">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+                excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                accusamus labore sustainable VHS.
+              </p>
+            </Card.Body>
+          </Accordion.Collapse>
+        </Card>
+        <Card className="d-flex mb-2 flex-grow-1">
+          <CustomAccordionToggle eventKey="2">Roll Marshmallow</CustomAccordionToggle>
+          <Accordion.Collapse eventKey="2">
+            <Card.Body className="pt-0">
+              <p>
+                <strong>Moon Tempor</strong>
+              </p>
+              <p className="mb-0">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+                excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                accusamus labore sustainable VHS.
+              </p>
+            </Card.Body>
+          </Accordion.Collapse>
+        </Card>
+        <Card className="d-flex mb-2 flex-grow-1">
+          <CustomAccordionToggle eventKey="3">Pudding Soufflé Macaroon Carrot Cake</CustomAccordionToggle>
+          <Accordion.Collapse eventKey="3">
+            <Card.Body className="pt-0">
+              <p>
+                <strong>Moon Tempor</strong>
+              </p>
+              <p className="mb-0">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+                excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                accusamus labore sustainable VHS.
+              </p>
+            </Card.Body>
+          </Accordion.Collapse>
+        </Card>
+        <Card className="d-flex mb-2 flex-grow-1">
+          <CustomAccordionToggle eventKey="4">Sesame Snaps Cheesecake Muffin</CustomAccordionToggle>
+          <Accordion.Collapse eventKey="4">
+            <Card.Body className="pt-0">
+              <p>
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+                excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                accusamus labore sustainable VHS.
+              </p>
+            </Card.Body>
+          </Accordion.Collapse>
+        </Card>
+        <Card className="d-flex mb-2 flex-grow-1">
+          <CustomAccordionToggle eventKey="5">Candy Cupcake Ice Cream Gummies Dessert Muffin</CustomAccordionToggle>
+          <Accordion.Collapse eventKey="5">
+            <Card.Body className="pt-0">
+              <p>
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+                excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                accusamus labore sustainable VHS.
+              </p>
+            </Card.Body>
+          </Accordion.Collapse>
+        </Card>
+        <Card className="d-flex mb-2 flex-grow-1">
+          <CustomAccordionToggle eventKey="6">Powder Halvah Dessert Ice Cream</CustomAccordionToggle>
+          <Accordion.Collapse eventKey="6">
+            <Card.Body className="pt-0">
+              <p>
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+                excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                accusamus labore sustainable VHS.
+              </p>
+            </Card.Body>
+          </Accordion.Collapse>
+        </Card>
+      </Accordion>
 
       <Modal show={verticallyCenteredScrollable} onHide={() => setVerticallyCenteredScrollable(false)} scrollable centered>
         <Modal.Header closeButton>

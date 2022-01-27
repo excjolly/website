@@ -13,6 +13,12 @@ const BlogDetail = () => {
   const title = 'Blog Detail';
   const description = 'Blog Detail';
 
+  const breadcrumbs = [
+    { to: '', text: 'Home' },
+    { to: 'pages', text: 'Pages' },
+    { to: 'pages/blog', text: 'Blog' },
+  ];
+
   const galleyItems = [
     {
       large: '/img/product/large/product-1.webp',
@@ -44,6 +50,7 @@ const BlogDetail = () => {
       {/* Title Start */}
       <div className="page-title-container">
         <h1 className="mb-0 pb-0 display-4">{title}</h1>
+        <BreadcrumbList items={breadcrumbs} />
       </div>
       {/* Title End */}
 

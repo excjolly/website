@@ -14,7 +14,7 @@ const pages = {
   programHome: lazy(() => import('views/pages/ProgramHome')),
   program: lazy(() => import('views/pages/Program')),
   blogHome: lazy(() => import('views/pages/BlogHome')),
-  blog: lazy(() => import('views/pages/BlogHome')),
+  blog: lazy(() => import('views/pages/Blog')),
   scholarship: lazy(() => import('views/pages/Scholarship')),
   videos: lazy(() => import('views/pages/Videos')),
   contact: lazy(() => import('views/pages/Contact')),  
@@ -82,7 +82,7 @@ const routesAndMenuItems = {
           icon: 'file-text',
           component: pages.blogHome,
           subs: [
-            { path: '/blog-name', component: pages.scholarship }
+            { path: '/blog-name', component: pages.blog }
           ],
         },
         { path: `/videos`, label: 'Videos', icon: 'play', component: pages.videos }

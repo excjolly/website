@@ -4,7 +4,7 @@ import CsLineIcons from 'cs-line-icons/CsLineIcons';
 
 export const CtaTextAndButtonsFirst = () => {
   return (
-    <Card className="h-100">
+    <Card style = {{ height : "14.5rem"}}>
       <Card.Body>
         <div className="cta-3">Ready to make bread?</div>
         <div className="mb-3 cta-3 text-primary">Start now!</div>
