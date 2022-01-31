@@ -3,7 +3,7 @@ import { Button, Card, Col, Row } from 'react-bootstrap';
 
 const ListBasicItems = () => {
   return (
-    <div className="mb-n2">
+    <>
       <Card className="mb-2" style = {{ height : "6.2rem"}}>
         <Row className="g-0 sh-10" style = {{ height : "6.2rem"}}>
           <Col style = {{ height : "6.2rem"}}>
@@ -46,7 +46,7 @@ const ListBasicItems = () => {
           </Col>
         </Row>
       </Card>
-    </div>
+    </>
   );
 };
 
