@@ -43,7 +43,7 @@ html:not([data-show='true']) body.spinner {
 }
 
 html[data-show='true'] {
-  scroll-behavior: smooth;
+  //scroll-behavior: smooth;
   #root {
     opacity: 1;
   }

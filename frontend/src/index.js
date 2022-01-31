@@ -31,6 +31,8 @@ import { Slide, ToastContainer } from 'react-toastify';
 // mock server register for demo
 import '@mock-api';
 
+import ScrollUpButton from "react-scroll-up-button";
+
 const Main = () => {
   const layoutlessRoutes = useMemo(() => getLayoutlessRoutes({ data: routesAndMenuItems }), []);
   return (
@@ -42,6 +44,7 @@ const Main = () => {
           <LangProvider>
             <RouteIdentifier routes={[...layoutlessRoutes, ...defaultRoutes]} fallback={<Loading />} />
           </LangProvider>
+        <ScrollUpButton />
         </Router>
       </PersistGate>
     </Provider>
