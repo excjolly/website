@@ -95,7 +95,7 @@ const routesAndMenuItems = {
       component: pages.contact,
     },
     {
-      path: `${appRoot}/terms-and-contitions`,
+      path: `${appRoot}/terms-and-conditions`,
       component: pages.terms,
     },
     {
