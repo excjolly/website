@@ -23,6 +23,8 @@ const pages = {
   terms: lazy(() => import('views/pages/Terms')),
   disclaimer: lazy(() => import('views/pages/Disclaimer')),
   privacy: lazy(() => import('views/pages/Privacy')),
+  careerHome: lazy(() => import('views/pages/CareerHome')),
+  career: lazy(() => import('views/pages/Career')),
 };
 const blocks = {
   index: lazy(() => import('views/blocks/Blocks')),
@@ -105,6 +107,13 @@ const routesAndMenuItems = {
     {
       path: `${appRoot}/privacy-policy`,
       component: pages.privacy,
+    },
+    {
+      path: `${appRoot}/careers`,
+      component: pages.careerHome,
+      subs: [
+        { path: '/career-name', component: pages.career }
+      ]
     }
   ],
   sidebarItems: [

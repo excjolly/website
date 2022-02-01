@@ -325,10 +325,9 @@ const Terms = () => {
           </p>
           <address>
             <p>Excelsior. Infotech Pvt. Ltd.</p>
-            <p>R7, D22, Block 7E</p>
-            <p>Sector 10, Raj Nagar</p>
-            <p>Ghaziabad, Uttar Pradesh - 20100</p>
-            <p>Phone: +91 9818834553, +91 995302160</p>
+            <p>D612, 7th Cross Road, 3rd Block,</p>
+            <p>Koramangala, Bengaluru 560034</p>
+            <p>Phone: +91 92894 60333, +91 92894 60444, +91 92894 60555</p>
             <p>Email:<a href="mailto:info@getexcelsior.com"><span class="__cf_email__" data-cfemail="fd94939b92bdb8859e98918e94928fd3d39e92"> info@getexcelsior.com</span></a></p>
           </address>
         </article>
