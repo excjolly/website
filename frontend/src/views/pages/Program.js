@@ -42,6 +42,7 @@ const CoursesDetail = () => {
   const title = 'Bread Making Techniques';
   const description = 'Elearning Portal Course Detail Page';
   const [verticallyCenteredScrollable, setVerticallyCenteredScrollable] = useState(false);
+  const [currModal, setCurrModal] = useState(false);
   const [exampleModal, setExampleModal] = useState(false);
 
   return (
@@ -248,13 +249,16 @@ const CoursesDetail = () => {
           {/* At a Glance End  */}
 
           {/* Tags Start */}          
-          <h2 className="small-title">Download Brochure</h2>
+          <h2 className="small-title">Curriculum</h2>
           <Card className="mb-5">
             <Card.Body>
               <div className="cta-3">Need more details?</div>
               <div className="text-muted mb-4">Cheesecake chocolate carrot cake pie lollipop lemon toffee lollipop. Oat cake pie cake cotton.</div>
-              <Button variant="outline-primary" className="btn-icon btn-icon-start sw-15 stretched-link">
-                <CsLineIcons icon="file-text" /> <span>Docs</span>
+              <Button variant="outline-primary" className="btn-icon btn-icon-start me-2" onClick={() => setCurrModal(true)}>
+                <CsLineIcons icon="book-open" /> <span>View</span>
+              </Button>
+              <Button variant="outline-primary" className="btn-icon btn-icon-start">
+                <CsLineIcons icon="file-text" /> <span>Download</span>
               </Button>
             </Card.Body>
           </Card>
@@ -264,7 +268,7 @@ const CoursesDetail = () => {
             <Card.Body>
               <div className="cta-3">Need more details?</div>
               <div className="text-muted mb-4">Cheesecake chocolate carrot cake pie lollipop lemon toffee lollipop. Oat cake pie cake cotton.</div>
-              <Button variant="outline-primary" className="btn-icon btn-icon-start sw-15 stretched-link">
+              <Button variant="outline-primary" className="btn-icon btn-icon-start">
                 <CsLineIcons icon="file-text" /> <span>Docs</span>
               </Button>
             </Card.Body>
@@ -496,42 +500,6 @@ const CoursesDetail = () => {
         </Card>
       </Col>
 
-      </Row>
-
-      <h2 className="small-title">Curriculum</h2>
-      <Row className="mb-5">
-        <Accordion className="mb-n2">
-            <Card className="d-flex mb-2 flex-grow-1">
-              <Button variant="link" className="p-4 text-start" onClick={() => setVerticallyCenteredScrollable(true)}>
-                Jelly Beans Lemon Danish
-              </Button>
-            </Card>
-            <Card className="d-flex mb-2 flex-grow-1">
-              <Button variant="link" className="p-4 text-start" onClick={() => setVerticallyCenteredScrollable(true)}>
-                Jelly Beans Lemon Danish
-              </Button>
-            </Card>
-            <Card className="d-flex mb-2 flex-grow-1">
-              <Button variant="link" className="p-4 text-start" onClick={() => setVerticallyCenteredScrollable(true)}>
-                Jelly Beans Lemon Danish
-              </Button>
-            </Card>
-            <Card className="d-flex mb-2 flex-grow-1">
-              <Button variant="link" className="p-4 text-start" onClick={() => setVerticallyCenteredScrollable(true)}>
-                Jelly Beans Lemon Danish
-              </Button>
-            </Card>
-            <Card className="d-flex mb-2 flex-grow-1">
-              <Button variant="link" className="p-4 text-start" onClick={() => setVerticallyCenteredScrollable(true)}>
-                Jelly Beans Lemon Danish
-              </Button>
-            </Card>
-            <Card className="d-flex mb-2 flex-grow-1">
-              <Button variant="link" className="p-4 text-start" onClick={() => setVerticallyCenteredScrollable(true)}>
-                Jelly Beans Lemon Danish
-              </Button>
-            </Card>
-          </Accordion>
       </Row>
 
       <h2 className="small-title">Sample Projects</h2>
@@ -1258,8 +1226,8 @@ const CoursesDetail = () => {
       <ThumbnailsIconContent/>
 
       <h2 className="small-title">Cta</h2>    
-      <Row xs="1" xxl="2" className="mb-5">
-        <Col className="mb-2"> <CtaTextAndButtonsSecond/> </Col>
+      <Row className="mb-5">
+        <Col> <CtaTextAndButtonsSecond/> </Col>
         <Col> <CtaTextAndButtonsSecond/> </Col>
       </Row>
 
@@ -1342,6 +1310,7 @@ const CoursesDetail = () => {
 
 
 
+
       <Modal show={exampleModal} onHide={() => setExampleModal(false)}>
         <Modal.Header closeButton>
           <Modal.Title>Week 1</Modal.Title>
@@ -1376,6 +1345,47 @@ const CoursesDetail = () => {
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={() => setExampleModal(false)}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
+
+
+      <Modal show={currModal} onHide={() => setCurrModal(false)} size="lg">
+        <Modal.Header closeButton>
+          <Modal.Title>Curriculum</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+
+            <Accordion defaultActiveKey="1" flush>
+              <Accordion.Item eventKey="1">
+                <Accordion.Header as="div">Accordion Item #1</Accordion.Header>
+                <Accordion.Body>
+                  Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's
+                  accordion body.
+                </Accordion.Body>
+              </Accordion.Item>
+              <Accordion.Item eventKey="2">
+                <Accordion.Header as="div">Accordion Item #2</Accordion.Header>
+                <Accordion.Body>
+                  Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's
+                  accordion body. Let's imagine this being filled with some actual content.
+                </Accordion.Body>
+              </Accordion.Item>
+              <Accordion.Item eventKey="3">
+                <Accordion.Header as="div">Accordion Item #3</Accordion.Header>
+                <Accordion.Body>
+                  Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's
+                  accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first
+                  glance, a bit more representative of how this would look in a real-world application.
+                </Accordion.Body>
+              </Accordion.Item>
+            </Accordion>
+
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => setCurrModal(false)}>
             Close
           </Button>
         </Modal.Footer>
