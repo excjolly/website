@@ -1,16 +1,11 @@
 const express = require("express");
-const mongoose = require("mongoose");
-var app = express();
+const path = require('path');
 
-
-mongoose.connect("mongodb+srv://excelsior:coder@cluster0.hmmr0.mongodb.net/excelsior", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
+const app = express();
+app.use(express.json());
 
 app.get("/",function(request,response){
-response.send("Hello World!")
-})
-app.listen(5000, function () {
-console.log("Started application on port %d", 5000)
+    response.send("Hello World!")
 });
+
+module.exports = app;
