@@ -1,11 +1,13 @@
 const express = require("express");
 const path = require('path');
+const Err = require('./utility/error');
+const globalErrorHandler = require('./utility/globalErrorHandler');
+const videoRoutes = require('./routes/videoRoutes')
 
 const app = express();
 app.use(express.json());
+app.use(globalErrorHandler);
 
-app.get("/",function(request,response){
-    response.send("Hello World!")
-});
+app.use('/api/videos',videoRoutes);
 
 module.exports = app;
