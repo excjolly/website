@@ -17,7 +17,7 @@ const Footer = () => {
             <Col xs="12" sm="6">
               <p className="mb-0 text-muted text-medium">Excelsior 2022</p>
             </Col>
-            <Col sm="6" className="d-none d-sm-block">
+            <Col sm="6" className="d-sm-block">
               <Breadcrumb className="pt-0 pe-0 mb-0 float-end">
                 <Breadcrumb.Item className="mb-0 text-medium" href="/terms-and-conditions" linkProps={{ className: 'btn-link' }}>
                   Terms & Conditions

@@ -7,8 +7,8 @@ export const USE_MULTI_LANGUAGE = true;
 
 // For detailed information: https://github.com/nfl/react-helmet#reference-guide
 export const REACT_HELMET_PROPS = {
-  defaultTitle: 'Acorn Admin Template',
-  titleTemplate: '%s | Acorn Admin Template',
+  defaultTitle: 'Excelsior',
+  titleTemplate: '%s | Excelsior',
 };
 
 export const DEFAULT_PATHS = {
@@ -17,7 +17,7 @@ export const DEFAULT_PATHS = {
   REGISTER: '/register',
   FORGOT_PASSWORD: '/forgot-password',
   RESET_PASSWORD: '/reset-password',
-  USER_WELCOME: '/dashboards/default',
+  USER_WELCOME: '/home',
   NOTFOUND: '/page-not-found',
   UNAUTHORIZED: '/unauthorized',
   INVALID_ACCESS: '/invalid-access',

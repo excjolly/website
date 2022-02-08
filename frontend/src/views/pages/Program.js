@@ -1,20 +1,19 @@
 import React, {useState} from 'react';
-import { Button, Card, Col, Row, Accordion, useAccordionButton, Form, Modal } from 'react-bootstrap';
+import { Button, Card, Col, Row, Accordion, Modal } from 'react-bootstrap';
 import Plyr from 'plyr-react';
 import HtmlHead from 'components/html-head/HtmlHead';
 import CsLineIcons from 'cs-line-icons/CsLineIcons';
 import { Helmet } from 'react-helmet';
 import Glide from 'components/carousel/Glide';
-import Pricing from 'views/pages/miscellaneous/Pricing';
-import BlogHome from 'views/pages/blog/BlogHome';     
+import Pricing from 'views/components/Pricing';
+import BlogHome from 'views/components/BlogHome';     
 import Clamp from 'components/clamp';
 import { NavLink } from 'react-router-dom';
-import ListBasicItems from 'views/blocks/list/ListBasicItems';
-import PlayerBasic from 'views/interface/plugins/player/PlayerBasic';
-import { ThumbnailsIconContent } from 'views/blocks/thumbnails/ThumbnailsIconContent';
-import BlogGrid from 'views/pages/blog/BlogGrid';
-import { CtaTextAndButtonsSecond } from 'views/blocks/cta/CtaTextAndButtons';
-import LayoutsBasic from 'views/interface/forms/layouts/LayoutsBasic';
+import ListBasicItems from 'views/components/ListBasicItems';
+import PlayerBasic from 'views/components/PlayerBasic';
+import { ThumbnailsIconContent } from 'views/components/ThumbnailsIconContent';
+import { CtaTextAndButtonsSecond } from 'views/components/CtaTextAndButtons';
+import LayoutsBasic from 'views/components/LayoutsBasic';
 import { faqs } from 'data/faq';
 
 const PurePlyr = React.memo(() => {
@@ -27,16 +26,6 @@ const PurePlyr = React.memo(() => {
   return <Plyr source={videoSrc} options={{}} />;
 });
 
-function CustomAccordionToggle({ children, eventKey }) {
-  const decoratedOnClick = useAccordionButton(eventKey, () => {});
-  return (
-    <Card.Body className="py-4" onClick={decoratedOnClick} role="button">
-      <Button variant="link" className="list-item-heading p-0">
-        {children}
-      </Button>
-    </Card.Body>
-  );
-}
 
 const CoursesDetail = () => {
   const title = 'Bread Making Techniques';
@@ -725,7 +714,7 @@ const CoursesDetail = () => {
                   <img
                     className="card-img sh-15 sh-sm-25 scale cursor-pointer"
                     src="/img/product/small/product-3.webp"
-                    alt="card image"
+                    alt="card"
                   />
                 </div>
               </Col>

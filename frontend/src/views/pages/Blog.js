@@ -13,33 +13,11 @@ const BlogDetail = () => {
   const title = 'Blog Detail';
   const description = 'Blog Detail';
 
-  const breadcrumbs = [
-    { to: '', text: 'Home' },
-    { to: 'pages', text: 'Pages' },
-    { to: 'pages/blog', text: 'Blog' },
-  ];
-
   const galleyItems = [
     {
       large: '/img/product/large/product-1.webp',
       thumb: '/img/product/small/product-1.webp',
-    },
-    {
-      large: '/img/product/large/product-2.webp',
-      thumb: '/img/product/small/product-2.webp',
-    },
-    {
-      large: '/img/product/large/product-3.webp',
-      thumb: '/img/product/small/product-3.webp',
-    },
-    {
-      large: '/img/product/large/product-4.webp',
-      thumb: '/img/product/small/product-4.webp',
-    },
-    {
-      large: '/img/product/large/product-5.webp',
-      thumb: '/img/product/small/product-5.webp',
-    },
+    }
   ];
 
   useCustomLayout({ layout: LAYOUT.Boxed });
@@ -50,7 +28,6 @@ const BlogDetail = () => {
       {/* Title Start */}
       <div className="page-title-container">
         <h1 className="mb-0 pb-0 display-4">{title}</h1>
-        <BreadcrumbList items={breadcrumbs} />
       </div>
       {/* Title End */}
 
@@ -67,11 +44,6 @@ const BlogDetail = () => {
                 ))}
               </GlideGallery.LargeItems>
               <GlideGallery.ThumbItems className="mb-3">
-                {galleyItems.map((item, index) => (
-                  <GlideGallery.Item key={`half.boxed.thumb.${index}`}>
-                    <img alt="thumb" src={item.thumb} className="responsive rounded-md img-fluid" />
-                  </GlideGallery.Item>
-                ))}
               </GlideGallery.ThumbItems>
             </GlideGallery>
 

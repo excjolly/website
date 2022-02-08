@@ -14,13 +14,6 @@ import menuReducer from 'layout/nav/main-menu/menuSlice';
 import notificationReducer from 'layout/nav/notifications/notificationSlice';
 import scrollspyReducer from 'components/scrollspy/scrollspySlice';
 
-// import app reducers
-import calendarReducer from 'views/apps/calendar/calendarSlice';
-import contactsReducer from 'views/apps/contacts/contactsSlice';
-import chatReducer from 'views/apps/chat/chatSlice';
-import mailboxReducer from 'views/apps/mailbox/mailboxSlice';
-import tasksReducer from 'views/apps/tasks/tasksSlice';
-
 // import persist key
 import { REDUX_PERSIST_KEY } from 'config.js';
 
@@ -40,11 +33,6 @@ const persistedReducer = persistReducer(
     menu: menuReducer,
     notification: notificationReducer,
     scrollspy: scrollspyReducer,
-    calendar: calendarReducer,
-    contacts: contactsReducer,
-    chat: chatReducer,
-    mailbox: mailboxReducer,
-    tasks: tasksReducer,
   })
 );
 const store = configureStore({

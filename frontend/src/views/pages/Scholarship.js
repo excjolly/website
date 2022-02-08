@@ -33,7 +33,7 @@ const QuizList = () => {
       <Row className="row-cols-1 row-cols-sm-2 row-cols-xl-3 row-cols-xxl-5 g-4">
         <Col>
           <Card>
-            <img src="/img/product/small/product-1.webp" className="card-img-top sh-25" alt="card image" />
+            <img src="/img/product/small/product-1.webp" className="card-img-top sh-25" alt="card" />
             <Card.Body>
               <NavLink to="/quiz/detail" className="body-link d-block sh-6 mb-2 h5 heading lh-1-5">
                 <Clamp tag="span" clamp="2">
@@ -107,7 +107,7 @@ const QuizList = () => {
         </Col>
         <Col>
           <Card>
-            <img src="/img/product/small/product-2.webp" className="card-img-top sh-25" alt="card image" />
+            <img src="/img/product/small/product-2.webp" className="card-img-top sh-25" alt="card" />
             <Card.Body>
               <NavLink to="/quiz/detail" className="body-link d-block sh-6 mb-2 h5 heading lh-1-5">
                 <Clamp tag="span" clamp="2">
@@ -181,7 +181,7 @@ const QuizList = () => {
         </Col>
         <Col>
           <Card>
-            <img src="/img/product/small/product-3.webp" className="card-img-top sh-25" alt="card image" />
+            <img src="/img/product/small/product-3.webp" className="card-img-top sh-25" alt="card" />
             <Card.Body>
               <NavLink to="/quiz/detail" className="body-link d-block sh-6 mb-2 h5 heading lh-1-5">
                 <Clamp tag="span" clamp="2">
@@ -255,7 +255,7 @@ const QuizList = () => {
         </Col>
         <Col>
           <Card>
-            <img src="/img/product/small/product-4.webp" className="card-img-top sh-25" alt="card image" />
+            <img src="/img/product/small/product-4.webp" className="card-img-top sh-25" alt="card" />
             <Card.Body>
               <NavLink to="/quiz/detail" className="body-link d-block sh-6 mb-2 h5 heading lh-1-5">
                 <Clamp tag="span" clamp="2">
@@ -329,7 +329,7 @@ const QuizList = () => {
         </Col>
         <Col>
           <Card>
-            <img src="/img/product/small/product-5.webp" className="card-img-top sh-25" alt="card image" />
+            <img src="/img/product/small/product-5.webp" className="card-img-top sh-25" alt="card" />
             <Card.Body>
               <NavLink to="/quiz/detail" className="body-link d-block sh-6 mb-2 h5 heading lh-1-5">
                 <Clamp tag="span" clamp="2">
@@ -403,7 +403,7 @@ const QuizList = () => {
         </Col>
         <Col>
           <Card>
-            <img src="/img/product/small/product-6.webp" className="card-img-top sh-25" alt="card image" />
+            <img src="/img/product/small/product-6.webp" className="card-img-top sh-25" alt="card" />
             <Card.Body>
               <NavLink to="/quiz/detail" className="body-link d-block sh-6 mb-2 h5 heading lh-1-5">
                 <Clamp tag="span" clamp="2">
@@ -477,7 +477,7 @@ const QuizList = () => {
         </Col>
         <Col>
           <Card>
-            <img src="/img/product/small/product-7.webp" className="card-img-top sh-25" alt="card image" />
+            <img src="/img/product/small/product-7.webp" className="card-img-top sh-25" alt="card" />
             <Card.Body>
               <NavLink to="/quiz/detail" className="body-link d-block sh-6 mb-2 h5 heading lh-1-5">
                 <Clamp tag="span" clamp="2">
@@ -551,7 +551,7 @@ const QuizList = () => {
         </Col>
         <Col>
           <Card>
-            <img src="/img/product/small/product-8.webp" className="card-img-top sh-25" alt="card image" />
+            <img src="/img/product/small/product-8.webp" className="card-img-top sh-25" alt="card" />
             <Card.Body>
               <NavLink to="/quiz/detail" className="body-link d-block sh-6 mb-2 h5 heading lh-1-5">
                 <Clamp tag="span" clamp="2">
@@ -625,7 +625,7 @@ const QuizList = () => {
         </Col>
         <Col>
           <Card>
-            <img src="/img/product/small/product-9.webp" className="card-img-top sh-25" alt="card image" />
+            <img src="/img/product/small/product-9.webp" className="card-img-top sh-25" alt="card" />
             <Card.Body>
               <NavLink to="/quiz/detail" className="body-link d-block sh-6 mb-2 h5 heading lh-1-5">
                 <Clamp tag="span" clamp="2">
@@ -699,7 +699,7 @@ const QuizList = () => {
         </Col>
         <Col>
           <Card>
-            <img src="/img/product/small/product-10.webp" className="card-img-top sh-25" alt="card image" />
+            <img src="/img/product/small/product-10.webp" className="card-img-top sh-25" alt="card" />
             <Card.Body>
               <NavLink to="/quiz/detail" className="body-link d-block sh-6 mb-2 h5 heading lh-1-5">
                 <Clamp tag="span" clamp="2">

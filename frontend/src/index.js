@@ -28,9 +28,6 @@ import routesAndMenuItems from 'routes.js';
 // import toastify for notification
 import { Slide, ToastContainer } from 'react-toastify';
 
-// mock server register for demo
-import '@mock-api';
-
 import ScrollUpButton from "react-scroll-up-button";
 
 const Main = () => {
