@@ -25,7 +25,7 @@ const PlayerBasic = () => {
       }}>
       {[1, 2, 3, 4, 5, 6, 7].map((i) => (
         <Glide.Item key={`basic.${i}`} >
-          <Col className="mb-5">
+          <Col className="mb-3">
             <Plyr source={videoSrc} options={{}} />
             {/* <iframe src="https://www.youtube.com/embed/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
           </Col>

@@ -1197,7 +1197,7 @@ const CoursesDetail = () => {
 
       <Pricing/>
 
-      <Row>
+      <Row className="mb-5">
         <h2 className="small-title">Videos</h2>
         <PlayerBasic/>
       </Row>
@@ -1215,8 +1215,8 @@ const CoursesDetail = () => {
       <ThumbnailsIconContent/>
 
       <h2 className="small-title">Cta</h2>    
-      <Row className="mb-5">
-        <Col> <CtaTextAndButtonsSecond/> </Col>
+      <Row className="mb-5" xs="1" xxl="2">
+        <Col className="mb-2"> <CtaTextAndButtonsSecond/> </Col>
         <Col> <CtaTextAndButtonsSecond/> </Col>
       </Row>
 

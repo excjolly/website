@@ -9,7 +9,7 @@ const BlogGrid = () => {
     <>
       <Row>
         <Col>
-          <Row className="row-cols-1 row-cols-sm-2 row-cols-xl-3 g-2 mb-5">
+          <Row className="row-cols-1 row-cols-sm-2 row-cols-xl-3 g-2 mb-3">
             <Glide
             options={{
               perView: 3,    
@@ -21,7 +21,7 @@ const BlogGrid = () => {
             }}>
             {[1, 2, 3, 4, 5, 6, 7].map((i) => (
               <Glide.Item key={`basic.${i}`} >
-              <Col className="mb-5">
+              <Col className="mb-3">
                 <Card>
                   <Card.Img src="/img/product/small/product-6.webp" className="card-img-top sh-16" alt="card image" />
                   <Card.Body>
@@ -53,7 +53,7 @@ const BlogGrid = () => {
 
         {/* Sidebar Start */}
         <Col xl="4" xxl="3">
-          <Row>
+          <Row className="mb-5">
             {/* Mailing List Start */}
             <Col xs="12">
               <Card>

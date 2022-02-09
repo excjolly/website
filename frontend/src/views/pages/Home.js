@@ -29,21 +29,21 @@ const DashboardsDefault = () => {
 
     <Row>
         <h2 className="small-title">Extend Your Knowledge</h2>
-        <Col md="4" className="mb-3">
+        <Col md="4" className="mb-2">
           <Card className="sh-13">
             <Card.Body className="py-0 d-flex align-items-center">
               <ChartSmallDoughnutChart1 />
             </Card.Body>
           </Card>
         </Col>
-        <Col md="4" className="mb-3">
+        <Col md="4" className="mb-2">
           <Card className="sh-13">
             <Card.Body className="py-0 d-flex align-items-center">
               <ChartSmallDoughnutChart1 />
             </Card.Body>
           </Card>
         </Col>
-        <Col md="4" className="mb-3">
+        <Col md="4" className="mb-2">
           <Card className="sh-13">
             <Card.Body className="py-0 d-flex align-items-center">
               <ChartSmallDoughnutChart1 />
@@ -51,22 +51,22 @@ const DashboardsDefault = () => {
           </Card>
         </Col>
       </Row>
-      <Row>
-        <Col md="4" className="mb-3">
+      <Row className="mb-3">
+        <Col md="4" className="mb-2">
           <Card className="sh-13">
             <Card.Body className="py-0 d-flex align-items-center">
               <ChartSmallDoughnutChart1 />
             </Card.Body>
           </Card>
         </Col>
-        <Col md="4" className="mb-3">
+        <Col md="4" className="mb-2">
           <Card className="sh-13">
             <Card.Body className="py-0 d-flex align-items-center">
               <ChartSmallDoughnutChart1 />
             </Card.Body>
           </Card>
         </Col>
-        <Col md="4" className="mb-3">
+        <Col md="4" className="mb-2">
           <Card className="sh-13">
             <Card.Body className="py-0 d-flex align-items-center">
               <ChartSmallDoughnutChart1 />
@@ -343,7 +343,7 @@ const DashboardsDefault = () => {
         </Col>
     </Row>
 
-    <Row>
+    <Row className="mb-5">
         <h2 className="small-title">Videos</h2>
         <PlayerBasic/>
     </Row>
@@ -353,7 +353,7 @@ const DashboardsDefault = () => {
         <BlogHome/>
     </Row>
 
-    <Row>
+    <Row className="mb-5">
         <h2 className="small-title">Admission Procedure</h2>
         <CarouselSingle/>
     </Row>

@@ -8,7 +8,7 @@ import Glide from 'components/carousel/Glide';
 export const ThumbnailsIconContent = () => {
   return (
     <Row>
-    <Glide
+    <Glide  className="mb-5"
       options={{
         perView: 3,
         peek: { before: 0, after: 10 },        
@@ -21,7 +21,7 @@ export const ThumbnailsIconContent = () => {
       >
       {[1, 2, 3, 4, 5, 6, 7].map((i) => (
         <Glide.Item key={`basic.${i}`}>
-          <Col className="mb-5">
+          <Col className="mb-3">
             <Card className="h-100">
               <Card.Img src="/img/product/small/product-6.webp" className="card-img-top sh-16" alt="card image" />
               <Card.Body>
