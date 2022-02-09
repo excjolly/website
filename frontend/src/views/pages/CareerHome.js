@@ -1,28 +1,18 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Row, Col, Button, Dropdown, Form, Card, Badge, Pagination, Tooltip, OverlayTrigger } from 'react-bootstrap';
+import { Row, Col, Dropdown, Form, Card, Badge, Pagination, Tooltip, OverlayTrigger } from 'react-bootstrap';
 import HtmlHead from 'components/html-head/HtmlHead';
 import CsLineIcons from 'cs-line-icons/CsLineIcons';
-import CheckAll from 'components/check-all/CheckAll';
 
 const ProductsList = () => {
   const title = 'Product List';
   const description = 'Ecommerce Product List Page';
-
-  const allItems = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   const [selectedItems, setSelectedItems] = useState([]);
   const checkItem = (item) => {
     if (selectedItems.includes(item)) {
       setSelectedItems(selectedItems.filter((x) => x !== item));
     } else {
       setSelectedItems([...selectedItems, item]);
-    }
-  };
-  const toggleCheckAll = (allSelect) => {
-    if (allSelect) {
-      setSelectedItems(allItems);
-    } else {
-      setSelectedItems([]);
     }
   };
 

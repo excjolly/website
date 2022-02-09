@@ -1,8 +1,6 @@
 import React from 'react';
-import { Badge, Button, Card, Col, Row } from 'react-bootstrap';
+import { Card, Col, Row } from 'react-bootstrap';
 import Glide from 'components/carousel/Glide';
-import CsLineIcons from 'cs-line-icons/CsLineIcons';
-
 
 const CarouselSingle = () => {
   return (

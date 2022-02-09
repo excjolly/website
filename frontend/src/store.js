@@ -8,7 +8,6 @@ import { FLUSH, PAUSE, PERSIST, PURGE, REGISTER, REHYDRATE } from 'reduxjs-toolk
 // import theme reducers
 import settingsReducer from 'settings/settingsSlice';
 import layoutReducer from 'layout/layoutSlice';
-import langReducer from 'lang/langSlice';
 import authReducer from 'auth/authSlice';
 import menuReducer from 'layout/nav/main-menu/menuSlice';
 import notificationReducer from 'layout/nav/notifications/notificationSlice';
@@ -20,7 +19,7 @@ import { REDUX_PERSIST_KEY } from 'config.js';
 const persistConfig = {
   key: REDUX_PERSIST_KEY,
   storage,
-  whitelist: ['menu', 'settings', 'lang'],
+  whitelist: ['menu', 'settings'],
 };
 
 const persistedReducer = persistReducer(
@@ -28,7 +27,6 @@ const persistedReducer = persistReducer(
   combineReducers({
     settings: settingsReducer,
     layout: layoutReducer,
-    lang: langReducer,
     auth: authReducer,
     menu: menuReducer,
     notification: notificationReducer,

@@ -12,9 +12,6 @@ import { store, persistedStore } from 'store.js';
 import { Helmet } from 'react-helmet';
 import { REACT_HELMET_PROPS } from 'config.js';
 
-// import multi language
-import LangProvider from 'lang/LangProvider';
-
 // import routing modules
 import { BrowserRouter as Router } from 'react-router-dom';
 import RouteIdentifier from 'routing/components/RouteIdentifier';
@@ -38,9 +35,7 @@ const Main = () => {
         <Helmet {...REACT_HELMET_PROPS} />
         <ToastContainer transition={Slide} newestOnTop />
         <Router basename={process.env.REACT_APP_BASENAME}>
-          <LangProvider>
-            <RouteIdentifier routes={[...layoutlessRoutes, ...defaultRoutes]} fallback={<Loading />} />
-          </LangProvider>
+          <RouteIdentifier routes={[...layoutlessRoutes, ...defaultRoutes]} fallback={<Loading />} />
         <ScrollUpButton />
         </Router>
       </PersistGate>

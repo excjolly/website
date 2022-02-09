@@ -3,7 +3,6 @@ import { Button, Card, Col, Row } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import { LAYOUT } from 'constants.js';
 import HtmlHead from 'components/html-head/HtmlHead';
-import BreadcrumbList from 'components/breadcrumb-list/BreadcrumbList';
 import Clamp from 'components/clamp';
 import CsLineIcons from 'cs-line-icons/CsLineIcons';
 import useCustomLayout from 'hooks/useCustomLayout';
@@ -142,7 +141,7 @@ const BlogDetail = () => {
           <Row className="g-4">
             <Col md="4" className="sh-40">
               <Card className="h-100">
-                <Card.Img src="/img/product/small/product-2.webp" className="card-img-top sh-22" alt="card image" />
+                <Card.Img src="/img/product/small/product-2.webp" className="card-img-top sh-22" alt="card" />
                 <Card.Body className="pb-0">
                   <NavLink to="/pages/blog/detail" className="body-link stretched-link d-block heading sh-8 mb-0 sh-md-6 d-block h5 heading lh-1-5">
                     <Clamp tag="span" clamp="2">
@@ -166,7 +165,7 @@ const BlogDetail = () => {
             </Col>
             <Col md="4" className="sh-40">
               <Card className="h-100">
-                <Card.Img src="/img/product/small/product-3.webp" className="card-img-top sh-22" alt="card image" />
+                <Card.Img src="/img/product/small/product-3.webp" className="card-img-top sh-22" alt="card" />
                 <Card.Body className="pb-0">
                   <NavLink to="/pages/blog/detail" className="body-link stretched-link d-block heading sh-8 mb-0 sh-md-6 d-block h5 heading lh-1-5">
                     <Clamp tag="span" clamp="2">
@@ -190,7 +189,7 @@ const BlogDetail = () => {
             </Col>
             <Col md="4" className="sh-40">
               <Card className="h-100">
-                <Card.Img src="/img/product/small/product-4.webp" className="card-img-top sh-22" alt="card image" />
+                <Card.Img src="/img/product/small/product-4.webp" className="card-img-top sh-22" alt="card" />
                 <Card.Body className="pb-0">
                   <NavLink to="/pages/blog/detail" className="body-link stretched-link d-block heading sh-8 mb-0 sh-md-6 d-block h5 heading lh-1-5">
                     <Clamp tag="span" clamp="2">
@@ -302,7 +301,7 @@ const BlogDetail = () => {
           <Row>
             <Col xs="12" sm="6" xl="12" className="mb-2">
               <Card className="w-100 sh-25 hover-img-scale-up">
-                <img src="/img/banner/cta-square-1.webp" className="card-img h-100 scale" alt="card image" />
+                <img src="/img/banner/cta-square-1.webp" className="card-img h-100 scale" alt="card" />
                 <div className="card-img-overlay d-flex flex-column justify-content-between bg-transparent">
                   <div className="d-flex flex-column h-100 justify-content-between align-items-start">
                     <div className="cta-3 mb-5 text-black">
@@ -319,7 +318,7 @@ const BlogDetail = () => {
             </Col>
             <Col xs="12" sm="6" xl="12" className="mb-5">
               <Card className="w-100 sh-25 hover-img-scale-up">
-                <img src="/img/banner/cta-square-2.webp" className="card-img h-100 scale" alt="card image" />
+                <img src="/img/banner/cta-square-2.webp" className="card-img h-100 scale" alt="card" />
                 <div className="card-img-overlay d-flex flex-column justify-content-between bg-transparent">
                   <div className="d-flex flex-column h-100 justify-content-between align-items-start">
                     <div className="cta-3 mb-5 text-black">

@@ -2,7 +2,6 @@ import React from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import Clamp from 'components/clamp';
-import CsLineIcons from 'cs-line-icons/CsLineIcons';
 import Glide from 'components/carousel/Glide';
 
 
@@ -30,7 +29,7 @@ const BlogHome = () => {
           <Glide.Item>
             <Col>
               <Card className="w-100 sh-25 hover-img-scale-up">
-                <img src="/img/banner/cta-standard-1.webp" className="card-img h-100 scale" alt="card image" />
+                <img src="/img/banner/cta-standard-1.webp" className="card-img h-100 scale" alt="card" />
                 <div className="card-img-overlay d-flex flex-column justify-content-end bg-transparent">
                   <NavLink to="/pages/blog/list" className="stretched-link">
                     <div className="cta-3 mb-3 text-black w-100 w-sm-50">14 Facts About Sugar</div>
@@ -47,7 +46,7 @@ const BlogHome = () => {
           <Glide.Item>
             <Col>
               <Card className="w-100 sh-25 hover-img-scale-up">
-                <img src="/img/banner/cta-standard-1.webp" className="card-img h-100 scale" alt="card image" />
+                <img src="/img/banner/cta-standard-1.webp" className="card-img h-100 scale" alt="card" />
                 <div className="card-img-overlay d-flex flex-column justify-content-end bg-transparent">
                   <NavLink to="/pages/blog/list" className="stretched-link">
                     <div className="cta-3 mb-3 text-black w-100 w-sm-50">14 Facts About Sugar</div>
@@ -64,7 +63,7 @@ const BlogHome = () => {
           <Glide.Item>
             <Col>
               <Card className="w-100 sh-25 hover-img-scale-up">
-                <img src="/img/banner/cta-standard-1.webp" className="card-img h-100 scale" alt="card image" />
+                <img src="/img/banner/cta-standard-1.webp" className="card-img h-100 scale" alt="card" />
                 <div className="card-img-overlay d-flex flex-column justify-content-end bg-transparent">
                   <NavLink to="/pages/blog/list" className="stretched-link">
                     <div className="cta-3 mb-3 text-black w-100 w-sm-50">14 Facts About Sugar</div>

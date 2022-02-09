@@ -1,27 +1,9 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import ReactTags from 'react-tag-autocomplete';
-import DatePicker from 'react-datepicker';
 import Select from 'react-select';
 import 'react-datepicker/dist/react-datepicker.css';
 
 const LayoutsBasic = () => {
-  // Tags
-  const [tags, setTags] = useState([]);
-  const onTagDelete = (i) => {
-    const newTags = [...tags];
-    newTags.splice(i, 1);
-    setTags(newTags);
-  };
-  const onTagAddition = (tag) => {
-    setTags(() => {
-      return [...tags, tag];
-    });
-  };
-
-  // Datepicker
-  const [startDate, setStartDate] = useState(null);
-
   // Select
   const [selectValue, setSelectValue] = useState();
   const options = [

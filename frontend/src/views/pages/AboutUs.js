@@ -4,7 +4,6 @@ import HtmlHead from 'components/html-head/HtmlHead';
 import { Helmet } from 'react-helmet';
 import ContextMenuBasic from 'views/components/ContextMenuBasic';
 import CsLineIcons from 'cs-line-icons/CsLineIcons';
-import { h2 } from 'react-router-dom';
 import ChartDoughnut from 'views/components/ChartDoughnut';
 import { CtaTextAndButtonsFirst } from 'views/components/CtaTextAndButtons';
 

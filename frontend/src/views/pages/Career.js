@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
 import Select from 'react-select';
 import { useQuill } from 'react-quilljs';
 import 'quill/dist/quill.bubble.css';
 import Active from 'components/quill/Active';
-import { Row, Col, Button, Dropdown, Form, Card } from 'react-bootstrap';
+import { Row, Col, Button, Form, Card } from 'react-bootstrap';
 import HtmlHead from 'components/html-head/HtmlHead';
 import CsLineIcons from 'cs-line-icons/CsLineIcons';
 import ReactTags from 'react-tag-autocomplete';

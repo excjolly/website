@@ -30,7 +30,7 @@ const CarouselFlow = () => {
         <Glide.Item key={`flow.${i}`} style = {{ margin : "auto 0px", padding : "0px 0px 0px 0px"}}>
           <Card className="mb-5 d-flex sh-19" style = {{ margin : "auto 0px", padding : "0px 0px 0px 0px"}}>
             <Card.Body className="d-flex">
-              <img src={`/img/brand/${brand}-light-background.webp`} className="img-fluid grayscale opacity-75 d-flex align-self-center" alt="logo image" />
+              <img src={`/img/brand/${brand}-light-background.webp`} className="img-fluid grayscale opacity-75 d-flex align-self-center" alt="logo" />
             </Card.Body>
           </Card>
         </Glide.Item>

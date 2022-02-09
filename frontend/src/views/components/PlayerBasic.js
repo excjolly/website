@@ -1,8 +1,6 @@
 import React from 'react';
 import Plyr from 'plyr-react';
-import { Card, Col, Row } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
-import CsLineIcons from 'cs-line-icons/CsLineIcons';
+import { Col } from 'react-bootstrap';
 import Glide from 'components/carousel/Glide';
 
 

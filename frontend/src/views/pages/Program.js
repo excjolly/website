@@ -273,7 +273,7 @@ const CoursesDetail = () => {
         </Col>
 
         <Col className="mb-3">
-          <h2 className='small-title'></h2>
+          <h2 className='small-title'> List </h2>
           <ListBasicItems/>
         </Col>
 
