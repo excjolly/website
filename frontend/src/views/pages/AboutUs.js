@@ -2,11 +2,10 @@ import React from 'react';
 import { Button, Card, Col, Row } from 'react-bootstrap';
 import HtmlHead from 'components/html-head/HtmlHead';
 import { Helmet } from 'react-helmet';
-import ContextMenuBasic from 'views/interface/plugins/context-menu/ContextMenuBasic';
+import ContextMenuBasic from 'views/components/ContextMenuBasic';
 import CsLineIcons from 'cs-line-icons/CsLineIcons';
-import { h2 } from 'react-router-dom';
-import ChartDoughnut from 'views/interface/plugins/chart/ChartDoughnut';
-import { CtaTextAndButtonsFirst } from 'views/blocks/cta/CtaTextAndButtons';
+import ChartDoughnut from 'views/components/ChartDoughnut';
+import { CtaTextAndButtonsFirst } from 'views/components/CtaTextAndButtons';
 
 const AboutUs = () => {
   const title = 'About Us';

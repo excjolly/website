@@ -1,10 +1,9 @@
 import React, { useEffect, useState, memo, forwardRef, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink, useLocation } from 'react-router-dom';
-import { useIntl } from 'react-intl';
 import classNames from 'classnames';
 import { Collapse, Dropdown } from 'react-bootstrap';
-import { DEFAULT_SETTINGS, USE_MULTI_LANGUAGE } from 'config.js';
+import { DEFAULT_SETTINGS } from 'config.js';
 import { MENU_PLACEMENT } from 'constants.js';
 import CsLineIcons from 'cs-line-icons/CsLineIcons';
 import { layoutShowingNavMenu } from 'layout/layoutSlice';
@@ -35,7 +34,6 @@ const MainMenuItem = memo(({ item, id, isSubItem = false, menuPlacement = DEFAUL
   const { pathname } = useLocation();
   const isActive = item.path.startsWith('#') ? false : pathname === item.path || pathname.indexOf(`${item.path}/`) > -1;
 
-  const { formatMessage: f } = useIntl();
   const [verticalMenuCollapseExpanded, setVerticalMenuCollapseExpanded] = useState(isActive);
   const [horizontalDropdownIsOpen, setHorizontalDropdownIsOpen] = useState(false);
 
@@ -46,7 +44,7 @@ const MainMenuItem = memo(({ item, id, isSubItem = false, menuPlacement = DEFAUL
           <CsLineIcons icon={icon} size={18} className="cs-icon icon" />{' '}
         </>
       )}
-      <span className="label">{USE_MULTI_LANGUAGE ? f({ id: label }) : label}</span>
+      <span className="label">{label}</span>
     </>
   );
 

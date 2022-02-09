@@ -4,16 +4,15 @@ import { OverlayScrollbarsComponent } from 'overlayscrollbars-react';
 import { NavLink } from 'react-router-dom';
 import HtmlHead from 'components/html-head/HtmlHead';
 import CsLineIcons from 'cs-line-icons/CsLineIcons';
-import ChartSmallDoughnutChart1 from 'views/interface/plugins/chart/ChartSmallDoughnutChart1';
-import BlogGrid from 'views/pages/blog/BlogGrid';
-import BlogHome from 'views/pages/blog/BlogHome';     
-import BlogDetail from 'views/pages/blog/BlogDetail';
-import CarouselFlow from 'views/interface/plugins/carousel/CarouselFlow';
-import CarouselSingle from 'views/interface/plugins/carousel/CarouselSingle';
-import 'intro.js/introjs.css';                          
-import { ThumbnailsIconContent } from 'views/blocks/thumbnails/ThumbnailsIconContent';
+import ChartSmallDoughnutChart1 from 'views/components/ChartSmallDoughnutChart1';
+import BlogGrid from 'views/components/BlogGrid';
+import BlogHome from 'views/components/BlogHome';     
+import BlogDetail from 'views/components/BlogDetail';
+import CarouselFlow from 'views/components/CarouselFlow';
+import CarouselSingle from 'views/components/CarouselSingle';
+import { ThumbnailsIconContent } from 'views/components/ThumbnailsIconContent';
 import { Helmet } from 'react-helmet';
-import PlayerBasic from 'views/interface/plugins/player/PlayerBasic';
+import PlayerBasic from 'views/components/PlayerBasic';
 
 const DashboardsDefault = () => {
   const title = 'Home';
@@ -30,21 +29,21 @@ const DashboardsDefault = () => {
 
     <Row>
         <h2 className="small-title">Extend Your Knowledge</h2>
-        <Col md="4" className="mb-3">
+        <Col md="4" className="mb-2">
           <Card className="sh-13">
             <Card.Body className="py-0 d-flex align-items-center">
               <ChartSmallDoughnutChart1 />
             </Card.Body>
           </Card>
         </Col>
-        <Col md="4" className="mb-3">
+        <Col md="4" className="mb-2">
           <Card className="sh-13">
             <Card.Body className="py-0 d-flex align-items-center">
               <ChartSmallDoughnutChart1 />
             </Card.Body>
           </Card>
         </Col>
-        <Col md="4" className="mb-3">
+        <Col md="4" className="mb-2">
           <Card className="sh-13">
             <Card.Body className="py-0 d-flex align-items-center">
               <ChartSmallDoughnutChart1 />
@@ -52,22 +51,22 @@ const DashboardsDefault = () => {
           </Card>
         </Col>
       </Row>
-      <Row>
-        <Col md="4" className="mb-3">
+      <Row className="mb-3">
+        <Col md="4" className="mb-2">
           <Card className="sh-13">
             <Card.Body className="py-0 d-flex align-items-center">
               <ChartSmallDoughnutChart1 />
             </Card.Body>
           </Card>
         </Col>
-        <Col md="4" className="mb-3">
+        <Col md="4" className="mb-2">
           <Card className="sh-13">
             <Card.Body className="py-0 d-flex align-items-center">
               <ChartSmallDoughnutChart1 />
             </Card.Body>
           </Card>
         </Col>
-        <Col md="4" className="mb-3">
+        <Col md="4" className="mb-2">
           <Card className="sh-13">
             <Card.Body className="py-0 d-flex align-items-center">
               <ChartSmallDoughnutChart1 />
@@ -344,7 +343,7 @@ const DashboardsDefault = () => {
         </Col>
     </Row>
 
-    <Row>
+    <Row className="mb-5">
         <h2 className="small-title">Videos</h2>
         <PlayerBasic/>
     </Row>
@@ -354,7 +353,7 @@ const DashboardsDefault = () => {
         <BlogHome/>
     </Row>
 
-    <Row>
+    <Row className="mb-5">
         <h2 className="small-title">Admission Procedure</h2>
         <CarouselSingle/>
     </Row>

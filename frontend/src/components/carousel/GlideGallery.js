@@ -64,7 +64,7 @@ const GlideGallery = ({ className = '', galleryThumbCount = 5, thumbWidth = 70, 
     if (largeCarousel && thumbCarousel && width && largeRef.current && thumbRef.current && glideLarge.current && glideThumb.current) {
       update();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
@@ -73,7 +73,7 @@ const GlideGallery = ({ className = '', galleryThumbCount = 5, thumbWidth = 70, 
         update();
       }, 10);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line
   }, [width, placementStatus, behaviourStatus, attrMobile]);
 
   const glideLength = largeCarousel ? largeCarousel.props.children.length : 0;
@@ -181,7 +181,7 @@ const GlideGallery = ({ className = '', galleryThumbCount = 5, thumbWidth = 70, 
         destroy();
       }
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line
   }, []);
 
   if (!largeCarousel || !thumbCarousel || !Array.isArray(children)) return <Error />;

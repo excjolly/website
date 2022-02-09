@@ -2,13 +2,6 @@
 import { lazy } from 'react';
 import { DEFAULT_PATHS } from 'config.js';
 
-const dashboards = {
-  default: lazy(() => import('views/dashboards/DashboardsDefault')),
-};
-const apps = {
-  index: lazy(() => import('views/apps/Apps')),
-  calendar: lazy(() => import('views/apps/calendar/Calendar')),
-};
 const pages = {
   home: lazy(() => import('views/pages/Home')),
   programHome: lazy(() => import('views/pages/ProgramHome')),
@@ -25,11 +18,6 @@ const pages = {
   privacy: lazy(() => import('views/pages/Privacy')),
   careerHome: lazy(() => import('views/pages/CareerHome')),
   career: lazy(() => import('views/pages/Career')),
-};
-const blocks = {
-  index: lazy(() => import('views/blocks/Blocks')),
-  cta: lazy(() => import('views/blocks/cta/Cta')),
-  details: lazy(() => import('views/blocks/details/Details')),
 };
 
 const appRoot = DEFAULT_PATHS.APP.endsWith('/') ? DEFAULT_PATHS.APP.slice(1, DEFAULT_PATHS.APP.length) : DEFAULT_PATHS.APP;

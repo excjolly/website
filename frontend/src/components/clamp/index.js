@@ -15,7 +15,7 @@ const Clamp = ({ tag = 'p', className = '', clamp = 'auto', children, href = '' 
 
       ClampJs(clampRef.current, { clamp });
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line
   }, []);
 
   if (href) {

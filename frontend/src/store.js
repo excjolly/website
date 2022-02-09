@@ -8,18 +8,10 @@ import { FLUSH, PAUSE, PERSIST, PURGE, REGISTER, REHYDRATE } from 'reduxjs-toolk
 // import theme reducers
 import settingsReducer from 'settings/settingsSlice';
 import layoutReducer from 'layout/layoutSlice';
-import langReducer from 'lang/langSlice';
 import authReducer from 'auth/authSlice';
 import menuReducer from 'layout/nav/main-menu/menuSlice';
 import notificationReducer from 'layout/nav/notifications/notificationSlice';
 import scrollspyReducer from 'components/scrollspy/scrollspySlice';
-
-// import app reducers
-import calendarReducer from 'views/apps/calendar/calendarSlice';
-import contactsReducer from 'views/apps/contacts/contactsSlice';
-import chatReducer from 'views/apps/chat/chatSlice';
-import mailboxReducer from 'views/apps/mailbox/mailboxSlice';
-import tasksReducer from 'views/apps/tasks/tasksSlice';
 
 // import persist key
 import { REDUX_PERSIST_KEY } from 'config.js';
@@ -27,7 +19,7 @@ import { REDUX_PERSIST_KEY } from 'config.js';
 const persistConfig = {
   key: REDUX_PERSIST_KEY,
   storage,
-  whitelist: ['menu', 'settings', 'lang'],
+  whitelist: ['menu', 'settings'],
 };
 
 const persistedReducer = persistReducer(
@@ -35,16 +27,10 @@ const persistedReducer = persistReducer(
   combineReducers({
     settings: settingsReducer,
     layout: layoutReducer,
-    lang: langReducer,
     auth: authReducer,
     menu: menuReducer,
     notification: notificationReducer,
     scrollspy: scrollspyReducer,
-    calendar: calendarReducer,
-    contacts: contactsReducer,
-    chat: chatReducer,
-    mailbox: mailboxReducer,
-    tasks: tasksReducer,
   })
 );
 const store = configureStore({
