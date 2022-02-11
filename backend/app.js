@@ -8,10 +8,11 @@ const quizRouter = require('./routes/quizRoutes');
 
 const app = express();
 app.use(express.json());
-app.use(globalErrorHandler);
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api/videos', videoRoutes);
 app.use('/api/blogs', blogRoutes);
 app.use('/api/quizs', quizRouter);
+app.use(globalErrorHandler);
 
 module.exports = app;
