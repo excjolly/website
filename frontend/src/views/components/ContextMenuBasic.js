@@ -6,20 +6,9 @@ import 'react-contexify/dist/ReactContexify.css';
 
 
 const ContextMenuBasic = () => {
-  const displayContextMenu = (event, id) => {
-    contextMenu.show({
-      id,
-      event,
-    });
-  };
-
-  const handleItemClick = ({ event, props, triggerEvent, data }) => {
-    console.log(event, props, triggerEvent, data);
-  };
-
   return (
     <>
-      <div onContextMenu={(e) => displayContextMenu(e, 'context-menu-basic')}>
+      <div>
         <Card className="mb-2 cursor-default">
           <Row className="sh-9 p-card pt-0 pb-0 g-0">
             <Col xs="2" className="d-flex align-items-center justify-content-center">
@@ -34,11 +23,6 @@ const ContextMenuBasic = () => {
           </Row>
         </Card>
       </div>
-      <Menu id="context-menu-basic" animation={false}>
-        <Item onClick={handleItemClick}>Copy</Item>
-        <Item onClick={handleItemClick}>Archive</Item>
-        <Item onClick={handleItemClick}>Delete</Item>
-      </Menu>
     </>
   );
 };

@@ -18,6 +18,7 @@ const pages = {
   privacy: lazy(() => import('views/pages/Privacy')),
   careerHome: lazy(() => import('views/pages/CareerHome')),
   career: lazy(() => import('views/pages/Career')),
+
 };
 
 const appRoot = DEFAULT_PATHS.APP.endsWith('/') ? DEFAULT_PATHS.APP.slice(1, DEFAULT_PATHS.APP.length) : DEFAULT_PATHS.APP;
@@ -42,10 +43,12 @@ const routesAndMenuItems = {
       icon: 'screen',
       subs: [
         { path: '/all', label: 'All Programs', icon: 'list', component: pages.programHome },
-        { path: '/program_name', label: 'Program Name', icon: 'code', component: pages.program },
-        { path: '/program_name', label: 'Program Name', icon: 'code', component: pages.program },
-        { path: '/program_name', label: 'Program Name', icon: 'code', component: pages.program },
-        { path: '/program_name', label: 'Program Name', icon: 'code', component: pages.program },
+        { path: '/data-science-for-it', label: 'Data Science for IT', icon: 'code', component: pages.program },
+        { path: '/data-science-for-finance', label: 'Data Science for Finance', icon: 'code', component: pages.program },
+        { path: '/deep-learning', label: 'Deep Learning', icon: 'code', component: pages.program },
+        { path: '/machine-learning-with-python', label: 'Machine Learning With Python', icon: 'code', component: pages.program },
+        { path: '/data-analytics', label: 'Data Analytics', icon: 'code', component: pages.program },
+        { path: '/python-preparatory-course', label: 'Python Preparatory Course', icon: 'code', component: pages.program },
       ],
     },
     {

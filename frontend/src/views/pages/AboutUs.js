@@ -26,25 +26,71 @@ const AboutUs = () => {
 
       <img alt="detail" src='/img/product/large/banner.jpeg' className="responsive border-0 rounded mb-5 w-100 sh-50" />
       <Card body className="mb-5">
-        <h2 className="small-title">Inner Title</h2>
-        <p className="mb-0">
-          Icing sesame snaps cake muffin lollipop carrot cake chocolate cake powder. Pie tart cotton candy pastry. Icing chocolate powder pie bear claw
-          jelly-o cake marshmallow biscuit. Wafer chupa chups tart topping tiramisu. Icing cake donut. Topping candy canes fruitcake. Brownie danish cake.
-          Marshmallow donut sweet roll. Wafer tootsie roll gingerbread croissant ice cream. Sweet roll ice cream marzipan croissant soufflé fruitcake.
-          Soufflé bonbon cookie. Jujubes ice cream cotton candy tootsie roll sweet.
-        </p>
+        <h2 className="small-title">About Excelsior</h2>
+        <p className="mb-0">Is acquiring a new skill sufficient? Is it possible to start a new career in a different field? Will employers hire you once you complete a certification course? Excelsior was founded in 2017 by three co-founders from IIT Kharagpur and IIT Delhi, who saw a need in the field of skill acquisition and decided to fill it. Excelsior is more than simply an Ed-tech platform; it's a one-stop solution for career guidance, learning, and placement to help students reach their goals.</p>
+        <p className="mb-0">To develop high-quality online learning experiences that enhance learner success, we use the newest technology, best teaching techniques, and collaborations with exceptional industry leaders.</p>
+        <p className="mb-0">We're the industry's premier source of software-technology training, with live lectures given by industry leaders and subject matter experts.</p> 
+        <p className="mb-0">Our intensive programs combine a modern curriculum with hands-on experience using cutting-edge technology.</p>
       </Card>
       <Row xxl="3" xs="1">
         <Col className="mb-5">
           <h2 className="small-title">Our Values</h2>
-          <ContextMenuBasic/>
-          <ContextMenuBasic/>
-          <ContextMenuBasic/>
+            <div>
+              <Card className="mb-2 cursor-default">
+                <Row className="sh-9 p-card pt-0 pb-0 g-0">
+                  <Col xs="2" className="d-flex align-items-center justify-content-center">
+                    <div className="pe-card">
+                      <CsLineIcons icon="radio" width="20" height="20" className="cs-icon icon text-primary" />
+                    </div>
+                  </Col>
+                  <Col xs="10" className="d-flex flex-column justify-content-center">
+                    <p className="heading mb-0">Efficiency</p>
+                    <p className="text-small text-muted mb-0">There can be growth only where there is efficiency</p>
+                  </Col>
+                </Row>
+              </Card>
+            </div>
+
+            <div>
+              <Card className="mb-2 cursor-default">
+                <Row className="sh-9 p-card pt-0 pb-0 g-0">
+                  <Col xs="2" className="d-flex align-items-center justify-content-center">
+                    <div className="pe-card">
+                      <CsLineIcons icon="radio" width="20" height="20" className="cs-icon icon text-primary" />
+                    </div>
+                  </Col>
+                  <Col xs="10" className="d-flex flex-column justify-content-center">
+                    <p className="heading mb-0">Committment</p>
+                    <p className="text-small text-muted mb-0">When you do something with a lot of commitment, the input reflects in the output</p>
+                  </Col>
+                </Row>
+              </Card>
+            </div>
+
+            <div>
+              <Card className="mb-2 cursor-default">
+                <Row className="sh-9 p-card pt-0 pb-0 g-0">
+                  <Col xs="2" className="d-flex align-items-center justify-content-center">
+                    <div className="pe-card">
+                      <CsLineIcons icon="radio" width="20" height="20" className="cs-icon icon text-primary" />
+                    </div>
+                  </Col>
+                  <Col xs="10" className="d-flex flex-column justify-content-center">
+                    <p className="heading mb-0">Reliability</p>
+                    <p className="text-small text-muted mb-0">Reliability is the pre-condition to trust</p>
+                  </Col>
+                </Row>
+              </Card>
+            </div>
         </Col>
+
+
         <Col className="mb-5">
           <h2 className="small-title">Our Mission</h2>
           <CtaTextAndButtonsFirst/>
         </Col>
+
+
         <Col className="mb-5">
           <h2 className="small-title">Our Vision</h2>
           <CtaTextAndButtonsFirst/>
@@ -75,12 +121,11 @@ const AboutUs = () => {
                 <div className="d-flex flex-column justify-content-start">
                   <div className="d-flex flex-column">
                     <Button variant="link" className="p-0 pt-1 heading text-start">
-                      Powder Sesame Snaps Cupcake
+                    Beginning
                     </Button>
-                    <div className="text-alternate">06.11.2020</div>
+                    <div className="text-alternate">2017</div>
                     <div className="text-muted mt-1">
-                      Jujubes tootsie roll liquorice cake jelly beans pudding gummi bears chocolate cake donut. Jelly-o sugar plum fruitcake bonbon bear claw cake
-                      cookie chocolate bar. Tiramisu soufflé apple pie.
+                      In 2017, Excelsior set out to create the first 3-Dimensional learning experience for students.
                     </div>
                   </div>
                 </div>
@@ -106,11 +151,11 @@ const AboutUs = () => {
                 <div className="d-flex flex-column justify-content-start">
                   <div className="d-flex flex-column">
                     <Button variant="link" className="p-0 pt-1 heading text-start">
-                      Jujubes Wafer Topping Biscuit
+                    First Milestone 
                     </Button>
-                    <div className="text-alternate">25.11.2020</div>
+                    <div className="text-alternate">2019</div>
                     <div className="text-muted mt-1">
-                      Jelly-o wafer sesame snaps candy canes. Danish dragée toffee bonbon. Jelly-o marshmallow cake oat cake caramels jujubes.
+                    We have reached a significant juncture with our mission to help students find meaningful employment.  We are thrilled to have assisted over 1,000 students in launching their careers in the 18 months since we opened our doors in 2017, and we will continue to work tirelessly until all our students are employed after successful completion of the course.
                     </div>
                   </div>
                 </div>
@@ -136,11 +181,11 @@ const AboutUs = () => {
                 <div className="d-flex flex-column justify-content-start">
                   <div className="d-flex flex-column">
                     <Button variant="link" className="p-0 pt-1 heading text-start">
-                      Jujubes Wafer Topping Biscuit
+                    We expanded
                     </Button>
-                    <div className="text-alternate">25.11.2020</div>
+                    <div className="text-alternate">2019</div>
                     <div className="text-muted mt-1">
-                      Jelly-o wafer sesame snaps candy canes. Danish dragée toffee bonbon. Jelly-o marshmallow cake oat cake caramels jujubes.
+                    Well, it started with just a dialog like, "We have the best talents at our disposal. Why don’t we build our own IT product?" Some googling here, some phone calls there and over 100 cups of coffee later an idea struck, and that was the start of one the most innovative product in the ed-tech space. Excelsior is proud to announce Edu-Verse. Stay tuned for more updates  
                     </div>
                   </div>
                 </div>

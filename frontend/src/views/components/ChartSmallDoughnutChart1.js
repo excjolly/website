@@ -5,7 +5,7 @@ import { Chart, registerables } from 'chart.js';
 import { useSelector } from 'react-redux';
 import { Col, Row } from 'react-bootstrap';
 
-const ChartSmallDoughnutChart1 = () => {
+const ChartSmallDoughnutChart1 = props => {
   const { themeValues } = useSelector((state) => state.settings);
   const chartContainer = useRef(null);
   const legendRef = useRef(null);
@@ -40,9 +40,9 @@ const ChartSmallDoughnutChart1 = () => {
               return (
                 <div key={`customLegend${index}`}>
                   <div className="text-small text-muted text">{text}</div>
-                  <div className="cta-3 text-primary value">
-                    {chart.data.datasets[0].data[0]} / {chart.data.datasets[0].data[1] + chart.data.datasets[0].data[0]}
-                  </div>
+                  {/* <div className="cta-3 text-primary value"> */}
+                  {/*   {chart.data.datasets[0].data[0]} / {chart.data.datasets[0].data[1] + chart.data.datasets[0].data[0]} */}
+                  {/* </div> */}
                 </div>
               );
             })}
@@ -66,13 +66,13 @@ const ChartSmallDoughnutChart1 = () => {
 
         const activeValue = datasets[0].data[0];
         const { total } = _metasets[0];
-        let activePercentage = parseFloat(((activeValue / total) * 100).toFixed(1));
-        activePercentage = datasets[0].data[0] / total;
-        activePercentage = parseFloat((activePercentage * 100).toFixed(1));
+        // let activePercentage = parseFloat(((activeValue / total) * 100).toFixed(1));
+        // activePercentage = datasets[0].data[0] / total;
+        // activePercentage = parseFloat((activePercentage * 100).toFixed(1));
         ctx.font = `12px${themeValues.font}`;
         ctx.textBaseline = 'middle';
         ctx.fillStyle = themeValues.primary;
-        const text = `${activePercentage}%`;
+        const text = props.data;
         const textX = Math.round((right - ctx.measureText(text).width) / 2);
         const textY = bottom / 2;
         ctx.fillText(text, textX, textY);
@@ -83,10 +83,10 @@ const ChartSmallDoughnutChart1 = () => {
 
   const data = React.useMemo(() => {
     return {
-      labels: ['PURCHASING'],
+      labels: [props.title],
       datasets: [
         {
-          data: [14, 0],
+          data: [14,0],
           backgroundColor: [themeValues.primary, 'rgba(0,0,0,0)'],
           borderWidth: 0,
           fill: true,

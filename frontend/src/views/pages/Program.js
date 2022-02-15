@@ -15,6 +15,8 @@ import { ThumbnailsIconContent } from 'views/components/ThumbnailsIconContent';
 import { CtaTextAndButtonsSecond } from 'views/components/CtaTextAndButtons';
 import LayoutsBasic from 'views/components/LayoutsBasic';
 import { faqs } from 'data/faq';
+import { blogs } from 'data/blogs';
+import { programs } from 'data/programs';
 
 const PurePlyr = React.memo(() => {
   const videoSrc = {
@@ -1209,10 +1211,10 @@ const CoursesDetail = () => {
 
     
       <h2 className="small-title">Blogs</h2> 
-      <ThumbnailsIconContent/>
+      <ThumbnailsIconContent type="/blogs/" items={ blogs } />
 
-      <h2 className="small-title">Other Courses</h2>
-      <ThumbnailsIconContent/>
+      <h2 className="small-title">Other Programs</h2>
+      <ThumbnailsIconContent type="/programs/" items={ programs } />
 
       <h2 className="small-title">Cta</h2>    
       <Row className="mb-5" xs="1" xxl="2">

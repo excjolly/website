@@ -17,9 +17,11 @@ const BlogDetail = () => {
               <Col>
               <Card className="w-100 sh-50">
                 <Card.Body>
+                <div className="mb-3">
                   <h2>
-                    Course Recommendation
+                    Choose the right path for you
                   </h2>
+                </div>
                   <WizardBasic />
                 </Card.Body>
               </Card>

@@ -5,14 +5,11 @@ import { LAYOUT } from 'constants.js';
 import HtmlHead from 'components/html-head/HtmlHead';
 import Clamp from 'components/clamp';
 import CsLineIcons from 'cs-line-icons/CsLineIcons';
-import useCustomLayout from 'hooks/useCustomLayout';
 import { Helmet } from 'react-helmet';
 
 const BlogGrid = () => {
   const title = 'Blog Grid';
   const description = 'Blog Grid';
-
-  useCustomLayout({ layout: LAYOUT.Boxed });
 
   return (
     <>
@@ -35,7 +32,7 @@ const BlogGrid = () => {
               <Card className="h-100">
                 <Card.Img src="/img/product/small/product-1.webp" className="card-img-top sh-19" alt="card image" />
                 <Card.Body>
-                  <NavLink to="/pages/blog/detail" className="body-link stretched-link d-block heading sh-8 mb-0 sh-md-6 d-block h5 heading lh-1-5">
+                  <NavLink to="/" className="body-link stretched-link d-block heading sh-8 mb-0 sh-md-6 d-block h5 heading lh-1-5">
                     <Clamp tag="span" clamp="2">
                       A Complete Guide to Mix Dough for the Molds
                     </Clamp>
@@ -321,11 +318,6 @@ const BlogGrid = () => {
             </Col>
           </Row>
           <Row>
-            <Col xs="12" className="text-center">
-              <Button size="xl" variant="outline-primary" className="sw-30">
-                Load More
-              </Button>
-            </Col>
           </Row>
           {/* Grid End */}
         </Col>
