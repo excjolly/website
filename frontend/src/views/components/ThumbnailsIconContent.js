@@ -6,11 +6,11 @@ import Glide from 'components/carousel/Glide';
 
 
 export const ThumbnailsIconContent = props => {
-  console.log(props);
   let x;
   return (
     <Row>
     <Glide  className="mb-5"
+      noDots={true}
       options={{
         perView: 3,
         peek: { before: 0, after: 10 },        
@@ -18,7 +18,7 @@ export const ThumbnailsIconContent = props => {
           400: {
             perView: 1
           }
-        }
+        },
       }}
       >
       {props.items.map((p) => {

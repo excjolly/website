@@ -12,8 +12,8 @@ export const programs = [
         "slug": "deep-learning"
     },
     {
-        "title": "Machine Learning With Python ",
-        "slug": "machine-learning-with-python "
+        "title": "Machine Learning With Python",
+        "slug": "machine-learning-with-python"
     },
     {
         "title": "Data Analytics",

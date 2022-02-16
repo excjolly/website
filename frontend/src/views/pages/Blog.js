@@ -7,10 +7,15 @@ import Clamp from 'components/clamp';
 import CsLineIcons from 'cs-line-icons/CsLineIcons';
 import useCustomLayout from 'hooks/useCustomLayout';
 import GlideGallery from 'components/carousel/GlideGallery';
+import { blogs } from 'data/blogs';
 
 const BlogDetail = () => {
   const title = 'Blog Detail';
   const description = 'Blog Detail';
+  const slug = window.location.pathname;
+  const blog = blogs.find(b => {
+    return '/knowledge-centre/blogs/' + b.slug === slug;
+  });
 
   const galleyItems = [
     {
@@ -26,7 +31,7 @@ const BlogDetail = () => {
       <HtmlHead title={title} description={description} />
       {/* Title Start */}
       <div className="page-title-container">
-        <h1 className="mb-0 pb-0 display-4">{title}</h1>
+        <h1 className="mb-0 pb-0 display-4">{blog.title}</h1>
       </div>
       {/* Title End */}
 

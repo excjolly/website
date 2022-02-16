@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Col, Row } from 'react-bootstrap';
+import { Card, Col, Row, Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import Clamp from 'components/clamp';
 import Glide from 'components/carousel/Glide';
@@ -15,10 +15,9 @@ const BlogHome = () => {
             gap: 0,
             perView: 3,
             type: 'carousel',
-            peek: { before: 50, after: 50 },
             breakpoints: {
               1000: { perView: 1 },
-              1600: { perView: 2 },
+              1600: { perView: 3 },
               2560: { perView: 3 },
             },
             autoplay: 3000,
@@ -30,24 +29,26 @@ const BlogHome = () => {
           {testimonials.map((t) => {
             return (
               <Glide.Item>
-                <Col>
-                  <Card className="w-100 sh-25 hover-img-scale-up">
-                    <img src="/img/banner/cta-standard-1.webp" className="card-img h-100 scale" alt="card" />
-                    <div className="card-img-overlay d-flex flex-column bg-transparent">
-                      <NavLink to={{pathname: t.link}} className="stretched-link" target="_blank">
-                        <div className="mb-3 text-black w-100">{t.name}</div>
-                        <div className="w-75 text-black d-none d-md-block">
-                          <Clamp tag="div" clamp="5" className="">
-                          {t.text}
-                          </Clamp>
+                <Card style = {{ height : "29rem"}}>
+                  <Card.Body>
+                    <div className="d-flex align-items-center flex-column mb-4">
+                      <div className="d-flex align-items-center flex-column">
+                        <div className="sw-13 position-relative mb-3">
+                          <img src="/img/profile/profile-1.webp" className="img-fluid rounded-xl" alt="thumb" />
                         </div>
-                      </NavLink>
+                        <Clamp tag="div" clamp="1" className="h5 mb-0">{t.name}</Clamp>
+                        <div className="text-muted mb-0">{t.role}</div>
+                        <Button href={t.link} className="mb-0 pt-0" variant="link" target="_blank">LinkedIn Profile</Button>
+                          <Clamp tag="div" clamp="100" className="">
+                          "{t.text}"  
+                          </Clamp>
+                      </div>
                     </div>
-                  </Card>
-                </Col>
+                  </Card.Body>
+                </Card>
               </Glide.Item>
-            );
-          })}
+             ); 
+           })} 
 
         </Glide>
       </Row>

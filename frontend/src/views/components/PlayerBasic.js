@@ -6,6 +6,7 @@ import Glide from 'components/carousel/Glide';
 const PlayerBasic = () => {
   return (
     <Glide
+      noDots={true}
       options={{
         perView: 4,
         peek: { before: 0, after: 15 },

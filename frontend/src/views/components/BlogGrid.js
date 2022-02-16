@@ -14,6 +14,7 @@ const BlogGrid = () => {
         <Col>
           <Row className="row-cols-1 row-cols-sm-2 row-cols-xl-3 g-2 mb-3">
             <Glide
+            noDots={true}
             options={{
               perView: 3,    
               breakpoints: {
@@ -26,7 +27,6 @@ const BlogGrid = () => {
               {x = '/programs/' + p.slug;}
               return(
                 <Glide.Item>
-                <Col className="mb-3">
                   <Card>
                     <Card.Img src="/img/product/small/product-6.webp" className="card-img-top sh-16" alt="card image" />
                     <Card.Body>
@@ -49,7 +49,6 @@ const BlogGrid = () => {
                       </Row>
                     </Card.Footer>
                   </Card>
-                </Col>
                 </Glide.Item>
                 );
             })}

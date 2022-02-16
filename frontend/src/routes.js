@@ -1,6 +1,8 @@
 /* eslint-disable */
 import { lazy } from 'react';
 import { DEFAULT_PATHS } from 'config.js';
+import { programs } from 'data/programs';
+import { blogs } from 'data/blogs';
 
 const pages = {
   home: lazy(() => import('views/pages/Home')),
@@ -18,10 +20,26 @@ const pages = {
   privacy: lazy(() => import('views/pages/Privacy')),
   careerHome: lazy(() => import('views/pages/CareerHome')),
   career: lazy(() => import('views/pages/Career')),
-
 };
 
 const appRoot = DEFAULT_PATHS.APP.endsWith('/') ? DEFAULT_PATHS.APP.slice(1, DEFAULT_PATHS.APP.length) : DEFAULT_PATHS.APP;
+
+let programSubs = [];
+for(let i = 0; i<programs.length; i++) {
+  if(i < 7) 
+    programSubs.push({ path: '/' + programs[i].slug, label: programs[i].title, icon: 'code', component: pages.program });
+  else 
+    programSubs.push({ path: '/' + programs[i].slug, component: pages.program });
+}
+programSubs.push({ path: '/all', label: 'All Programs', icon: 'list', component: pages.programHome });
+
+let blogSubs = [];
+blogs.map((b) => {
+  blogSubs.push({ path: '/' + b.slug, component: pages.blog });
+});
+
+console.log(blogSubs);
+console.log(programSubs);
 
 const routesAndMenuItems = {
   mainMenuItems: [
@@ -41,15 +59,7 @@ const routesAndMenuItems = {
       path: `${appRoot}/programs`,
       label: 'Programs',
       icon: 'screen',
-      subs: [
-        { path: '/all', label: 'All Programs', icon: 'list', component: pages.programHome },
-        { path: '/data-science-for-it', label: 'Data Science for IT', icon: 'code', component: pages.program },
-        { path: '/data-science-for-finance', label: 'Data Science for Finance', icon: 'code', component: pages.program },
-        { path: '/deep-learning', label: 'Deep Learning', icon: 'code', component: pages.program },
-        { path: '/machine-learning-with-python', label: 'Machine Learning With Python', icon: 'code', component: pages.program },
-        { path: '/data-analytics', label: 'Data Analytics', icon: 'code', component: pages.program },
-        { path: '/python-preparatory-course', label: 'Python Preparatory Course', icon: 'code', component: pages.program },
-      ],
+      subs: programSubs
     },
     {
       path: `${appRoot}/about-us`,
@@ -74,9 +84,7 @@ const routesAndMenuItems = {
           label: 'Blogs',
           icon: 'file-text',
           component: pages.blogHome,
-          subs: [
-            { path: '/blog-name', component: pages.blog }
-          ],
+          subs: blogSubs
         },
         { path: `/videos`, label: 'Videos', icon: 'play', component: pages.videos }
       ]

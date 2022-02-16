@@ -16,16 +16,8 @@ export const RADIUS = {
 };
 
 export const THEME_COLOR = {
-  LightBlue: 'light-blue',
-  DarkBlue: 'dark-blue',
   LightRed: 'light-red',
-  DarkRed: 'dark-red',
-  LightGreen: 'light-green',
-  DarkGreen: 'dark-green',
-  LightPurple: 'light-purple',
-  DarkPurple: 'dark-purple',
-  LightPink: 'light-pink',
-  DarkPink: 'dark-pink',
+  DarkRed: 'dark-red'
 };
 
 export const NAV_COLOR = {

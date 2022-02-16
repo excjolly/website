@@ -17,7 +17,7 @@ export const DEFAULT_PATHS = {
   REGISTER: '/register',
   FORGOT_PASSWORD: '/forgot-password',
   RESET_PASSWORD: '/reset-password',
-  USER_WELCOME: '/home',
+  USER_WELCOME: '/',
   NOTFOUND: '/page-not-found',
   UNAUTHORIZED: '/unauthorized',
   INVALID_ACCESS: '/invalid-access',

@@ -35,6 +35,10 @@ const CoursesDetail = () => {
   const [verticallyCenteredScrollable, setVerticallyCenteredScrollable] = useState(false);
   const [currModal, setCurrModal] = useState(false);
   const [exampleModal, setExampleModal] = useState(false);
+  const slug = window.location.pathname;
+  const program = programs.find(p => {
+    return '/programs/' + p.slug === slug;
+  });
 
   return (
     <>
@@ -48,7 +52,7 @@ const CoursesDetail = () => {
         <Row className="g-0">
           {/* Title Start */}
           <Col className="col-auto mb-sm-0 me-auto">
-            <h1 className="mb-0 pb-0 display-4">{title}</h1>
+            <h1 className="mb-0 pb-0 display-4">program.title</h1>
           </Col>
           {/* Title End */}
         </Row>

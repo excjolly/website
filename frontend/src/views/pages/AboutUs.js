@@ -5,7 +5,6 @@ import { Helmet } from 'react-helmet';
 import ContextMenuBasic from 'views/components/ContextMenuBasic';
 import CsLineIcons from 'cs-line-icons/CsLineIcons';
 import ChartDoughnut from 'views/components/ChartDoughnut';
-import { CtaTextAndButtonsFirst } from 'views/components/CtaTextAndButtons';
 
 const AboutUs = () => {
   const title = 'About Us';
@@ -40,7 +39,7 @@ const AboutUs = () => {
                 <Row className="sh-9 p-card pt-0 pb-0 g-0">
                   <Col xs="2" className="d-flex align-items-center justify-content-center">
                     <div className="pe-card">
-                      <CsLineIcons icon="radio" width="20" height="20" className="cs-icon icon text-primary" />
+                      <CsLineIcons icon="check-square" width="20" height="20" className="cs-icon icon text-primary" />
                     </div>
                   </Col>
                   <Col xs="10" className="d-flex flex-column justify-content-center">
@@ -56,7 +55,7 @@ const AboutUs = () => {
                 <Row className="sh-9 p-card pt-0 pb-0 g-0">
                   <Col xs="2" className="d-flex align-items-center justify-content-center">
                     <div className="pe-card">
-                      <CsLineIcons icon="radio" width="20" height="20" className="cs-icon icon text-primary" />
+                      <CsLineIcons icon="check-square" width="20" height="20" className="cs-icon icon text-primary" />
                     </div>
                   </Col>
                   <Col xs="10" className="d-flex flex-column justify-content-center">
@@ -72,7 +71,7 @@ const AboutUs = () => {
                 <Row className="sh-9 p-card pt-0 pb-0 g-0">
                   <Col xs="2" className="d-flex align-items-center justify-content-center">
                     <div className="pe-card">
-                      <CsLineIcons icon="radio" width="20" height="20" className="cs-icon icon text-primary" />
+                      <CsLineIcons icon="check-square" width="20" height="20" className="cs-icon icon text-primary" />
                     </div>
                   </Col>
                   <Col xs="10" className="d-flex flex-column justify-content-center">
@@ -87,13 +86,26 @@ const AboutUs = () => {
 
         <Col className="mb-5">
           <h2 className="small-title">Our Mission</h2>
-          <CtaTextAndButtonsFirst/>
+          <Card style = {{ height : "14.5rem"}}>
+            <Card.Body>
+              <div>
+                <p>Excelsior aspires to fulfill its purpose of re-inventing the student learning experience by elevating mentoring, learning, and placement to new heights.</p>
+                <p>Excelsior is a once-in-a-lifetime learning opportunity! We want to transform how students and working professionals think about their future.</p>
+              </div>
+            </Card.Body>
+          </Card>
         </Col>
 
 
         <Col className="mb-5">
           <h2 className="small-title">Our Vision</h2>
-          <CtaTextAndButtonsFirst/>
+         <Card style = {{ height : "14.5rem"}}>
+            <Card.Body>
+              <div>
+                <p>We have a problem. And Excelsior is working on a solution. We have the problem of rising tuition and diminishing returns for students who are placed in the wrong classes or receive weak guidance. We seek to solve this problem by offering a dynamic learning experience that guides students through the most efficient paths for knowledge acquisition and development of skills and passions to achieve long term success.</p>
+              </div>
+            </Card.Body>
+          </Card>
         </Col>
       </Row>
 
@@ -504,13 +516,8 @@ const AboutUs = () => {
             <Card.Body>
               <div className="text-center">
                 <img src="/img/illustration/icon-launch.webp" className="theme-filter" alt="launch" />
-                <div className="d-flex flex-column sh-5">
-                  <h2 to="/support/knowledge-base" className="heading stretched-link">
-                    Application Launch
-                  </h2>
-                </div>
               </div>
-              <div className="text-muted">Chocolate cake marshmallow bear claw sweet. Apple pie macaroon sesame snaps candy jelly pudding.</div>
+              <div>Since 2017, we have successfully placed 98.3% of all applicants in their dream jobs</div>
             </Card.Body>
           </Card>
         </Col>
@@ -519,13 +526,8 @@ const AboutUs = () => {
             <Card.Body>
               <div className="text-center">
                 <img src="/img/illustration/icon-performance.webp" className="theme-filter" alt="performance" />
-                <div className="d-flex flex-column sh-5">
-                  <h2 to="/support/knowledge-base" className="heading stretched-link">
-                    Performance Tweaks
-                  </h2>
-                </div>
               </div>
-              <div className="text-muted">Cheesecake chocolate carrot cake pie lollipop lemon drops toffee lollipop.</div>
+              <div>Our Hiring partners are rapidly increasing with over 160+ brands</div>
             </Card.Body>
           </Card>
         </Col>
@@ -534,13 +536,8 @@ const AboutUs = () => {
             <Card.Body>
               <div className="text-center">
                 <img src="/img/illustration/icon-configure.webp" className="theme-filter" alt="configure" />
-                <div className="d-flex flex-column sh-5">
-                  <h2 to="/support/knowledge-base" className="heading stretched-link">
-                    Advanced Configuration
-                  </h2>
-                </div>
               </div>
-              <div className="text-muted">Sweet roll apple pie tiramisu bonbon sugar plum muffin sesame snaps chocolate. Lollipop halvah powder.</div>
+              <div>Over 6,000+ students have uccessfully transformed their career with us</div>
             </Card.Body>
           </Card>
         </Col>
@@ -549,13 +546,8 @@ const AboutUs = () => {
             <Card.Body>
               <div className="text-center">
                 <img src="/img/illustration/icon-analytics.webp" className="theme-filter" alt="analytics" />
-                <div className="d-flex flex-column sh-5">
-                  <h2 to="/support/knowledge-base" className="heading stretched-link">
-                    Server Analytics
-                  </h2>
-                </div>
               </div>
-              <div className="text-muted">Cake tart apple pie bear bonbon sugar plum muffin sesame snaps sweet roll gingerbread bonbon sugar.</div>
+              <div>Excelsior Family is now bigger than ever and we have more than 100 employees</div>
             </Card.Body>
           </Card>
         </Col>

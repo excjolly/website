@@ -39,7 +39,7 @@ const ChartSmallDoughnutChart1 = props => {
               const { strokeStyle, text, index, hidden } = legend;
               return (
                 <div key={`customLegend${index}`}>
-                  <div className="text-small text-muted text">{text}</div>
+                  <div className="text-medium text-bold text">{text}</div>
                   {/* <div className="cta-3 text-primary value"> */}
                   {/*   {chart.data.datasets[0].data[0]} / {chart.data.datasets[0].data[1] + chart.data.datasets[0].data[0]} */}
                   {/* </div> */}

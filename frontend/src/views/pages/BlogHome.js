@@ -7,10 +7,12 @@ import Clamp from 'components/clamp';
 import CsLineIcons from 'cs-line-icons/CsLineIcons';
 import useCustomLayout from 'hooks/useCustomLayout';
 import { Helmet } from 'react-helmet';
+import { blogs } from 'data/blogs';
 
 const BlogGrid = () => {
   const title = 'Blog Grid';
   const description = 'Blog Grid';
+  let x;
 
   useCustomLayout({ layout: LAYOUT.Boxed });
 
@@ -31,301 +33,37 @@ const BlogGrid = () => {
         <Col xl="8" xxl="9" className="mb-5">
           {/* Grid Start */}
           <Row className="row-cols-1 row-cols-sm-2 row-cols-xl-3 g-2 mb-5">
-            <Col>
-              <Card className="h-100">
-                <Card.Img src="/img/product/small/product-1.webp" className="card-img-top sh-19" alt="card image" />
-                <Card.Body>
-                  <NavLink to="/pages/blog/detail" className="body-link stretched-link d-block heading sh-8 mb-0 sh-md-6 d-block h5 heading lh-1-5">
-                    <Clamp tag="span" clamp="2">
-                      A Complete Guide to Mix Dough for the Molds
-                    </Clamp>
-                  </NavLink>
-                </Card.Body>
-                <Card.Footer className="border-0 pt-0">
-                  <Row className="g-0">
-                    <Col xs="auto" className="pe-3">
-                      <CsLineIcons icon="like" size="15" className="text-primary me-1" />
-                      <span className="align-middle">452</span>
-                    </Col>
-                    <Col>
-                      <CsLineIcons icon="clock" size="15" className="text-primary me-1" />
-                      <span className="align-middle">30 Min</span>
-                    </Col>
-                  </Row>
-                </Card.Footer>
-              </Card>
-            </Col>
-            <Col>
-              <Card className="h-100">
-                <Card.Img src="/img/product/small/product-2.webp" className="card-img-top sh-19" alt="card image" />
-                <Card.Body>
-                  <NavLink to="/pages/blog/detail" className="body-link stretched-link d-block heading sh-8 mb-0 sh-md-6 d-block h5 heading lh-1-5">
-                    <Clamp tag="span" clamp="2">
-                      14 Grim Facts About Sugar Industry
-                    </Clamp>
-                  </NavLink>
-                </Card.Body>
-                <Card.Footer className="border-0 pt-0">
-                  <Row className="g-0">
-                    <Col xs="auto" className="pe-3">
-                      <CsLineIcons icon="like" size="15" className="text-primary me-1" />
-                      <span className="align-middle">54</span>
-                    </Col>
-                    <Col>
-                      <CsLineIcons icon="clock" size="15" className="text-primary me-1" />
-                      <span className="align-middle">15 Min</span>
-                    </Col>
-                  </Row>
-                </Card.Footer>
-              </Card>
-            </Col>
-            <Col>
-              <Card className="h-100">
-                <Card.Img src="/img/product/small/product-3.webp" className="card-img-top sh-19" alt="card image" />
-                <Card.Body>
-                  <NavLink to="/pages/blog/detail" className="body-link stretched-link d-block heading sh-8 mb-0 sh-md-6 d-block h5 heading lh-1-5">
-                    <Clamp tag="span" clamp="2">
-                      Fresh Apple Cake Recipe for Absolute Starters
-                    </Clamp>
-                  </NavLink>
-                </Card.Body>
-                <Card.Footer className="border-0 pt-0">
-                  <Row className="g-0">
-                    <Col xs="auto" className="pe-3">
-                      <CsLineIcons icon="like" size="15" className="text-primary me-1" />
-                      <span className="align-middle">79</span>
-                    </Col>
-                    <Col>
-                      <CsLineIcons icon="clock" size="15" className="text-primary me-1" />
-                      <span className="align-middle">20 Min</span>
-                    </Col>
-                  </Row>
-                </Card.Footer>
-              </Card>
-            </Col>
-            <Col>
-              <Card className="h-100">
-                <Card.Img src="/img/product/small/product-4.webp" className="card-img-top sh-19" alt="card image" />
-                <Card.Body>
-                  <NavLink to="/pages/blog/detail" className="body-link stretched-link d-block heading sh-8 mb-0 sh-md-6 d-block h5 heading lh-1-5">
-                    <Clamp tag="span" clamp="2">
-                      A Complete Guide to Mix Dough for the Molds
-                    </Clamp>
-                  </NavLink>
-                </Card.Body>
-                <Card.Footer className="border-0 pt-0">
-                  <Row className="g-0">
-                    <Col xs="auto" className="pe-3">
-                      <CsLineIcons icon="like" size="15" className="text-primary me-1" />
-                      <span className="align-middle">82</span>
-                    </Col>
-                    <Col>
-                      <CsLineIcons icon="clock" size="15" className="text-primary me-1" />
-                      <span className="align-middle">30 Min</span>
-                    </Col>
-                  </Row>
-                </Card.Footer>
-              </Card>
-            </Col>
-            <Col>
-              <Card className="h-100">
-                <Card.Img src="/img/product/small/product-5.webp" className="card-img-top sh-19" alt="card image" />
-                <Card.Body>
-                  <NavLink to="/pages/blog/detail" className="body-link stretched-link d-block heading sh-8 mb-0 sh-md-6 d-block h5 heading lh-1-5">
-                    <Clamp tag="span" clamp="2">
-                      10 Secrets Every Southern Baker Should Know
-                    </Clamp>
-                  </NavLink>
-                </Card.Body>
-                <Card.Footer className="border-0 pt-0">
-                  <Row className="g-0">
-                    <Col xs="auto" className="pe-3">
-                      <CsLineIcons icon="like" size="15" className="text-primary me-1" />
-                      <span className="align-middle">43</span>
-                    </Col>
-                    <Col>
-                      <CsLineIcons icon="clock" size="15" className="text-primary me-1" />
-                      <span className="align-middle">30 Min</span>
-                    </Col>
-                  </Row>
-                </Card.Footer>
-              </Card>
-            </Col>
-            <Col>
-              <Card className="h-100">
-                <Card.Img src="/img/product/small/product-6.webp" className="card-img-top sh-19" alt="card image" />
-                <Card.Body>
-                  <NavLink to="/pages/blog/detail" className="body-link stretched-link d-block heading sh-8 mb-0 sh-md-6 d-block h5 heading lh-1-5">
-                    <Clamp tag="span" clamp="2">
-                      Quick Recipes for Sweet and Healty Treats for Children
-                    </Clamp>
-                  </NavLink>
-                </Card.Body>
-                <Card.Footer className="border-0 pt-0">
-                  <Row className="g-0">
-                    <Col xs="auto" className="pe-3">
-                      <CsLineIcons icon="like" size="15" className="text-primary me-1" />
-                      <span className="align-middle">15</span>
-                    </Col>
-                    <Col>
-                      <CsLineIcons icon="clock" size="15" className="text-primary me-1" />
-                      <span className="align-middle">20 Min</span>
-                    </Col>
-                  </Row>
-                </Card.Footer>
-              </Card>
-            </Col>
-            <Col>
-              <Card className="h-100">
-                <Card.Img src="/img/product/small/product-7.webp" className="card-img-top sh-19" alt="card image" />
-                <Card.Body>
-                  <NavLink to="/pages/blog/detail" className="body-link stretched-link d-block heading sh-8 mb-0 sh-md-6 d-block h5 heading lh-1-5">
-                    <Clamp tag="span" clamp="2">
-                      Better Ways to Mix Dough for the Molds
-                    </Clamp>
-                  </NavLink>
-                </Card.Body>
-                <Card.Footer className="border-0 pt-0">
-                  <Row className="g-0">
-                    <Col xs="auto" className="pe-3">
-                      <CsLineIcons icon="like" size="15" className="text-primary me-1" />
-                      <span className="align-middle">44</span>
-                    </Col>
-                    <Col>
-                      <CsLineIcons icon="clock" size="15" className="text-primary me-1" />
-                      <span className="align-middle">10 Min</span>
-                    </Col>
-                  </Row>
-                </Card.Footer>
-              </Card>
-            </Col>
-            <Col>
-              <Card className="h-100">
-                <Card.Img src="/img/product/small/product-8.webp" className="card-img-top sh-19" alt="card image" />
-                <Card.Body>
-                  <NavLink to="/pages/blog/detail" className="body-link stretched-link d-block heading sh-8 mb-0 sh-md-6 d-block h5 heading lh-1-5">
-                    <Clamp tag="span" clamp="2">
-                      Basic Introduction for Dough Molding
-                    </Clamp>
-                  </NavLink>
-                </Card.Body>
-                <Card.Footer className="border-0 pt-0">
-                  <Row className="g-0">
-                    <Col xs="auto" className="pe-3">
-                      <CsLineIcons icon="like" size="15" className="text-primary me-1" />
-                      <span className="align-middle">341</span>
-                    </Col>
-                    <Col>
-                      <CsLineIcons icon="clock" size="15" className="text-primary me-1" />
-                      <span className="align-middle">50 Min</span>
-                    </Col>
-                  </Row>
-                </Card.Footer>
-              </Card>
-            </Col>
-            <Col>
-              <Card className="h-100">
-                <Card.Img src="/img/product/small/product-9.webp" className="card-img-top sh-19" alt="card image" />
-                <Card.Body>
-                  <NavLink to="/pages/blog/detail" className="body-link stretched-link d-block heading sh-8 mb-0 sh-md-6 d-block h5 heading lh-1-5">
-                    <Clamp tag="span" clamp="2">
-                      Introduction to Baking Cakes for Fancy Guests
-                    </Clamp>
-                  </NavLink>
-                </Card.Body>
-                <Card.Footer className="border-0 pt-0">
-                  <Row className="g-0">
-                    <Col xs="auto" className="pe-3">
-                      <CsLineIcons icon="like" size="15" className="text-primary me-1" />
-                      <span className="align-middle">122</span>
-                    </Col>
-                    <Col>
-                      <CsLineIcons icon="clock" size="15" className="text-primary me-1" />
-                      <span className="align-middle">15 Min</span>
-                    </Col>
-                  </Row>
-                </Card.Footer>
-              </Card>
-            </Col>
-            <Col>
-              <Card className="h-100">
-                <Card.Img src="/img/product/small/product-10.webp" className="card-img-top sh-19" alt="card image" />
-                <Card.Body>
-                  <NavLink to="/pages/blog/detail" className="body-link stretched-link d-block heading sh-8 mb-0 sh-md-6 d-block h5 heading lh-1-5">
-                    <Clamp tag="span" clamp="2">
-                      Apple Cake Recipe for Absolute Starters
-                    </Clamp>
-                  </NavLink>
-                </Card.Body>
-                <Card.Footer className="border-0 pt-0">
-                  <Row className="g-0">
-                    <Col xs="auto" className="pe-3">
-                      <CsLineIcons icon="like" size="15" className="text-primary me-1" />
-                      <span className="align-middle">84</span>
-                    </Col>
-                    <Col>
-                      <CsLineIcons icon="clock" size="15" className="text-primary me-1" />
-                      <span className="align-middle">10 Min</span>
-                    </Col>
-                  </Row>
-                </Card.Footer>
-              </Card>
-            </Col>
-            <Col>
-              <Card className="h-100">
-                <Card.Img src="/img/product/small/product-2.webp" className="card-img-top sh-19" alt="card image" />
-                <Card.Body>
-                  <NavLink to="/pages/blog/detail" className="body-link stretched-link d-block heading sh-8 mb-0 sh-md-6 d-block h5 heading lh-1-5">
-                    <Clamp tag="span" clamp="2">
-                      A Complete Guide to Mix Dough for the Molds
-                    </Clamp>
-                  </NavLink>
-                </Card.Body>
-                <Card.Footer className="border-0 pt-0">
-                  <Row className="g-0">
-                    <Col xs="auto" className="pe-3">
-                      <CsLineIcons icon="like" size="15" className="text-primary me-1" />
-                      <span className="align-middle">36</span>
-                    </Col>
-                    <Col>
-                      <CsLineIcons icon="clock" size="15" className="text-primary me-1" />
-                      <span className="align-middle">45 Min</span>
-                    </Col>
-                  </Row>
-                </Card.Footer>
-              </Card>
-            </Col>
-            <Col>
-              <Card className="h-100">
-                <Card.Img src="/img/product/small/product-1.webp" className="card-img-top sh-19" alt="card image" />
-                <Card.Body>
-                  <NavLink to="/pages/blog/detail" className="body-link stretched-link d-block heading sh-8 mb-0 sh-md-6 d-block h5 heading lh-1-5">
-                    <Clamp tag="span" clamp="2">
-                      Basic Introduction to Bread Making Techniques
-                    </Clamp>
-                  </NavLink>
-                </Card.Body>
-                <Card.Footer className="border-0 pt-0">
-                  <Row className="g-0">
-                    <Col xs="auto" className="pe-3">
-                      <CsLineIcons icon="like" size="15" className="text-primary me-1" />
-                      <span className="align-middle">15</span>
-                    </Col>
-                    <Col>
-                      <CsLineIcons icon="clock" size="15" className="text-primary me-1" />
-                      <span className="align-middle">40 Min</span>
-                    </Col>
-                  </Row>
-                </Card.Footer>
-              </Card>
-            </Col>
-          </Row>
-          <Row>
-            <Col xs="12" className="text-center">
-              <Button size="xl" variant="outline-primary" className="sw-30">
-                Load More
-              </Button>
-            </Col>
+          { blogs.map((b) => {
+            x = '/knowledge-centre/blogs/' + b.sluga;
+            return (
+              <Col>
+                <Card className="h-100">
+                  <Card.Img src="/img/product/small/product-1.webp" className="card-img-top sh-19" alt="card image" />
+                  <Card.Body>
+                    <NavLink to={x} className="body-link stretched-link d-block heading sh-8 mb-0 sh-md-6 d-block h5 heading lh-1-5">
+                      <Clamp tag="span" clamp="2">
+                        b.title
+                      </Clamp>
+                    </NavLink>
+                  </Card.Body>
+                  <Card.Footer className="border-0 pt-0">
+                    <Row className="g-0">
+                      <Col xs="auto" className="pe-3">
+                        <CsLineIcons icon="like" size="15" className="text-primary me-1" />
+                        <span className="align-middle">452</span>
+                      </Col>
+                      <Col>
+                        <CsLineIcons icon="clock" size="15" className="text-primary me-1" />
+                        <span className="align-middle">30 Min</span>
+                      </Col>
+                    </Row>
+                  </Card.Footer>
+                </Card>
+              </Col>              
+              );
+          })}
+
+            
           </Row>
           {/* Grid End */}
         </Col>

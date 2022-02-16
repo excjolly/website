@@ -25,7 +25,7 @@ import routesAndMenuItems from 'routes.js';
 // import toastify for notification
 import { Slide, ToastContainer } from 'react-toastify';
 
-import ScrollUpButton from "react-scroll-up-button";
+import { CircleArrow as ScrollUpButton } from "react-scroll-up-button";
 
 const Main = () => {
   const layoutlessRoutes = useMemo(() => getLayoutlessRoutes({ data: routesAndMenuItems }), []);

@@ -140,3 +140,6 @@ export const blogs = [
         "slug": "a-simple-explanation-of-what-data-science-is-and-why-you-should-care"
     }
 ];
+
+// categories - why choose us
+// extend your knowledge - excelsior by number
