@@ -14,7 +14,7 @@ const LayoutsBasic = () => {
   ];
 
   return (
-    <Form>
+    <Form onSubmit={() => console.log('test')}>
       <div className="mb-2">
         <Form.Label>Name</Form.Label>
         <Form.Control type="name" />
@@ -31,7 +31,7 @@ const LayoutsBasic = () => {
         <Form.Label>Select</Form.Label>
         <Select classNamePrefix="react-select" options={options} value={selectValue} onChange={setSelectValue} placeholder="" />
       </div>
-      <Button variant="primary">Submit</Button>
+      <Button variant="primary" type="submit">Submit</Button>
     </Form>
   );
 };

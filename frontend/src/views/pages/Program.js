@@ -22,7 +22,7 @@ const PurePlyr = React.memo(() => {
   const videoSrc = {
     type: 'video',
     sources: [{ src: 'GXIa56Gh7Og', provider: 'youtube' }],
-    poster: '/img/product/large/product-4.webp',
+    poster: '/img/banner/Ai-02.png',
   };
 
   return <Plyr source={videoSrc} options={{}} />;
@@ -52,7 +52,7 @@ const CoursesDetail = () => {
         <Row className="g-0">
           {/* Title Start */}
           <Col className="col-auto mb-sm-0 me-auto">
-            <h1 className="mb-0 pb-0 display-4">program.title</h1>
+            <h1 className="mb-0 pb-0 display-4">{program.title}</h1>
           </Col>
           {/* Title End */}
         </Row>
@@ -64,7 +64,7 @@ const CoursesDetail = () => {
           {/* Preview Start */}
           <h2 className="small-title">Preview</h2>
           <Card className="mb-5">
-              <PurePlyr />
+          <img src="/img/banner/Ai-02.png" className="rounded"></img>
           </Card>
           {/* Preview End */}
           
