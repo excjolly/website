@@ -1215,7 +1215,7 @@ const CoursesDetail = () => {
 
     
       <h2 className="small-title">Blogs</h2> 
-      <ThumbnailsIconContent type="/blogs/" items={ blogs } />
+      <ThumbnailsIconContent type="/knowledge-centre/blogs/" items={ blogs } />
 
       <h2 className="small-title">Other Programs</h2>
       <ThumbnailsIconContent type="/programs/" items={ programs } />
@@ -1229,6 +1229,7 @@ const CoursesDetail = () => {
 
       <h2 className="small-title">Frequently Asked Questions</h2>
       <section className="scroll-section">
+      
       {faqs.map((faq, i) => {
         return (
           <Card className="mb-2 p-2">

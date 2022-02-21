@@ -16,6 +16,12 @@ import scrollspyReducer from 'components/scrollspy/scrollspySlice';
 // import persist key
 import { REDUX_PERSIST_KEY } from 'config.js';
 
+import formReducer from 'redux/form/formReducer';
+import { applyMiddleware, createStore } from 'redux';
+import logger from 'redux-logger';
+
+const middleware = [logger];
+
 const persistConfig = {
   key: REDUX_PERSIST_KEY,
   storage,
@@ -31,16 +37,20 @@ const persistedReducer = persistReducer(
     menu: menuReducer,
     notification: notificationReducer,
     scrollspy: scrollspyReducer,
+    form: formReducer
   })
 );
-const store = configureStore({
-  reducer: persistedReducer,
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware({
-      serializableCheck: {
-        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-      },
-    }),
-});
+
+const store = createStore(persistedReducer, applyMiddleware(...middleware));
+
+// const store = configureStore({
+//   reducer: persistedReducer,
+//   middleware: (getDefaultMiddleware) =>
+//     getDefaultMiddleware({
+//       serializableCheck: {
+//         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+//       },
+//     }),
+// });
 const persistedStore = persistStore(store);
 export { store, persistedStore };

@@ -34,7 +34,7 @@ const BlogGrid = () => {
           {/* Grid Start */}
           <Row className="row-cols-1 row-cols-sm-2 row-cols-xl-3 g-2 mb-5">
           { blogs.map((b) => {
-            x = '/knowledge-centre/blogs/' + b.sluga;
+            x = '/knowledge-centre/blogs/' + b.slug;
             return (
               <Col>
                 <Card className="h-100">
@@ -42,7 +42,7 @@ const BlogGrid = () => {
                   <Card.Body>
                     <NavLink to={x} className="body-link stretched-link d-block heading sh-8 mb-0 sh-md-6 d-block h5 heading lh-1-5">
                       <Clamp tag="span" clamp="2">
-                        b.title
+                        {b.title}
                       </Clamp>
                     </NavLink>
                   </Card.Body>

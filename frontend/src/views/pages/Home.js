@@ -255,7 +255,7 @@ const DashboardsDefault = () => {
     </Row>
 
     <h2 className="small-title">Blogs</h2>
-    <ThumbnailsIconContent type="/blogs/" items={ blogs } />
+    <ThumbnailsIconContent type="/knowledge-centre/blogs/" items={ blogs } />
 
     <Modal show={modal1} onHide={() => setModal1(false)}>
       <Modal.Header closeButton>

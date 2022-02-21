@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import Glide from 'components/carousel/Glide';
 import CsLineIcons from 'cs-line-icons/CsLineIcons';
 import { programs } from 'data/programs';
+import Clamp from 'components/clamp';
 
 const BlogGrid = () => {
   let x;
@@ -27,12 +28,12 @@ const BlogGrid = () => {
               {x = '/programs/' + p.slug;}
               return(
                 <Glide.Item>
-                  <Card>
+                  <Card className="mb-2">
                     <Card.Img src="/img/product/small/product-6.webp" className="card-img-top sh-16" alt="card image" />
                     <Card.Body>
                       <h5 className="heading mb-0">
                         <NavLink to={x} className="body-link stretched-link">
-                          {p.title}
+                          <Clamp tag="span" clamp="1">{p.title}</Clamp>
                         </NavLink>
                       </h5>
                     </Card.Body>

@@ -3,6 +3,7 @@ import { Card, Col, Row } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import CsLineIcons from 'cs-line-icons/CsLineIcons';
 import Glide from 'components/carousel/Glide';
+import Clamp from 'components/clamp';
 
 
 export const ThumbnailsIconContent = props => {
@@ -31,9 +32,20 @@ export const ThumbnailsIconContent = props => {
               <Card.Body>
                 <h5 className="heading mb-0">
                   <NavLink to={x} className="body-link stretched-link">
-                    {p.title}
+                    <Clamp tag="span" clamp="1">
+                      {p.title}
+                    </Clamp>
                   </NavLink>
                 </h5>
+                <p style={{fontSize: '0px'}}>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+                optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
+                obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
+                nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
+                tenetur error, harum nesciunt ipsum debitis quas aliquid.
+                </p>
               </Card.Body>
               <Card.Footer className="border-0 pt-0">
                 <Row className="g-0">

@@ -78,10 +78,12 @@ const BlogGrid = () => {
                   <div className="cta-3">Ready to make bread?</div>
                   <div className="mb-3 cta-3 text-primary">Join our email list!</div>
                   <div className="text-muted mb-3">Cheesecake chocolate carrot cake pie lollipop lemon drops.</div>
-                  <Form.Control type="email" className="mb-2" placeholder="E-mail" />
-                  <Button variant="primary" className="btn-icon btn-icon-start">
-                    <CsLineIcons icon="chevron-right" /> <span>Join Now</span>
-                  </Button>
+                  <Form>
+                    <Form.Control type="email" className="mb-2" placeholder="E-mail" />
+                    <Button variant="primary" className="btn-icon btn-icon-start">
+                      <CsLineIcons icon="chevron-right" /> <span>Join Now</span>
+                    </Button>
+                  </Form>
                 </Card.Body>
               </Card>
             </Col>

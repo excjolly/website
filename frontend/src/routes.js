@@ -38,9 +38,6 @@ blogs.map((b) => {
   blogSubs.push({ path: '/' + b.slug, component: pages.blog });
 });
 
-console.log(blogSubs);
-console.log(programSubs);
-
 const routesAndMenuItems = {
   mainMenuItems: [
     {
