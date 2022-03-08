@@ -39,15 +39,34 @@ const PurePlyr1 = React.memo(() => {
   return <Plyr source={videoSrc} options={{}} />;
 });
 async function printTickets(title) {
-  console.log('jjj');
-  console.log(title);
   const { data } = await curriculumPdf(title)
-  // const blob = new Blob([data], { type: 'application/pdf' })
-  // saveAs(blob, "tickets.pdf")
+  const blob = new Blob([data], { type: 'application/pdf' })
+  saveAs(blob, title+".pdf")
 }
 async function curriculumPdf(title) {
-  var course=title
-  return axios.get('http://localhost:4000/download'+title, {
+  var url;
+  if(title=="Data Science for IT"){
+    url="http://localhost:4000/download/course1"
+  }
+  else if(title=="Data Science for Finance"){
+    url="http://localhost:4000/download/course2"
+  }
+  else if(title=="Deep Learning"){
+    url="http://localhost:4000/download/course3"
+  }
+  else if(title=="Machine Learning With Python"){
+    url="http://localhost:4000/download/course4"
+  }
+  else if(title=="Data Analysis"){
+    url="http://localhost:4000/download/course5"
+  }
+  else if(title=="Python Preparatory Course"){
+    url="http://localhost:4000/download/course6"
+  }
+  else if(title=="brochure"){
+    url="http://localhost:4000/download/brochure"
+  }
+  return axios.get(url, {
     headers: {
       'Content-Type': 'multipart/form-data'
     },
@@ -1052,7 +1071,7 @@ SQL Server ETL (Extraction, Transformation, and Loading)
                 <CsLineIcons icon="book-open" /> <span>View</span>
               </Button>
               <Button variant="outline-primary" className="btn-icon btn-icon-start">
-                <CsLineIcons icon="file-text" /> <NavLink to='#'  target="_blank" 
+                <CsLineIcons icon="file-text" /> <NavLink to='#' 
                 onClick={() => printTickets(program.title)}>Download</NavLink>
               </Button>
             </Card.Body>
@@ -1064,7 +1083,8 @@ SQL Server ETL (Extraction, Transformation, and Loading)
               <div className="cta-3">Need more details?</div>
               <div className="text-muted mb-4">Cheesecake chocolate carrot cake pie lollipop lemon toffee lollipop. Oat cake pie cake cotton.</div>
               <Button variant="outline-primary" className="btn-icon btn-icon-start">
-                <CsLineIcons icon="file-text" /> <span>Docs</span>
+                <CsLineIcons icon="file-text" /> <NavLink to='#' 
+                onClick={() => printTickets('brochure')}>Docs</NavLink>
               </Button>
             </Card.Body>
           </Card>
@@ -1623,7 +1643,7 @@ SQL Server ETL (Extraction, Transformation, and Loading)
             <Glide.Item key={`flow.${i}`} style = {{ margin : "auto 0px", padding : "0px 0px 0px 0px"}}>
               <Col>
                 <div className="card hover-img-scale-up">
-                <img src={`/img/Toolscovered/${brand}.webp`} className="img-fluid grayscale opacity-75 d-flex align-self-center" alt="logo" />
+                <img src={`/img/Toolscovered/${brand}.webp`} className="img-fluid grayscale opacity-75 d-flex align-self-center" alt="logo"  width="200" />
                 </div>
               </Col>
             </Glide.Item>

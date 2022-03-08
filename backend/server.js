@@ -8,11 +8,27 @@ var http = require('http');
 var formidable = require('formidable');
 var fs = require('fs');
 app.use('/all', programRoutes);
-app.post('/download', function(req, res){
- console.log('jjj');
- console.log(req.data);
-  res.download("./public/science/DataAnalysis.pdf"); // Set disposition and send it.
+app.get('/download/course1', function(req, res){
+ res.download("./public/courses/Data Science for IT.pdf"); // Set disposition and send it.
 });
+app.get('/download/course2', function(req, res){
+res.download("./public/courses/Data Science for Finance.pdf"); // Set disposition and send it.
+});
+app.get('/download/course3', function(req, res){
+    res.download("./public/courses/Deep Learning.pdf"); // Set disposition and send it.
+});
+app.get('/download/course4', function(req, res){
+    res.download("./public/courses/Machine Learning.pdf"); // Set disposition and send it.
+}); 
+app.get('/download/course5', function(req, res){
+    res.download("./public/courses/Data Analysis.pdf"); // Set disposition and send it.
+});  
+app.get('/download/course6', function(req, res){
+    res.download("./public/courses/Python Bootcamp.pdf"); // Set disposition and send it.
+});
+app.get('/download/brochure', function(req, res){
+    res.download("./public/courses/Excelsior Report Card.pdf"); // Set disposition and send it.
+});  
 const server = app.listen(port, () => {
 	console.log("Hello from the server side...");
 });
