@@ -29,7 +29,20 @@ const BlogGrid = () => {
               return(
                 <Glide.Item>
                   <Card className="mb-2">
-                    <Card.Img src="/img/product/small/product-6.webp" className="card-img-top sh-16" alt="card image" />
+                    {p.title=="Data Science for IT"
+                    ?<Card.Img src="/img/banner/DataSciIT.webp" className="card-img-top sh-16" alt="card image" />
+                    :p.title=="Data Science for Finance"
+                    ?<Card.Img src="/img/banner/DataScienceforFinance.webp" className="card-img-top sh-16" alt="card image" />
+                    :p.title=="Deep Learning"
+                    ?<Card.Img src="/img/banner/DeepLearning.webp" className="card-img-top sh-16" alt="card image" />
+                    :p.title=="Machine Learning With Python"
+                    ?<Card.Img src="/img/banner/MachineLearning.webp" className="card-img-top sh-16" alt="card image" />
+                    :p.title=="Data Analysis"
+                    ?<Card.Img src="/img/banner/DataAnalytics.webp" className="card-img-top sh-16" alt="card image" />
+                    :p.title=="Python Preparatory Course"
+                    ?<Card.Img src="/img/banner/Python.webp" className="card-img-top sh-16" alt="card image" />
+                    :''
+                    }
                     <Card.Body>
                       <h5 className="heading mb-0">
                         <NavLink to={x} className="body-link stretched-link">
@@ -74,11 +87,13 @@ const BlogGrid = () => {
                     as="select"
                     className="mb-1"
                   >
-                    <option value="red">Red</option>
-                    <option value="blue">Blue</option>
-                    <option value="green">Green</option>
-                    <option value="black">Black</option>
-                    <option value="orange">Orange</option>
+                     <option value="0">-- Select Course --</option>
+                    <option value="1">Data Science for IT</option>
+                    <option value="2">Data Science for Finance</option>
+                    <option value="3">Deep Learning</option>
+                    <option value="4">Machine Learning With Python</option>
+                    <option value="5">Data Analysis</option>
+                    <option value="6">Python Preparatory Course</option>
                   </Form.Control>
                   <Button variant="primary" className="btn-icon btn-icon-start">
                     <CsLineIcons icon="chevron-right" /> <span>Submit</span>

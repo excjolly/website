@@ -70,22 +70,22 @@ const routesAndMenuItems = {
       icon: 'diploma',
       component: pages.scholarship,
     },
-    {
-      path: `${appRoot}/knowledge-centre`,
-      label: 'Knowledge Centre',
-      icon: 'graduation',
-      subs: [
-        { path: '/sample-tests', label: 'Sample Tests', icon: 'quiz', component: pages.test },
-        {
-          path: `/blogs`,
-          label: 'Blogs',
-          icon: 'file-text',
-          component: pages.blogHome,
-          subs: blogSubs
-        },
-        { path: `/videos`, label: 'Videos', icon: 'play', component: pages.videos }
-      ]
-    },
+    // {
+    //   path: `${appRoot}/knowledge-centre`,
+    //   label: 'Knowledge Centre',
+    //   icon: 'graduation',
+    //   subs: [
+    //     { path: '/sample-tests', label: 'Sample Tests', icon: 'quiz', component: pages.test },
+    //     {
+    //       path: `/blogs`,
+    //       label: 'Blogs',
+    //       icon: 'file-text',
+    //       component: pages.blogHome,
+    //       subs: blogSubs
+    //     },
+    //     { path: `/videos`, label: 'Videos', icon: 'play', component: pages.videos }
+    //   ]
+    // },
     {
       path: `${appRoot}/contact`,
       label: 'Contact',

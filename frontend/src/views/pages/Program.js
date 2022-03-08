@@ -1065,11 +1065,11 @@ SQL Server ETL (Extraction, Transformation, and Loading)
           <h2 className="small-title">Curriculum</h2>
           <Card className="mb-5">
             <Card.Body>
-              <div className="cta-3">Need more details?</div>
+              {/* <div className="cta-3">Need more details?</div>
               <div className="text-muted mb-4">Cheesecake chocolate carrot cake pie lollipop lemon toffee lollipop. Oat cake pie cake cotton.</div>
               <Button variant="outline-primary" className="btn-icon btn-icon-start me-2" onClick={() => setCurrModal(true)}>
                 <CsLineIcons icon="book-open" /> <span>View</span>
-              </Button>
+              </Button> */}
               <Button variant="outline-primary" className="btn-icon btn-icon-start">
                 <CsLineIcons icon="file-text" /> <NavLink to='#' 
                 onClick={() => printTickets(program.title)}>Download</NavLink>
@@ -1080,8 +1080,8 @@ SQL Server ETL (Extraction, Transformation, and Loading)
           <h2 className="small-title">Download Brochure</h2>
           <Card className="mb-5">
             <Card.Body>
-              <div className="cta-3">Need more details?</div>
-              <div className="text-muted mb-4">Cheesecake chocolate carrot cake pie lollipop lemon toffee lollipop. Oat cake pie cake cotton.</div>
+              {/* <div className="cta-3">Need more details?</div>
+              <div className="text-muted mb-4">Cheesecake chocolate carrot cake pie lollipop lemon toffee lollipop. Oat cake pie cake cotton.</div> */}
               <Button variant="outline-primary" className="btn-icon btn-icon-start">
                 <CsLineIcons icon="file-text" /> <NavLink to='#' 
                 onClick={() => printTickets('brochure')}>Docs</NavLink>
@@ -1111,7 +1111,7 @@ SQL Server ETL (Extraction, Transformation, and Loading)
                 <Card.Body className="text-center">
                   <h2 className="nav-link" onClick={() => {industryStatus(1,title);setIndustryStatsModal(true)}}>
                     {/* <CsLineIcons icon="cupcake" className="text-primary" /> */}
-                    <p className="heading mt-3 text-body">Average Salaries and hike</p>
+                    <p className="heading mt-3  p-0  text-start btn btn-link">Average Salaries and hike</p>
                     {/* <div className="text-extra-small fw-medium text-muted">14 PRODUCTS</div> */}
                   </h2>
                 </Card.Body>
@@ -1122,7 +1122,7 @@ SQL Server ETL (Extraction, Transformation, and Loading)
                 <Card.Body className="text-center">
                   <h2 className="nav-link" onClick={() => {industryStatus(2,title);setIndustryStatsModal(true)}}>
                     {/* <CsLineIcons icon="cupcake" className="text-primary" /> */}
-                    <p className="heading mt-3 text-body">Career Path</p>
+                    <p className="heading mt-3  p-0  text-start btn btn-link">Career Path</p>
                     {/* <div className="text-extra-small fw-medium text-muted">14 PRODUCTS</div> */}
                   </h2>
                 </Card.Body>
@@ -1133,7 +1133,7 @@ SQL Server ETL (Extraction, Transformation, and Loading)
                 <Card.Body className="text-center">
                   <h2 className="nav-link" onClick={() =>{industryStatus(3,title); setIndustryStatsModal(true)}}>
                     {/* <CsLineIcons icon="cupcake" className="text-primary" /> */}
-                    <p className="heading mt-3 text-body">Top Companies Hiring for this role</p>
+                    <p className="heading mt-3  p-0  text-start btn btn-link">Top Companies Hiring for this role</p>
                     {/* <div className="text-extra-small fw-medium text-muted">14 PRODUCTS</div> */}
                   </h2>
                 </Card.Body>
@@ -1144,7 +1144,7 @@ SQL Server ETL (Extraction, Transformation, and Loading)
                 <Card.Body className="text-center">
                   <h2 className="nav-link" onClick={() =>{industryStatus(4,title); setIndustryStatsModal(true)}}>
                     {/* <CsLineIcons icon="cupcake" className="text-primary" /> */}
-                    <p className="heading mt-3 text-body">Average Salaries of Excelsiorites</p>
+                    <p className="heading mt-3  p-0  text-start btn btn-link">Average Salaries of Excelsiorites</p>
                     {/* <div className="text-extra-small fw-medium text-muted">14 PRODUCTS</div> */}
                   </h2>
                 </Card.Body>
@@ -1643,7 +1643,7 @@ SQL Server ETL (Extraction, Transformation, and Loading)
             <Glide.Item key={`flow.${i}`} style = {{ margin : "auto 0px", padding : "0px 0px 0px 0px"}}>
               <Col>
                 <div className="card hover-img-scale-up">
-                <img src={`/img/Toolscovered/${brand}.webp`} className="img-fluid grayscale opacity-75 d-flex align-self-center" alt="logo"  width="200" />
+                <img src={`/img/Toolscovered/${brand}.webp`} className="img-fluid grayscale opacity-75 d-flex align-self-center" alt="logo"  width="120" />
                 </div>
               </Col>
             </Glide.Item>
@@ -1914,8 +1914,8 @@ SQL Server ETL (Extraction, Transformation, and Loading)
       </Row> */}
 
     
-      <h2 className="small-title">Blogs</h2> 
-      <ThumbnailsIconContent type="/knowledge-centre/blogs/" items={ blogs } />
+      {/* <h2 className="small-title">Blogs</h2> 
+      <ThumbnailsIconContent type="/knowledge-centre/blogs/" items={ blogs } /> */}
 
       {/* <h2 className="small-title">Other Programs</h2>
       <ThumbnailsIconContent type="/programs/" items={ programs } /> */}

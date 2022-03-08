@@ -267,7 +267,7 @@ const AboutUs = () => {
       </Col>
       </Row>
 
-      <h2 className="small-title">Chart</h2>
+      {/* <h2 className="small-title">Chart</h2>
       <Row xxl="2" className="mb-3">            
         <Col xs="12" xl="6">
           <section className="scroll-section" id="doughnutChart">
@@ -287,7 +287,7 @@ const AboutUs = () => {
             </Card>
           </section>
         </Col>
-      </Row>
+      </Row> */}
 
       <h2 className="small-title">Our Team</h2>
       <Row className="row-cols-1 row-cols-md-2 row-cols-xxl-3 g-3 mb-5">
