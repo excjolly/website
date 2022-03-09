@@ -7,7 +7,44 @@ const port = 4000;
 var http = require('http');
 var formidable = require('formidable');
 var fs = require('fs');
+var enquiryModel = require('./models/enquiryModel');
+var journeyModel = require('./models/journeyModel');
 app.use('/all', programRoutes);
+//app.use('/enquire', programRoutes);
+app.post('/enquire', function(req, res){
+    var enquiry = new enquiryModel({
+        name: req.body.name,
+        email: req.body.email,
+        phone: req.body.phone,
+        course: req.body.course,
+      });
+      enquiry .save((err, doc) => {
+            if (!err)
+               {
+                res.send({ succes: true });
+               } 
+            else
+                console.log('Error during record insertion : ' + err);
+      });
+});
+app.post('/journey', function(req, res){
+    console.log('am in jorney')
+    var journey = new journeyModel({
+        name: req.body.name,
+        email: req.body.email,
+        phone: req.body.phone,
+        course: req.body.course,
+        });
+        
+        journey .save((err, doc) => {
+            if (!err)
+                {
+                res.send({ succes: true });
+                } 
+            else
+                console.log('Error during record insertion : ' + err);
+        });
+});
 app.get('/download/course1', function(req, res){
  res.download("./public/courses/Data Science for IT.pdf"); // Set disposition and send it.
 });

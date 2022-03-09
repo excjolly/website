@@ -20,6 +20,14 @@ exports.getAll = aEH(async (req, res, next) => {
         programs
     });
 });
+exports.enquireFrm = aEH(async (req, res, next) => {
+   console.log('am in enqjirefrm at server') ;
+    // const programs = await Program.find();
+    // res.status(200).json({
+    //     status: 'success',
+    //     programs
+    // });
+});
 
 exports.delete = aEH(async (req, res, next) => {
     const { id } = req.params;
