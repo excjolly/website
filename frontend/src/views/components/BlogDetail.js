@@ -7,7 +7,7 @@ const BlogDetail = () => {
     <>
       <Row>
         <Col xl="12" xxl="9" className="mt-2">
-            <img alt="detail" src='/img/banner/Home_Page_Banner.webp' className="responsive border-0 rounded mb-3 w-100 sh-50" />
+            <img alt="detail" src='img/banner/Home_Page_Banner.webp' className="responsive border-0 rounded mb-3 w-100 sh-50" />
         </Col>
 
         {/* <Col xl="4" xxl="3">
